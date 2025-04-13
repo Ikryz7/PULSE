@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="images/logo_fix.png">
     <title>Welcome | PULSE by Klinik XYZ</title>
     <!-- Link to external CSS for styles -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Login_Admin/style.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -25,7 +25,7 @@
     </ul>
     <h2 class="animation" style="--data:0;">Login</h2>
     
-    <form action="#" id="login-form">
+    <form id="login-form">
         <!-- Username input -->
         <div class="input-box animation" style="--data:1;">
             <input type="text" id="login-username" placeholder=""> <!-- ID should be 'login-username' -->
@@ -42,7 +42,7 @@
 
         <!-- Submit button -->
         <a href="../Dashboard_Admin/index.html">
-            <button type="button" class="btn animation" style="--data:4">Login</button>
+            <button type="submit" class="btn animation" style="--data:4">Login</button>
         </a>
 
 
@@ -61,7 +61,7 @@
         <!-- Sign-Up form container -->
 <div class="form-box signup">
     <h2 class="animation">Sign Up</h2>
-    <form action="#" id="signup-form"> 
+    <form id="signup-form">
         <!-- Hidden Identity Field for Admin -->
         <input type="hidden" id="signup-identity" value="admin" />
     
@@ -103,106 +103,14 @@
        <!-- Welcome back message and logos for signup -->
 <div class="info-text signup">
     <div class="logos-container signup-logos">
-        <img src="images/logo_fix.png" alt="Logo 1" class="logo">
-        <img src="images/logo.png" alt="Logo 2" class="logo">
+        <img src="/Login_Admin/images/logo_fix.png" alt="Logo 1" class="logo">
+        <img src="/Login_Admin/images/logo.png" alt="Logo 2" class="logo">
     </div>
     <h2 class="animation" style="--data:22">Join</h2>
     <p class="animation" style="--data:23">The PULSE of your health companion!</p>
   </div>
-    <script src="./script.js"></script>
+    <script src="/Login_Admin/script.js"></script>
     <!-- Your other HTML content -->
-
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Fungsi untuk menangani login
-    function handleLogin(event) {
-        event.preventDefault(); // Mencegah form submission
-
-        const usernameInput = document.getElementById('login-username');
-        const passwordInput = document.getElementById('login-password');
-
-        if (!usernameInput || !passwordInput) {
-            alert('Username atau password tidak ditemukan.');
-            return;
-        }
-
-        const usernameValue = usernameInput.value.trim();
-        const passwordValue = passwordInput.value.trim();
-
-        if (!usernameValue || !passwordValue) {
-            alert('Mohon masukkan username dan password.');
-            return;
-        }
-
-        // Ambil data dari file data.json
-        fetch('data.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Gagal memuat file data.json');
-                }
-                return response.json();
-            })
-            .then(data => {
-                const users = data.users || [];
-                // Cari user yang sesuai dengan input
-                const matchedUser = users.find(user => user.username === usernameValue && user.password === passwordValue);
-
-                if (matchedUser) {
-                    alert('Login berhasil!');
-                    // Redirect sesuai role atau ke halaman dashboard yang telah ditentukan
-                    window.location.href = (matchedUser.role === 'admin') ? '../Dashboard_Admin/index.html' : 'dashboard.html';
-                } else {
-                    alert('Login gagal. Username atau password salah.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Terjadi kesalahan: ' + error.message);
-            });
-    }
-
-    // Pasang event listener untuk form login
-    const loginForm = document.getElementById('login-form');
-    if (loginForm) {
-        loginForm.addEventListener('submit', handleLogin);
-    }
-
-    // Jika diperlukan, Anda juga bisa menambahkan validasi untuk sign-up, misalnya:
-    const signupForm = document.getElementById('signup-form');
-    if (signupForm) {
-        signupForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const username = document.getElementById('signup-username').value.trim();
-            const password = document.getElementById('signup-password').value.trim();
-            const posisi = document.getElementById('signup-posisi').value;
-            const identity = document.getElementById('signup-identity').value;
-
-            if (!username || !password || !posisi || !identity) {
-                alert('Mohon lengkapi semua kolom.');
-                return;
-            }
-
-            // Proses sign-up dapat dilakukan dengan mengirimkan data ke server (misalnya REST API) 
-            // karena mengubah data.json di sisi client tidaklah aman dan tidak efisien.
-            fetch('http://localhost:3000/signup', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, password, posisi, identity }),
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert(data.message || 'Sign-up gagal');
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Terjadi kesalahan saat mendaftar.');
-            });
-        });
-    }
-});
-</script>
-    
 
 </body>
 </html>
