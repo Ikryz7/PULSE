@@ -1,0 +1,10 @@
+[
+  {
+    "username": "123",
+    "password": "123",
+    "posisi": "Pasien",
+    "approved": true,
+    "status": "Active",
+    "identityFile": "123_map.jpg"
+  }
+]
