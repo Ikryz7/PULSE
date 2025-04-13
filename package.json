@@ -16,6 +16,7 @@
     "es-vary": "^0.1.2",
     "eta": "^3.4.0",
     "express": "^4.21.2",
+    "express-fileupload": "^1.5.1",
     "fill-range": "^7.1.1",
     "fs": "^0.0.1-security",
     "glob-parent": "^5.1.2",
