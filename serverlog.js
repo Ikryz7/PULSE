@@ -32,6 +32,8 @@ app.use('/Feedback_Admin', express.static(path.join(__dirname, 'Feedback_Admin')
 
 app.use('/Presensi_Admin', express.static(path.join(__dirname, 'Presensi_Admin')));
 
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
+
 // Menyajikan index.html saat mengakses root atau halaman lainnya
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/Login_Admin/index.html'));

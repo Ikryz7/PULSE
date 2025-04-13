@@ -52,7 +52,7 @@
                     <span class="fas fa-id-card-alt"></span>
                     <h3>Presensi</h3>
                 </a>
-                <a href="../Login_Admin/index.html"> <!-- Adjust this route for the logout logic -->
+                <a href="../Login_Admin/index.html" id="logoutLink"> <!-- Adjust this route for the logout logic -->
                     <span class="fas fa-sign-out-alt"></span>
                     <h3>Keluar</h3>
                 </a>
@@ -419,7 +419,9 @@ function openEditPage(nim) {
         window.onload = fetchAndRenderDaruratData;
     </script>
     
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/assets/logout.js"></script>
+
 </body>
 
 </html>
