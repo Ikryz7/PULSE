@@ -42,6 +42,7 @@
     "sirv": "^2.0.4",
     "sort-on": "^6.0.0",
     "steno": "^4.0.2",
+    "sweetalert2": "^11.17.2",
     "to-regex-range": "^5.0.1",
     "totalist": "^3.0.1",
     "type-fest": "^3.13.1",

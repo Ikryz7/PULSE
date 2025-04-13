@@ -1,5 +1,3 @@
-// Login form submission logic
-console.log('Script loaded'); // Tambahkan ini di awal script.js
 document.addEventListener('DOMContentLoaded', () => {
   const wrapper = document.querySelector('.wrapper');
   const signuplink = document.querySelector('.signup-link');
@@ -21,42 +19,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-// Login form submission logic
-if (loginForm) {
-  loginForm.addEventListener('submit', async (event) => {
-    event.preventDefault(); // Prevent page reload'
-    console.log('Login form submitted'); // Debug
+  // Login form submission logic
+  if (loginForm) {
+    loginForm.addEventListener('submit', async (event) => {
+      event.preventDefault(); // Prevent page reload'
 
-    const username = document.getElementById('login-username').value.trim();
-    const password = document.getElementById('login-password').value.trim();
+      const username = document.getElementById('login-username').value.trim();
+      const password = document.getElementById('login-password').value.trim();
 
-    if (!username || !password) {
-      alert('Please enter your username and password.');
-      return;
-    }
-
-    try {
-      const response = await fetch('http://localhost:3000/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
-      });
-
-      const data = await response.json();
-      console.log(data); // Debug: periksa respons
-
-      if (response.ok) {
-        alert(data.message); // Display success message
-        window.location.href = data.redirect || 'PULSE/Dashboard_Admin/index.html'; // Redirect to Dashboard_Admin
-      } else {
-        alert(data.message || 'Login failed.'); // Display failure message
+      if (!username || !password) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Perhatian!',
+          text: 'Silakan masukkan username dan password.',
+        });
+        return;
       }
-    } catch (error) {
-      console.error('Error during login:', error);
-      alert('An error occurred during login.');
-    }
-  });
-}
+
+      try {
+        const response = await fetch('http://localhost:3000/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Berhasil!',
+            text: data.message,
+            showConfirmButton: false,
+            timer: 2000,
+          }).then(() => {
+            window.location.href = data.redirect || 'PULSE/Dashboard_Admin/index.html';
+          });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Gagal!',
+            text: data.message || 'Login gagal.',
+          });
+        }
+      } catch (error) {
+        console.error('Error during login:', error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Kesalahan!',
+          text: 'Terjadi kesalahan selama proses login. Silakan coba lagi.',
+        });
+      }
+    });
+  }
 
   // Signup form submission logic
   if (signupForm) {
@@ -69,7 +84,11 @@ if (loginForm) {
       const identity = document.getElementById('signup-identity').value;
 
       if (!username || !password || !posisi || !identity) {
-        alert('Please fill in all fields.');
+        Swal.fire({
+          icon: 'warning',
+          title: 'Perhatian!',
+          text: 'Semua field harus diisi.',
+        });
         return;
       }
 
@@ -82,10 +101,30 @@ if (loginForm) {
 
         const data = await response.json();
 
-        alert(data.message || 'Sign-up failed.');
+        if (response.ok) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Pendaftaran Berhasil!',
+            text: data.message || 'Anda berhasil mendaftar.',
+            showConfirmButton: false,
+            timer: 2000,
+          }).then(() => {
+            wrapper.classList.remove("active"); // Kembali ke form login
+          });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Gagal!',
+            text: data.message || 'Pendaftaran gagal.',
+          });
+        }
       } catch (error) {
         console.error('Error during sign-up:', error);
-        alert('An error occurred during sign-up.');
+        Swal.fire({
+          icon: 'error',
+          title: 'Kesalahan!',
+          text: 'Terjadi kesalahan selama proses pendaftaran.',
+        });
       }
     });
   }
