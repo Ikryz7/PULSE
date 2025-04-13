@@ -24,6 +24,13 @@ app.use('/Login_Admin', express.static(path.join(__dirname, 'Login_Admin')));
 
 app.use('/Dashboard_Admin', express.static(path.join(__dirname, 'Dashboard_Admin')));
 
+app.use('/Dokter_Admin', express.static(path.join(__dirname, 'Dokter_Admin')));
+
+app.use('/Pasien_Admin', express.static(path.join(__dirname, 'Pasien_Admin')));
+
+app.use('/Feedback_Admin', express.static(path.join(__dirname, 'Feedback_Admin')));
+
+app.use('/Presensi_Admin', express.static(path.join(__dirname, 'Presensi_Admin')));
 
 // Menyajikan index.html saat mengakses root atau halaman lainnya
 app.get('/', (req, res) => {
