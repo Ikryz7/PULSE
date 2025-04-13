@@ -8,7 +8,11 @@ const app = express();
 const port = 3000;
 
 // Enable CORS for all origins (or configure for specific origins)
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000',  // Pastikan ini sesuai dengan alamat aplikasi client Anda
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
+  }));
 
 // Middleware to parse JSON request body
 app.use(bodyParser.json());
@@ -16,9 +20,14 @@ app.use(bodyParser.json());
 // Menyajikan file statis dari folder 'PULSE'
 app.use(express.static(path.join(__dirname, 'PULSE')));
 
+app.use('/Login_Admin', express.static(path.join(__dirname, 'Login_Admin')));
+
+app.use('/Dashboard_Admin', express.static(path.join(__dirname, 'Dashboard_Admin')));
+
+
 // Menyajikan index.html saat mengakses root atau halaman lainnya
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'PULSE/Dashboard_Admin/index.html'));
+    res.sendFile(path.join(__dirname, '/Login_Admin/index.html'));
 });
 
 // Route to handle sign-up and store data in signup.json (admin)
@@ -50,17 +59,17 @@ app.post('/signup', (req, res) => {
     });
 });
 
-// Sample login route
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
+    const usersFilePath = path.join(__dirname, 'data', 'signup.json');
 
     if (!username || !password) {
         return res.status(400).json({ message: 'Username and password are required.' });
     }
 
-    // Read the users from the signup.json file
     fs.readFile(usersFilePath, 'utf8', (err, data) => {
         if (err) {
+            console.error('Error reading user data:', err);
             return res.status(500).json({ message: 'Error reading user data.' });
         }
 
@@ -68,22 +77,27 @@ app.post('/login', (req, res) => {
         const user = users.find(u => u.username === username && u.password === password);
 
         if (!user) {
+            console.log('Invalid credentials for user:', username);
             return res.status(401).json({ message: 'Invalid credentials' });
         }
 
-        // Check if the user is approved (for simplicity, we assume there's an "approved" field)
         if (!user.approved) {
+            console.log('Account not approved:', username);
             return res.status(403).json({ message: 'Account not approved yet.' });
         }
 
-        // Successful login
+        if (user.status === 'Rejected') {
+            console.log('Account is rejected:', username);
+            return res.status(403).json({ message: 'Account is rejected and cannot log in.' });
+        }
+
+        console.log('Login successful for user:', username);
         res.json({
             message: 'Login successful!',
-            redirect: user.posisi === 'admin' ? '/Dashboard_Admin/index.html' : '/Dashboard_Dokter/index.html',
+            redirect: '/Dashboard_Admin/index.html', // Selalu arahkan ke Dashboard_Admin
         });
     });
 });
-
 
 // Approve request endpoint
 app.post('/approve-request/:username', (req, res) => {
@@ -120,7 +134,6 @@ app.post('/approve-request/:username', (req, res) => {
     });
 });
 
-
 // Route to get pending approval requests
 app.get('/get-pending-requests', (req, res) => {
     const signupFilePath = path.join(__dirname, 'data', 'signup.json');
@@ -137,8 +150,6 @@ app.get('/get-pending-requests', (req, res) => {
         res.status(200).json(pendingRequests);
     });
 });
-
-
 
 // Route to reject a request
 app.post('/reject-request/:username', (req, res) => {
