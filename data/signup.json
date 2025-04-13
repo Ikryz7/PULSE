@@ -52,5 +52,12 @@
     "password": "abc",
     "posisi": "dokter-umum",
     "approved": false
+  },
+  {
+    "username": "admin",
+    "password": "admin",
+    "posisi": "admin",
+    "approved": true,
+    "status": "Accepted"
   }
 ]
