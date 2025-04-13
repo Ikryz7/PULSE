@@ -1,0 +1,1302 @@
+[
+  {
+    "identitas": {
+      "nama": "Asmadi Gunawan",
+      "tanggalPeriksa": "2024-12-13",
+      "waktuMulai": "11:20",
+      "waktuSelesai": "15:27",
+      "poliPeriksa": "Poli Umum",
+      "id": "48a7bd16-44e8-4b18-a96f-c717974e2634"
+    },
+    "kuesioner": {
+      "identitasId": "48a7bd16-44e8-4b18-a96f-c717974e2634",
+      "kuesioner": {
+        "responses": {
+          "q1": 3,
+          "q2": 1,
+          "q3": 1,
+          "q4": 3,
+          "q5": 2,
+          "q6": 3,
+          "q7": 1,
+          "q8": 1,
+          "q9": 1,
+          "q10": 3,
+          "q11": 1,
+          "q12": 1,
+          "q13": 2
+        },
+        "score": 3.2424999999999997,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 4,
+            "NSF_ku": 2,
+            "N_total_ku": 3.3
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 4,
+            "NSF_ks": 3,
+            "N_total_ks": 3.6
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 3,
+            "NSF_rk": 2,
+            "N_total_rk": 2.5999999999999996
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 4,
+            "NSF_pp": 4.5,
+            "N_total_pp": 4.1499999999999995
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "10:30 - 11:00"
+    },
+    "konfirmasiJadwal": "Terkonfirmasi"
+  },
+  {
+    "identitas": {
+      "nama": "Ali Ja'far Miftadi",
+      "tanggalPeriksa": "2024-12-19",
+      "waktuMulai": "17:19",
+      "waktuSelesai": "19:22",
+      "poliPeriksa": "Poli Umum",
+      "id": "ae44ac63-8b7b-42a8-9fdb-3ec72666d190"
+    },
+    "kuesioner": {
+      "identitasId": "ae44ac63-8b7b-42a8-9fdb-3ec72666d190",
+      "kuesioner": {
+        "responses": {
+          "q1": 3,
+          "q2": 4,
+          "q3": 3,
+          "q4": 3,
+          "q5": 3,
+          "q6": 4,
+          "q7": 4,
+          "q8": 3,
+          "q9": 4,
+          "q10": 3,
+          "q11": 3,
+          "q12": 2,
+          "q13": 1
+        },
+        "score": 4.345416666666666,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 4,
+            "NSF_ku": 4.5,
+            "N_total_ku": 4.175
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 5,
+            "NSF_ks": 4,
+            "N_total_ks": 4.6
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 4,
+            "NSF_rk": 4.666666666666667,
+            "N_total_rk": 4.266666666666667
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 5,
+            "N_total_pp": 5
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "11:00 - 11:30"
+    },
+    "konfirmasiJadwal": "Ditolak"
+  },
+  {
+    "identitas": {
+      "nama": "Ari Purwadi",
+      "tanggalPeriksa": "2024-12-27",
+      "waktuMulai": "16:46",
+      "waktuSelesai": "18:49",
+      "poliPeriksa": "Poli Umum",
+      "id": "7edc7f2a-fec8-4637-88be-dc97b82f3196"
+    },
+    "kuesioner": {
+      "identitasId": "7edc7f2a-fec8-4637-88be-dc97b82f3196",
+      "kuesioner": {
+        "responses": {
+          "q1": 3,
+          "q2": 3,
+          "q3": 4,
+          "q4": 3,
+          "q5": 3,
+          "q6": 2,
+          "q7": 3,
+          "q8": 4,
+          "q9": 4,
+          "q10": 4,
+          "q11": 3,
+          "q12": 2,
+          "q13": 1
+        },
+        "score": 4.162083333333333,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 4,
+            "NSF_ku": 4.5,
+            "N_total_ku": 4.175
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 3,
+            "NSF_ks": 4,
+            "N_total_ks": 3.4
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 5,
+            "NSF_rk": 4.333333333333333,
+            "N_total_rk": 4.733333333333333
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 5,
+            "N_total_pp": 5
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "11:00 - 11:30"
+    },
+    "konfirmasiJadwal": "Ditolak"
+  },
+  {
+    "identitas": {
+      "nama": "Yance Wulandari",
+      "tanggalPeriksa": "2025-01-06",
+      "waktuMulai": "17:37",
+      "waktuSelesai": "18:39",
+      "poliPeriksa": "Poli Umum",
+      "id": "4bb540cf-7700-4554-88e4-f975b867099a"
+    },
+    "kuesioner": {
+      "identitasId": "4bb540cf-7700-4554-88e4-f975b867099a",
+      "kuesioner": {
+        "responses": {
+          "q1": 4,
+          "q2": 2,
+          "q3": 4,
+          "q4": 2,
+          "q5": 1,
+          "q6": 3,
+          "q7": 1,
+          "q8": 1,
+          "q9": 2,
+          "q10": 3,
+          "q11": 4,
+          "q12": 2,
+          "q13": 1
+        },
+        "score": 3.6333333333333333,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 4,
+            "NSF_ku": 4,
+            "N_total_ku": 4
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 4,
+            "NSF_ks": 2,
+            "N_total_ks": 3.2
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 3,
+            "NSF_rk": 3.3333333333333335,
+            "N_total_rk": 3.1333333333333333
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 5,
+            "N_total_pp": 5
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "16:30 - 17:00"
+    },
+    "konfirmasiJadwal": "Ditolak"
+  },
+  {
+    "identitas": {
+      "nama": "Cawisadi Prasetya",
+      "tanggalPeriksa": "2025-01-09",
+      "waktuMulai": "14:36",
+      "waktuSelesai": "17:39",
+      "poliPeriksa": "Poli Umum",
+      "id": "1f998d97-ccc1-43ef-a6bf-dbfbc26a5d06"
+    },
+    "kuesioner": {
+      "identitasId": "1f998d97-ccc1-43ef-a6bf-dbfbc26a5d06",
+      "kuesioner": {
+        "responses": {
+          "q1": 2,
+          "q2": 4,
+          "q3": 4,
+          "q4": 2,
+          "q5": 4,
+          "q6": 1,
+          "q7": 1,
+          "q8": 1,
+          "q9": 3,
+          "q10": 2,
+          "q11": 1,
+          "q12": 1,
+          "q13": 1
+        },
+        "score": 3.3216666666666663,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 3,
+            "NSF_ku": 5,
+            "N_total_ku": 3.7
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 2,
+            "NSF_ks": 5,
+            "N_total_ks": 3.2
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 2.5,
+            "NSF_rk": 2.6666666666666665,
+            "N_total_rk": 2.5666666666666664
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 4,
+            "NSF_pp": 5,
+            "N_total_pp": 4.3
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "18:30 - 19:00"
+    },
+    "konfirmasiJadwal": "Terkonfirmasi"
+  },
+  {
+    "identitas": {
+      "nama": "Galuh Damanik",
+      "tanggalPeriksa": "2025-01-14",
+      "waktuMulai": "15:39",
+      "waktuSelesai": "17:42",
+      "poliPeriksa": "Poli Gigi",
+      "id": "b4f669b9-3b3c-4db8-a03b-4ed92f91b9bd"
+    },
+    "kuesioner": {
+      "identitasId": "b4f669b9-3b3c-4db8-a03b-4ed92f91b9bd",
+      "kuesioner": {
+        "responses": {
+          "q1": 4,
+          "q2": 1,
+          "q3": 2,
+          "q4": 4,
+          "q5": 3,
+          "q6": 4,
+          "q7": 3,
+          "q8": 3,
+          "q9": 1,
+          "q10": 2,
+          "q11": 2,
+          "q12": 1,
+          "q13": 1
+        },
+        "score": 4.04625,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 5,
+            "NSF_ku": 2.5,
+            "N_total_ku": 4.125
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 5,
+            "NSF_ks": 4,
+            "N_total_ks": 4.6
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 3.5,
+            "NSF_rk": 3,
+            "N_total_rk": 3.3000000000000003
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 4,
+            "NSF_pp": 5,
+            "N_total_pp": 4.3
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "13:00 - 13:30"
+    },
+    "konfirmasiJadwal": "Terkonfirmasi"
+  },
+  {
+    "identitas": {
+      "nama": "Mustika Lazuardi",
+      "tanggalPeriksa": "2025-01-05",
+      "waktuMulai": "17:42",
+      "waktuSelesai": "18:43",
+      "poliPeriksa": "Poli Gigi",
+      "id": "8b5cf0b1-fe5a-4b82-bffc-28a243b2f965"
+    },
+    "kuesioner": {
+      "identitasId": "8b5cf0b1-fe5a-4b82-bffc-28a243b2f965",
+      "kuesioner": {
+        "responses": {
+          "q1": 3,
+          "q2": 1,
+          "q3": 3,
+          "q4": 4,
+          "q5": 3,
+          "q6": 4,
+          "q7": 4,
+          "q8": 3,
+          "q9": 3,
+          "q10": 2,
+          "q11": 1,
+          "q12": 2,
+          "q13": 1
+        },
+        "score": 4.080416666666666,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 4.5,
+            "NSF_ku": 3,
+            "N_total_ku": 3.975
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 5,
+            "NSF_ks": 4,
+            "N_total_ks": 4.6
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 3.5,
+            "NSF_rk": 3.6666666666666665,
+            "N_total_rk": 3.566666666666667
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 5,
+            "N_total_pp": 5
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "18:00 - 18:30"
+    },
+    "konfirmasiJadwal": "Terkonfirmasi"
+  },
+  {
+    "identitas": {
+      "nama": "Jaiman Widodo",
+      "tanggalPeriksa": "2025-01-13",
+      "waktuMulai": "14:40",
+      "waktuSelesai": "16:42",
+      "poliPeriksa": "Poli Gigi",
+      "id": "71d1844e-e435-4ba4-9640-8f9b4d7f68f1"
+    },
+    "kuesioner": {
+      "identitasId": "71d1844e-e435-4ba4-9640-8f9b4d7f68f1",
+      "kuesioner": {
+        "responses": {
+          "q1": 3,
+          "q2": 1,
+          "q3": 1,
+          "q4": 1,
+          "q5": 2,
+          "q6": 4,
+          "q7": 3,
+          "q8": 1,
+          "q9": 2,
+          "q10": 2,
+          "q11": 1,
+          "q12": 2,
+          "q13": 1
+        },
+        "score": 3.1675000000000004,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 3,
+            "NSF_ku": 2,
+            "N_total_ku": 2.6500000000000004
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 5,
+            "NSF_ks": 3,
+            "N_total_ks": 4.2
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 2.5,
+            "NSF_rk": 3,
+            "N_total_rk": 2.7
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 5,
+            "N_total_pp": 5
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "10:00 - 10:30"
+    }
+  },
+  {
+    "identitas": {
+      "nama": "Shakila Pudjiastuti",
+      "tanggalPeriksa": "2025-01-04",
+      "waktuMulai": "15:42",
+      "waktuSelesai": "16:44",
+      "poliPeriksa": "Poli Gigi",
+      "id": "593d2bb2-9ff5-4234-b087-bff4cdb7f4f0"
+    },
+    "kuesioner": {
+      "identitasId": "593d2bb2-9ff5-4234-b087-bff4cdb7f4f0",
+      "kuesioner": {
+        "responses": {
+          "q1": 1,
+          "q2": 2,
+          "q3": 1,
+          "q4": 4,
+          "q5": 2,
+          "q6": 3,
+          "q7": 1,
+          "q8": 2,
+          "q9": 3,
+          "q10": 2,
+          "q11": 3,
+          "q12": 2,
+          "q13": 2
+        },
+        "score": 3.3433333333333333,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 3.5,
+            "NSF_ku": 2.5,
+            "N_total_ku": 3.15
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 4,
+            "NSF_ks": 3,
+            "N_total_ks": 3.6
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 3,
+            "NSF_rk": 3.3333333333333335,
+            "N_total_rk": 3.1333333333333333
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 4.5,
+            "N_total_pp": 4.85
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "17:00 - 17:30"
+    }
+  },
+  {
+    "identitas": {
+      "nama": "Qori Nuraini",
+      "tanggalPeriksa": "2025-01-06",
+      "waktuMulai": "13:41",
+      "waktuSelesai": "15:46",
+      "poliPeriksa": "Poli Umum",
+      "id": "f67685ae-7bea-4a6e-98af-32f7608fa2c7"
+    },
+    "kuesioner": {
+      "identitasId": "f67685ae-7bea-4a6e-98af-32f7608fa2c7",
+      "kuesioner": {
+        "responses": {
+          "q1": 3,
+          "q2": 3,
+          "q3": 4,
+          "q4": 3,
+          "q5": 3,
+          "q6": 3,
+          "q7": 3,
+          "q8": 1,
+          "q9": 4,
+          "q10": 1,
+          "q11": 3,
+          "q12": 1,
+          "q13": 1
+        },
+        "score": 3.8270833333333334,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 4,
+            "NSF_ku": 4.5,
+            "N_total_ku": 4.175
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 4,
+            "NSF_ks": 4,
+            "N_total_ks": 4
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 2,
+            "NSF_rk": 4.333333333333333,
+            "N_total_rk": 2.9333333333333336
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 4,
+            "NSF_pp": 5,
+            "N_total_pp": 4.3
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "9:30 - 10:00"
+    }
+  },
+  {
+    "identitas": {
+      "nama": "Nurul Kusumawati",
+      "tanggalPeriksa": "2025-01-06",
+      "waktuMulai": "13:42",
+      "waktuSelesai": "14:47",
+      "poliPeriksa": "Poli Umum",
+      "id": "e7c92edd-0731-437c-94ba-525fc9358f76"
+    },
+    "kuesioner": {
+      "identitasId": "e7c92edd-0731-437c-94ba-525fc9358f76",
+      "kuesioner": {
+        "responses": {
+          "q1": 4,
+          "q2": 3,
+          "q3": 2,
+          "q4": 3,
+          "q5": 4,
+          "q6": 4,
+          "q7": 2,
+          "q8": 4,
+          "q9": 1,
+          "q10": 2,
+          "q11": 3,
+          "q12": 1,
+          "q13": 1
+        },
+        "score": 4.2325,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 4.5,
+            "NSF_ku": 3.5,
+            "N_total_ku": 4.15
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 5,
+            "NSF_ks": 5,
+            "N_total_ks": 5
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 4,
+            "NSF_rk": 3,
+            "N_total_rk": 3.6
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 4,
+            "NSF_pp": 5,
+            "N_total_pp": 4.3
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "14:30 - 15:00"
+    },
+    "konfirmasiJadwal": "Terkonfirmasi"
+  },
+  {
+    "identitas": {
+      "nama": "abc",
+      "tanggalPeriksa": "2025-01-07",
+      "waktuMulai": "14:51",
+      "waktuSelesai": "17:54",
+      "poliPeriksa": "Poli Umum",
+      "id": "a6139661-2654-4f9a-a0e7-a1e707e77e4a"
+    },
+    "kuesioner": {
+      "identitasId": "a6139661-2654-4f9a-a0e7-a1e707e77e4a",
+      "kuesioner": {
+        "responses": {
+          "q1": 4,
+          "q2": 3,
+          "q3": 3,
+          "q4": 3,
+          "q5": 4,
+          "q6": 4,
+          "q7": 4,
+          "q8": 3,
+          "q9": 3,
+          "q10": 3,
+          "q11": 3,
+          "q12": 1,
+          "q13": 2
+        },
+        "score": 4.437083333333333,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 4.5,
+            "NSF_ku": 4,
+            "N_total_ku": 4.325
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 5,
+            "NSF_ks": 5,
+            "N_total_ks": 5
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 4,
+            "NSF_rk": 4.333333333333333,
+            "N_total_rk": 4.133333333333333
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 4,
+            "NSF_pp": 4.5,
+            "N_total_pp": 4.1499999999999995
+          }
+        }
+      }
+    }
+  },
+  {
+    "identitas": {
+      "nama": "Erina Teresa",
+      "tanggalPeriksa": "2025-01-11",
+      "waktuMulai": "12:39",
+      "waktuSelesai": "15:43",
+      "poliPeriksa": "Poli Umum",
+      "id": "59068437-e1c1-4564-b53b-f24360db14ca"
+    },
+    "kuesioner": {
+      "identitasId": "59068437-e1c1-4564-b53b-f24360db14ca",
+      "kuesioner": {
+        "responses": {
+          "q1": 4,
+          "q2": 3,
+          "q3": 3,
+          "q4": 3,
+          "q5": 4,
+          "q6": 2,
+          "q7": 4,
+          "q8": 3,
+          "q9": 2,
+          "q10": 1,
+          "q11": 1,
+          "q12": 1,
+          "q13": 2
+        },
+        "score": 3.8870833333333334,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 4.5,
+            "NSF_ku": 4,
+            "N_total_ku": 4.325
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 3,
+            "NSF_ks": 5,
+            "N_total_ks": 3.8
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 3,
+            "NSF_rk": 3.3333333333333335,
+            "N_total_rk": 3.1333333333333333
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 4,
+            "NSF_pp": 4.5,
+            "N_total_pp": 4.1499999999999995
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "16:00 - 16:30"
+    },
+    "konfirmasiJadwal": "Terkonfirmasi"
+  },
+  {
+    "identitas": {
+      "nama": "Erina Teresa",
+      "tanggalPeriksa": "2025-01-12",
+      "waktuMulai": "10:55",
+      "waktuSelesai": "11:57",
+      "poliPeriksa": "Poli Umum",
+      "id": "38b22955-5838-43f8-97c3-4264547efca0"
+    },
+    "kuesioner": {
+      "identitasId": "38b22955-5838-43f8-97c3-4264547efca0",
+      "kuesioner": {
+        "responses": {
+          "q1": 4,
+          "q2": 3,
+          "q3": 2,
+          "q4": 1,
+          "q5": 2,
+          "q6": 3,
+          "q7": 3,
+          "q8": 3,
+          "q9": 4,
+          "q10": 3,
+          "q11": 3,
+          "q12": 2,
+          "q13": 1
+        },
+        "score": 3.7583333333333333,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 3.5,
+            "NSF_ku": 3.5,
+            "N_total_ku": 3.5
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 4,
+            "NSF_ks": 3,
+            "N_total_ks": 3.6
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 4,
+            "NSF_rk": 4.333333333333333,
+            "N_total_rk": 4.133333333333333
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 5,
+            "N_total_pp": 5
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "10:00 - 10:30"
+    },
+    "konfirmasiJadwal": "Terkonfirmasi"
+  },
+  {
+    "identitas": {
+      "nama": "Justicio",
+      "tanggalPeriksa": "2025-01-13",
+      "waktuMulai": "12:46",
+      "waktuSelesai": "17:51",
+      "poliPeriksa": "Poli Umum",
+      "id": "cb8b5746-1854-4b14-93b5-258d83ec08c9"
+    },
+    "kuesioner": {
+      "identitasId": "cb8b5746-1854-4b14-93b5-258d83ec08c9",
+      "kuesioner": {
+        "responses": {
+          "q1": 4,
+          "q2": 3,
+          "q3": 3,
+          "q4": 3,
+          "q5": 4,
+          "q6": 3,
+          "q7": 3,
+          "q8": 3,
+          "q9": 3,
+          "q10": 4,
+          "q11": 2,
+          "q12": 2,
+          "q13": 2
+        },
+        "score": 4.330416666666666,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 4.5,
+            "NSF_ku": 4,
+            "N_total_ku": 4.325
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 4,
+            "NSF_ks": 5,
+            "N_total_ks": 4.4
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 4.5,
+            "NSF_rk": 3.6666666666666665,
+            "N_total_rk": 4.166666666666666
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 4.5,
+            "N_total_pp": 4.85
+          }
+        }
+      }
+    }
+  },
+  {
+    "identitas": {
+      "nama": "abc",
+      "tanggalPeriksa": "2025-01-15",
+      "waktuMulai": "13:51",
+      "waktuSelesai": "16:54",
+      "poliPeriksa": "Poli Umum",
+      "id": "9d9a31d6-c14c-4511-b6d5-2ee72e7115f4"
+    },
+    "kuesioner": {
+      "identitasId": "9d9a31d6-c14c-4511-b6d5-2ee72e7115f4",
+      "kuesioner": {
+        "responses": {
+          "q1": 4,
+          "q2": 4,
+          "q3": 3,
+          "q4": 4,
+          "q5": 3,
+          "q6": 3,
+          "q7": 3,
+          "q8": 4,
+          "q9": 3,
+          "q10": 3,
+          "q11": 3,
+          "q12": 2,
+          "q13": 1
+        },
+        "score": 4.49625,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 5,
+            "NSF_ku": 4.5,
+            "N_total_ku": 4.825
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 4,
+            "NSF_ks": 4,
+            "N_total_ks": 4
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 4.5,
+            "NSF_rk": 4,
+            "N_total_rk": 4.3
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 5,
+            "N_total_pp": 5
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "15:00 - 15:30"
+    }
+  },
+  {
+    "identitas": {
+      "nama": "abc",
+      "tanggalPeriksa": "2025-01-13",
+      "waktuMulai": "14:00",
+      "waktuSelesai": "18:03",
+      "poliPeriksa": "Poli Umum",
+      "id": "94f044d8-5efd-4c56-b9a2-41902a77eda8"
+    },
+    "kuesioner": null
+  },
+  {
+    "identitas": {
+      "nama": "abc",
+      "tanggalPeriksa": "2025-01-13",
+      "waktuMulai": "14:06",
+      "waktuSelesai": "17:09",
+      "poliPeriksa": "Poli Umum",
+      "id": "4d070977-074b-4067-906b-86b21c5c681b"
+    },
+    "kuesioner": null
+  },
+  {
+    "identitas": {
+      "nama": "Erina Teresa",
+      "tanggalPeriksa": "2025-01-14",
+      "waktuMulai": "15:13",
+      "waktuSelesai": "18:16",
+      "poliPeriksa": "Poli Umum",
+      "id": "88427e55-74ef-4129-8a6e-cfa85954c178"
+    },
+    "kuesioner": {
+      "identitasId": "88427e55-74ef-4129-8a6e-cfa85954c178",
+      "kuesioner": {
+        "responses": {
+          "q1": 3,
+          "q2": 4,
+          "q3": 4,
+          "q4": 4,
+          "q5": 4,
+          "q6": 4,
+          "q7": 4,
+          "q8": 4,
+          "q9": 4,
+          "q10": 4,
+          "q11": 4,
+          "q12": 2,
+          "q13": 2
+        },
+        "score": 4.8462499999999995,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 4.5,
+            "NSF_ku": 5,
+            "N_total_ku": 4.675000000000001
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 5,
+            "NSF_ks": 5,
+            "N_total_ks": 5
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 5,
+            "NSF_rk": 5,
+            "N_total_rk": 5
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 4.5,
+            "N_total_pp": 4.85
+          }
+        }
+      }
+    }
+  },
+  {
+    "identitas": {
+      "nama": "Edi Kuswadi",
+      "tanggalPeriksa": "2024-12-31",
+      "waktuMulai": "15:53",
+      "waktuSelesai": "18:56",
+      "poliPeriksa": "Poli Gigi",
+      "id": "be24733c-0ca5-438d-aafc-1b592f1781c1"
+    },
+    "kuesioner": {
+      "identitasId": "be24733c-0ca5-438d-aafc-1b592f1781c1",
+      "kuesioner": {
+        "responses": {
+          "q1": 4,
+          "q2": 4,
+          "q3": 4,
+          "q4": 3,
+          "q5": 4,
+          "q6": 3,
+          "q7": 3,
+          "q8": 4,
+          "q9": 4,
+          "q10": 4,
+          "q11": 4,
+          "q12": 2,
+          "q13": 2
+        },
+        "score": 4.662916666666667,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 4.5,
+            "NSF_ku": 5,
+            "N_total_ku": 4.675000000000001
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 4,
+            "NSF_ks": 5,
+            "N_total_ks": 4.4
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 5,
+            "NSF_rk": 4.666666666666667,
+            "N_total_rk": 4.866666666666667
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 4.5,
+            "N_total_pp": 4.85
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "16:30 - 17:00"
+    }
+  },
+  {
+    "identitas": {
+      "nama": "Asmadi Gunawan",
+      "tanggalPeriksa": "2024-12-31",
+      "waktuMulai": "16:12",
+      "waktuSelesai": "18:14",
+      "poliPeriksa": "Poli Umum",
+      "id": "08a09359-93e5-4398-a7ee-090d5d5170c1"
+    },
+    "kuesioner": {
+      "identitasId": "08a09359-93e5-4398-a7ee-090d5d5170c1",
+      "kuesioner": {
+        "responses": {
+          "q1": 4,
+          "q2": 4,
+          "q3": 4,
+          "q4": 4,
+          "q5": 4,
+          "q6": 4,
+          "q7": 4,
+          "q8": 4,
+          "q9": 4,
+          "q10": 4,
+          "q11": 4,
+          "q12": 2,
+          "q13": 2
+        },
+        "score": 4.9925,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 5,
+            "NSF_ku": 5,
+            "N_total_ku": 5
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 5,
+            "NSF_ks": 5,
+            "N_total_ks": 5
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 5,
+            "NSF_rk": 5,
+            "N_total_rk": 5
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 4.5,
+            "N_total_pp": 4.85
+          }
+        }
+      }
+    }
+  },
+  {
+    "identitas": {
+      "nama": "Erina Teresa",
+      "tanggalPeriksa": "2025-01-13",
+      "waktuMulai": "16:09",
+      "waktuSelesai": "18:11",
+      "poliPeriksa": "Poli Umum",
+      "id": "93f091ba-599e-4335-82e5-89ff48cd590b"
+    },
+    "kuesioner": {
+      "identitasId": "93f091ba-599e-4335-82e5-89ff48cd590b",
+      "kuesioner": {
+        "responses": {
+          "q1": 4,
+          "q2": 4,
+          "q3": 4,
+          "q4": 4,
+          "q5": 4,
+          "q6": 4,
+          "q7": 4,
+          "q8": 4,
+          "q9": 4,
+          "q10": 4,
+          "q11": 4,
+          "q12": 2,
+          "q13": 2
+        },
+        "score": 4.9925,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 5,
+            "NSF_ku": 5,
+            "N_total_ku": 5
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 5,
+            "NSF_ks": 5,
+            "N_total_ks": 5
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 5,
+            "NSF_rk": 5,
+            "N_total_rk": 5
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 4.5,
+            "N_total_pp": 4.85
+          }
+        }
+      }
+    }
+  },
+  {
+    "identitas": {
+      "nama": "",
+      "tanggalPeriksa": "",
+      "waktuMulai": "",
+      "waktuSelesai": "",
+      "poliPeriksa": "Poli Gigi",
+      "id": "e1eb6164-0b5c-42e3-9e13-20ff45cc736e"
+    },
+    "kuesioner": null
+  },
+  {
+    "identitas": {
+      "nama": "asd",
+      "tanggalPeriksa": "2025-03-18",
+      "waktuMulai": "14:44",
+      "waktuSelesai": "14:44",
+      "poliPeriksa": "Poli Umum",
+      "id": "1927b747-97da-4430-9d80-ec1cee50299e"
+    },
+    "kuesioner": null
+  },
+  {
+    "identitas": {
+      "nama": "",
+      "tanggalPeriksa": "",
+      "waktuMulai": "",
+      "waktuSelesai": "",
+      "poliPeriksa": "Poli Gigi",
+      "id": "dd808015-d22c-49b3-aead-f3935207921a"
+    },
+    "kuesioner": null
+  },
+  {
+    "identitas": {
+      "nama": "",
+      "tanggalPeriksa": "",
+      "waktuMulai": "",
+      "waktuSelesai": "",
+      "poliPeriksa": "Poli Gigi",
+      "id": "4038a62d-c0e5-47fc-b185-a4acc908693c"
+    },
+    "kuesioner": null
+  },
+  {
+    "identitas": {
+      "nama": "I",
+      "tanggalPeriksa": "",
+      "waktuMulai": "",
+      "waktuSelesai": "",
+      "poliPeriksa": "Poli Gigi",
+      "id": "8ea5a649-196d-43b2-be48-93040564cb83"
+    },
+    "kuesioner": null
+  },
+  {
+    "identitas": {
+      "nama": "qweqw",
+      "tanggalPeriksa": "2025-03-10",
+      "waktuMulai": "14:48",
+      "waktuSelesai": "16:10",
+      "poliPeriksa": "Poli Umum",
+      "id": "f66fe2c0-68a4-4759-92dc-96f319c067fd"
+    },
+    "kuesioner": null
+  },
+  {
+    "identitas": {
+      "nama": "Ali",
+      "tanggalPeriksa": "2025-03-19",
+      "waktuMulai": "12:00",
+      "waktuSelesai": "15:00",
+      "poliPeriksa": "Poli Umum",
+      "id": "dc6d333b-ffdd-4da7-ac82-b0f4ac2f7d4b"
+    },
+    "kuesioner": {
+      "identitasId": "dc6d333b-ffdd-4da7-ac82-b0f4ac2f7d4b",
+      "kuesioner": {
+        "responses": {
+          "q1": 3,
+          "q2": 3,
+          "q4": 3,
+          "q5": 4,
+          "q6": 3,
+          "q7": 3,
+          "q8": 4,
+          "q9": 3,
+          "q10": 3,
+          "q12": 2,
+          "q13": 2
+        },
+        "score": 3.8812500000000005,
+        "details": {
+          "KeluhanUtama": {
+            "NCF_ku": 4,
+            "NSF_ku": 2.5,
+            "N_total_ku": 3.475
+          },
+          "KeluhanSekunder": {
+            "NCF_ks": 4,
+            "NSF_ks": 5,
+            "N_total_ks": 4.4
+          },
+          "RiwayatKesehatan": {
+            "NCF_rk": 4.5,
+            "NSF_rk": 3,
+            "N_total_rk": 3.9
+          },
+          "PreferensiPasien": {
+            "NCF_pp": 5,
+            "NSF_pp": 4.5,
+            "N_total_pp": 4.85
+          }
+        }
+      }
+    },
+    "selectedSchedule": {
+      "tanggal": "13 Desember 2024",
+      "poliklinik": "Poli Umum",
+      "jam": "11:30 - 12:00"
+    }
+  },
+  {
+    "identitas": {
+      "nama": "",
+      "tanggalPeriksa": "",
+      "waktuMulai": "",
+      "waktuSelesai": "",
+      "poliPeriksa": "Poli Gigi",
+      "id": "d4bcafc9-3672-4986-9bdb-a25c94ace741"
+    },
+    "kuesioner": null
+  }
+]

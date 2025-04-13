@@ -1,0 +1,143 @@
+[
+    {
+        "bulan": "November 2023",
+        "penyakit": [
+            { "nama": "Flu", "jumlahKasus": 30 },
+            { "nama": "Migrain", "jumlahKasus": 15 },
+            { "nama": "Pilek", "jumlahKasus": 20 },
+            { "nama": "Demam", "jumlahKasus": 30 },
+            { "nama": "Sakit Kepala", "jumlahKasus": 10 }
+        ],
+        "kasusTerbanyak": "Demam"
+    },
+    {
+        "bulan": "Desember 2023",
+        "penyakit": [
+            { "nama": "Flu", "jumlahKasus": 30 },
+            { "nama": "Migrain", "jumlahKasus": 15 },
+            { "nama": "Sakit Kepala", "jumlahKasus": 10 }
+        ],
+        "kasusTerbanyak": "Flu"
+    },
+    {
+        "bulan": "Januari 2024",
+        "penyakit": [
+            { "nama": "Diare", "jumlahKasus": 30 },
+            { "nama": "Gastritis", "jumlahKasus": 15 },
+            { "nama": "Sakit Kepala", "jumlahKasus": 10 }
+        ],
+        "kasusTerbanyak": "Diare"
+    },
+    {
+        "bulan": "Februari 2024",
+        "penyakit": [
+            { "nama": "ISPA", "jumlahKasus": 30 },
+            { "nama": "Hipertensi", "jumlahKasus": 20 },
+            { "nama": "Infeksi Saluran Kemih", "jumlahKasus": 35 }
+        ],
+        "kasusTerbanyak": "Infeksi Saluran Kemih"
+    },
+    {
+        "bulan": "Maret 2024",
+        "penyakit": [
+            { "nama": "Flu", "jumlahKasus": 30 },
+            { "nama": "Migrain", "jumlahKasus": 15 },
+            { "nama": "Pilek", "jumlahKasus": 15 },
+            { "nama": "Demam", "jumlahKasus": 15 },
+            { "nama": "Gastritis", "jumlahKasus": 10 }
+        ],
+        "kasusTerbanyak": "Flu"
+    },
+    {
+        "bulan": "April 2024",
+        "penyakit": [
+            { "nama": "Diare", "jumlahKasus": 45 },
+            { "nama": "Gastritis", "jumlahKasus": 15 },
+            { "nama": "Sakit Kepala", "jumlahKasus": 20 }
+        ],
+        "kasusTerbanyak": "Diare"
+    },
+    {
+        "bulan": "Juli 2024",
+        "penyakit": [
+            { "nama": "Flu", "jumlahKasus": 30 },
+            { "nama": "Pilek", "jumlahKasus": 15 },
+            { "nama": "ISPA", "jumlahKasus": 40 }
+        ],
+        "kasusTerbanyak": "ISPA"
+    },
+    {
+        "bulan": "Mei 2024",
+        "penyakit": [
+            { "nama": "Sakit Kepala", "jumlahKasus": 40 },
+            { "nama": "Migrain", "jumlahKasus": 15 },
+            { "nama": "Diare", "jumlahKasus": 5 }
+        ],
+        "kasusTerbanyak": "Sakit Kepala"
+    },
+    {
+        "bulan": "Juni 2024",
+        "penyakit": [
+            { "nama": "Flu", "jumlahKasus": 40 },
+            { "nama": "Migrain", "jumlahKasus": 15 },
+            { "nama": "Diare", "jumlahKasus": 50 }
+        ],
+        "kasusTerbanyak": "Diare"
+    },
+    {
+        "bulan": "Juli 2024",
+        "penyakit": [
+            { "nama": "Flu", "jumlahKasus": 50 },
+            { "nama": "Migrain", "jumlahKasus": 15 },
+            { "nama": "Sakit Kepala", "jumlahKasus": 10 }
+        ],
+        "kasusTerbanyak": "Flu"
+    },
+    {
+        "bulan": "Agustus 2024",
+        "penyakit": [
+            { "nama": "Flu", "jumlahKasus": 30 },
+            { "nama": "Migrain", "jumlahKasus": 15 },
+            { "nama": "Gastritis", "jumlahKasus": 15 },
+            { "nama": "Demam", "jumlahKasus": 45 },
+            { "nama": "Sakit Kepala", "jumlahKasus": 10 }
+        ],
+        "kasusTerbanyak": "Demam"
+    },
+    {
+        "bulan": "September 2024",
+        "penyakit": [
+            { "nama": "Flu", "jumlahKasus": 30 },
+            { "nama": "Migrain", "jumlahKasus": 15 },
+            { "nama": "Sakit Kepala", "jumlahKasus": 10 }
+        ],
+        "kasusTerbanyak": "Flu"
+    },
+    {
+        "bulan": "Oktober 2024",
+        "penyakit": [
+            { "nama": "Demam", "jumlahKasus": 25 },
+            { "nama": "Pilek", "jumlahKasus": 20 },
+            { "nama": "Batuk", "jumlahKasus": 18 }
+        ],
+        "kasusTerbanyak": "Demam"
+    },
+    {
+        "bulan": "November 2024",
+        "penyakit": [
+            { "nama": "ISPA", "jumlahKasus": 35 },
+            { "nama": "Pilek", "jumlahKasus": 20 },
+            { "nama": "Sakit Kepala", "jumlahKasus": 48 }
+        ],
+        "kasusTerbanyak": "Sakit Kepala"
+    },
+    {
+        "bulan": "Desember 2024",
+        "penyakit": [
+            { "nama": "Demam", "jumlahKasus": 25 },
+            { "nama": "Pilek", "jumlahKasus": 20 },
+            { "nama": "Batuk", "jumlahKasus": 18 }
+        ],
+        "kasusTerbanyak": "Demam"
+    }
+]

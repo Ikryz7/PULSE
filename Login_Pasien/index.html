@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo_fix.png">
+    <title>Welcome | PULSE by Klinik XYZ</title>
+    <!-- Link to external CSS for styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+    <div class="wrapper">
+        <!-- Background animation spans -->
+        <span class="bg-animate"></span>
+        <span class="bg-animate2"></span>
+
+        <!-- Login form container -->
+<div class="form-box login">
+    <ul class="navigation animation" style="--data:0;">
+        <li class="nav-link"><a href="about.html">About</a></li>
+    </ul>
+    <h2 class="animation" style="--data:0;">Login</h2>
+    
+    <form action="#" id="login-form">
+        <!-- Username input -->
+        <div class="input-box animation" style="--data:1;">
+            <input type="text" id="login-username" placeholder=""> <!-- Added id here -->
+            <label>NIM/NIP</label>
+            <i class="fa-solid fa-address-card"></i> <!-- User icon -->
+        </div>
+
+        <!-- Password input -->
+        <div class="input-box animation" style="--data:3;">
+            <input type="password" id="login-password" placeholder=""> <!-- Added id here -->
+            <label>Password</label>
+            <i class="fa-solid fa-lock"></i> <!-- Lock icon -->
+        </div>
+
+        <!-- Login Button that redirects directly to root_folder_Dashboard_Pasien_index.html -->
+<a href="../Dashboard_Pasien/index.html">
+    <button type="button" class="btn animation" style="--data:4">Login</button>
+</a>
+
+
+        <!-- Link to sign-up form -->
+        <div class="reg-link animation" style="--data:4;">
+            <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+        </div>
+    </form>
+</div>
+
+<!-- Welcome back message and logos for login -->
+<div class="info-text login">
+    <h2 class="animation" style="--data:0;">Your Health</h2>
+    <p class="animation" style="--data:1">Just a Click Away.</p>
+  </div>
+        <!-- Sign-Up form container -->
+<div class="form-box signup">
+    <h2 class="animation">Sign Up</h2>
+    <form action="#" id="signup-form"> 
+        <!-- Username input -->
+        <div class="input-box animation" style="--data:17">
+            <input type="text" id="signup-username" placeholder=""> <!-- Added id here -->
+            <label>NIM/NIP</label>
+            <i class="fa-solid fa-address-card"></i> <!-- User icon -->
+        </div>
+
+        <!-- Password input -->
+        <div class="input-box animation" style="--data:19">
+            <input type="password" id="signup-password" placeholder=""> <!-- Added id here -->
+            <label>Password</label>
+            <i class="fa-solid fa-lock"></i> <!-- Lock icon -->
+        </div>
+        
+        <!-- File upload input -->
+        <div class="input-box animation" style="--data:19">
+            <label for="identity-upload" class="custom-label" id="file-label">Upload Bukti KTM/Kartu Identitas</label>
+            <input 
+                type="file" 
+                id="identity-upload" 
+                accept=".jpg, .jpeg, .png" 
+                class="custom-file-input">
+            <span class="file-name">No file chosen</span>
+        </div>
+        
+        <!-- Submit button -->
+        <button type="submit" class="btn animation" style="--data:20">Sign Up</button>
+
+        <!-- Link to login form -->
+        <div class="reg-link animation" style="--data:21">
+            <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+        </div>
+    </form>
+</div>
+
+       <!-- Welcome back message and logos for signup -->
+<div class="info-text signup">
+    <div class="logos-container signup-logos">
+        <img src="images/logo_fix.png" alt="Logo 1" class="logo">
+        <img src="images/logo.png" alt="Logo 2" class="logo">
+    </div>
+    <h2 class="animation" style="--data:22">Join</h2>
+    <p class="animation" style="--data:23">The PULSE of your health companion!</p>
+  </div>
+    <script src="./script.js"></script>
+    <script>
+        const fileInput = document.getElementById('identity-upload');
+        const customLabel = document.getElementById('file-label');
+        const fileNameSpan = document.querySelector('.file-name');
+
+        customLabel.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', function () {
+            if (fileInput.files.length > 0) {
+                const fileName = fileInput.files[0].name;
+                customLabel.textContent = fileName;
+                fileNameSpan.textContent = fileName;
+            } else {
+                customLabel.textContent = 'Upload Bukti KTM/Kartu Identitas';
+                fileNameSpan.textContent = 'No file chosen';
+            }
+        });
+
+        // Handle the form submission for signup
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById('signup-username').value;
+            const password = document.getElementById('signup-password').value;
+            const fileInput = document.getElementById('identity-upload');
+            const identityUpload = fileInput.files.length > 0 ? fileInput.files[0] : null;
+
+            // Prepare data to send to the server
+            const formData = new FormData();
+            formData.append('username', username);
+            formData.append('password', password);
+            if (identityUpload) formData.append('identityUpload', identityUpload);
+
+            // Send data to the server using fetch
+            fetch('http://localhost:3000/signup', {
+    method: 'POST',
+    body: formData
+})
+.then(response => response.json())  // Ensure the response is parsed as JSON
+.then(data => {
+    if (data.message) {
+        alert(data.message);  // If the response has a message, show it
+    }
+})
+.catch(error => {
+    console.error('Error:', error);
+    alert('An error occurred: ' + error.message);
+});
+// Selectors for forms, links, and logos
+const loginForm = document.querySelector('.form-box.login');
+const signupForm = document.querySelector('.form-box.signup');
+const loginLink = document.querySelector('.login-link');
+const signupLink = document.querySelector('.signup-link');
+
+// Event listener for switching to the sign-up form
+signupLink.addEventListener('click', () => {
+  loginForm.classList.remove('active'); // Remove active class from login
+  signupForm.classList.add('active');  // Add active class to signup
+});
+
+// Event listener for switching to the login form
+loginLink.addEventListener('click', () => {
+  signupForm.classList.remove('active'); // Remove active class from signup
+  loginForm.classList.add('active');    // Add active class to login
+});
+
+        });
+    </script>
+</body>
+</html>

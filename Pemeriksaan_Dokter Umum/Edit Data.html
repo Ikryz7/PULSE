@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo_fix.png">
+    <title>Input Data | PULSE by Klinik XYZ</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo_fix.png">
+                    <h2>
+                        <span class="danger">PULSE</span>
+                        <span class="by-telkomedika">by Klinik XYZ</span>
+                    </h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="../Dashboard_Dokter Umum/index.html">
+                    <span class="fas fa-home"></span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="../Jadwal_Dokter Umum/index.html">
+                    <span class="	fas fa-user-md"></span>
+                    <h3>Jadwal</h3>
+                </a>
+                <a href="../Rekam Medis_Dokter Umum/Rekam Medis.html">
+                    <span class="fas fa-file-medical-alt"></span>
+                    <h3>Rekam Medis</h3>
+                </a>
+
+                <a href="../Pemeriksaan_Dokter Umum/index.html">
+                    <span class="fa fa-stethoscope"></span>
+                    <h3>Pemeriksaan</h3>
+                </a>
+                <a href="../Presensi_Dokter Umum/index.html">
+                    <span class="	fas fa-id-card-alt"></span>
+                    <h3>Presensi</h3>
+                </a>
+                <a href="../Login_Dokter/index.html">
+                    <span class="fas fa-sign-out-alt"></span> <!-- Ikon Logout -->
+                    <h3>Keluar</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+<!-- Main Content -->
+<main>
+    <h1>Input Data</h1>
+    <!-- Kontainer untuk Dokter -->
+<div class="kontainer-data-vital">
+    <h2>Detail Penanganan</h2>
+
+    <div class="kontainer-dokter">
+        <label for="poli">Poliklinik</label>
+        <input type="text" id="poli" placeholder="Masukkan Poli">
+
+        <label for="nama-dokter">Dokter</label>
+        <input type="text" id="nama-dokter" placeholder="Masukkan Nama Dokter">
+
+        <label for="tanggal-penanganan">Tanggal Penanganan</label>
+        <input type="date" id="tanggal-penanganan">
+
+        <label for="waktu-penanganan">Waktu Penanganan</label>
+        <input type="time" id="waktu-penanganan">
+
+        <label for="bentuk-penanganan">Bentuk Penanganan</label>
+    <select id="bentuk-penanganan">
+        <option value="Registrasi">Registrasi</option>
+        <option value="Darurat">Darurat</option>
+    </select>
+    </div>
+    </div>
+<div class="kontainer-data-vital">
+    <h2>Data Administrasi</h2>
+
+    <label for="nama-pasien">Nama Pasien</label>
+    <input type="text" id="nama-pasien" placeholder="Masukkan Nama Pasien">
+
+    <label for="nim">NIM/NIP</label>
+    <input type="text" id="nim" placeholder="Masukkan NIM/NIP">
+
+    <label for="nomor-rekam-medis">Nomor Rekam Medis</label>
+    <input type="text" id="nomor-rekam-medis" placeholder="Masukkan Nomor Rekam Medis">
+
+    <label for="alamat-lengkap">Alamat Lengkap</label>
+    <input type="text" id="alamat-lengkap" placeholder="Masukkan Alamat Lengkap Pasien">
+
+    <label for="tempat-lahir">Tempat Lahir</label>
+<input type="text" id="tempat-lahir" placeholder="Masukkan Tempat Lahir">
+
+<label for="tanggal-lahir">Tanggal Lahir</label>
+<input type="date" id="tanggal-lahir">
+
+
+    <label for="jenis-kelamin">Jenis Kelamin</label>
+    <select id="jenis-kelamin">
+        <option value="laki-laki">Laki-Laki</option>
+        <option value="perempuan">Perempuan</option>
+    </select>
+</div>
+
+    
+    <!-- Kontainer untuk Data Klinis -->
+<div class="kontainer-data-vital">
+    <h2>Data Klinis</h2>
+
+    <label for="amnesis">Hasil Amnesis</label>
+    <input type="text" id="amnesis" placeholder="Masukkan Hasil Amnesis Pasien">
+
+    <label for="kondisi-vital">Hasil Pemeriksaan Fisik</label>
+
+    <div class="sub-kondisi-vital">
+        <label for="suhu-tubuh">Suhu Tubuh</label>
+        <input type="text" id="suhu-tubuh" placeholder="Masukkan Suhu Tubuh (°C)">
+        
+        <label for="denyut-nadi">Denyut Nadi</label>
+        <input type="text" id="denyut-nadi" placeholder="Masukkan Denyut Nadi (BPM)">
+        
+        <label for="tekanan-darah">Tekanan Darah</label>
+        <input type="text" id="tekanan-darah" placeholder="Masukkan Tekanan Darah (mmHg)">
+        
+        <label for="saturasi-oksigen">Saturasi Oksigen</label>
+        <input type="text" id="saturasi-oksigen" placeholder="Masukkan Saturasi Oksigen (%)">
+    </div>
+    </div>
+    <div class="kontainer-data-vital">
+        <h2>Hasil Pemeriksaan</h2>
+        <label for="diagnosis">Diagnosis</label>
+        <input type="text" id="diagnosis" placeholder="Masukkan Diagnosis Pasien">
+
+        <label for="bentuk-penanganan">Bentuk Penanganan</label>
+        <input type="text" id="bentuk-penanganan" placeholder="Masukkan Bentuk Penanganan Pasien">
+
+        <label for="resep-quantity">Resep</label>
+        <input type="number" id="resep-quantity" placeholder="Masukkan Quantity Resep" min="1">
+
+        <div id="resep-container"></div>
+
+        <label for="rujukan">Rujukan</label>
+        <select id="rujukan>
+            <option value="tidak">Tidak</option>
+            <option value="ya">Ya</option>
+        </select>
+
+        <div id="rujukan-container" style="display: none;">
+            <label for="tujuan-rujukan">Tujuan Rujukan</label>
+            <input type="text" id="tujuan-rujukan" placeholder="Masukkan Tujuan Rujukan Pasien">
+        </div>
+    </div>
+</main>
+<!-- End of Main Content -->
+
+
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p><b>Wilujeng Sumping!</b></p>
+                        <small class="text-muted">Masuk Sebagai Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2>Klinik XYZ</h2>
+                    <p>Universitas XYZ</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Pengingat</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                                    <small class="text_muted">
+                                Jumat, 31 Mei 2024
+                            </small>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Penyuluhan</h3>
+                            <small class="text_muted">
+                                Rabu, 22 Mei 2024
+                            </small>
+                        </div>
+
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Tambah Pengingat</h3>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        function generateRandomNumber() {
+  return Math.floor(Math.random() * 9000000000) + 1000000000;
+}
+function generateRandomRekamMedis() {
+  return 'RM' + Math.floor(Math.random() * 9000) + 1000;
+}
+function getDefaultAlamat() {
+  return 'Bandung';
+}
+function getRandomKota() {
+  const cities = ['Bandung', 'Jakarta', 'Surabaya', 'Medan', 'Yogyakarta', 'Bali', 'Makassar'];
+  return cities[Math.floor(Math.random() * cities.length)];
+}
+function getRandomDate() {
+  const start = new Date(1950, 0, 1);
+  const end = new Date(2000, 11, 31);
+  const randomDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+  
+  const dd = String(randomDate.getDate()).padStart(2, '0');
+  const mm = String(randomDate.getMonth() + 1).padStart(2, '0'); // Januari adalah bulan 0
+  const yyyy = randomDate.getFullYear();
+  
+  return yyyy + '-' + mm + '-' + dd;
+}
+function getRandomJenisKelamin() {
+  return Math.random() > 0.5 ? 'Laki-laki' : 'Perempuan';
+}
+// Daftar dokter berdasarkan poli
+const dokterList = {
+            'Poli Umum': ['dr. Surya Putra', 'dr. Hana Putri'],
+            'Poli Gigi': ['drg. Phonna Chlissma', 'drg. Ferdian Sugandi', 'drg. Rini Yulianti'],
+        };
+    
+        // Fungsi untuk memilih dokter secara acak
+        function getRandomDokter(poli) {
+            if (dokterList[poli]) {
+                const dokterArray = dokterList[poli];
+                return dokterArray[Math.floor(Math.random() * dokterArray.length)];
+            }
+            return '-'; // Jika poli tidak ditemukan
+        }
+        async function fetchData() {
+  try {
+    const response = await fetch('http://localhost:3010/data/kuesioner.json');
+    if (!response.ok) throw new Error('Failed to fetch data');
+    const data = await response.json();
+
+    console.log("Data fetched:", data);  // Log seluruh data untuk memeriksa formatnya
+
+    // Pastikan data valid dan objek 'identitas' ada
+    if (Array.isArray(data) && data.length > 0) {
+      const pasien = data[0];  // Ambil data pasien pertama
+      const identitas = pasien.identitas;
+      const penanganan = pasien.penanganan || {};  // Ambil data penanganan jika ada
+      console.log("Identitas pasien:", identitas);  // Log data identitas pasien
+
+      // Isi data identitas pasien ke dalam form
+      if (identitas) {
+        document.getElementById('nama-pasien').value = identitas.nama || '';
+        document.getElementById('nim').value = generateRandomNumber(); // Generate nim acak
+        document.getElementById('nomor-rekam-medis').value = generateRandomRekamMedis(); // Generate RM acak
+        document.getElementById('alamat-lengkap').value = getDefaultAlamat(); // Default Bandung
+        document.getElementById('tempat-lahir').value = getRandomKota(); // Kota acak
+        document.getElementById('tanggal-lahir').value = getRandomDate(); // Tanggal acak
+        document.getElementById('jenis-kelamin').value = getRandomJenisKelamin(); // Jenis kelamin acak
+      } else {
+        console.error("Identitas pasien tidak ditemukan atau format salah.");
+      }
+
+      // Isi data penanganan ke dalam form
+      if (penanganan) {
+        document.getElementById('poli').value = identitas.poliPeriksa || '';
+        document.getElementById('nama-dokter').value = getRandomDokter(identitas.poliPeriksa) || ''; // Dokter acak
+        document.getElementById('tanggal-penanganan').value = identitas.tanggalPeriksa || '';
+        document.getElementById('waktu-penanganan').value = identitas.waktuMulai || '';
+        document.getElementById('bentuk-penanganan').value = penanganan.bentuk || '';
+      }
+    } else {
+      console.error("Data tidak valid, pastikan data adalah array dengan setidaknya satu item.");
+    }
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+window.onload = fetchData;
+
+    </script>
+    
+      
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo_fix.png">
+    <title>Laporan | PULSE by Klinik XYZ</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo_fix.png">
+                    <h2>
+                        <span class="danger">PULSE</span>
+                        <span class="by-telkomedika">by Klinik XYZ</span>
+                    </h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="../Dashboard_Pengelola/index.html">
+                    <span class="fas fa-home"></span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="../Data Klinik_Pengelola/Laporan.html">
+                    <span class="fas fa-clinic-medical"></span>
+                    <h3>Data Klinik</h3>
+                </a>
+                <a href="../Data Personalia_Pengelola/Laporan.html">
+                    <span class="fas fa-head-side-mask"></span>
+                    <h3>Data Personalia</h3>
+                </a>
+                <a href="../Login_Pengelola/index.html"> <!-- Adjust this route for the logout logic -->
+                    <span class="fas fa-sign-out-alt"></span>
+                    <h3>Keluar</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+<main>
+    <h1>Jadwal Pasien</h1>
+<!-- Container untuk laporan harian -->
+<div class="schedule-container">
+    <div class="daily-report">
+        <!-- Ketersediaan Dokter -->
+        <div class="category">
+            <h3>Jadwal Pasien</h3>
+            <canvas id="patientScheduleChart" width="400" height="150"></canvas> <!-- Ganti id sesuai dengan skrip -->
+        </div>
+    </div>
+</div>
+<!-- Container untuk jadwal pasien -->
+<div class="schedule-container">
+    <h2>Data Jadwal Pasien</h2>
+<table class="patients-table">
+    <thead>
+        <tr>
+            <th>Nama Pasien</th>
+            <th>Jadwal Janji Temu</th>
+            <th>Kehadiran</th>
+        </tr>
+    </thead>
+    <tbody id="patient-schedule">
+        <!-- Data pasien akan dimuat secara dinamis di sini -->
+    </tbody>
+</table>
+
+<div class="pagination">
+</div>
+
+</main>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p><b>Wilujeng Sumping!</b></p>
+                        <small class="text-muted">Masuk Sebagai Pengelola</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2>Klinik XYZ</h2>
+                    <p>Universitas XYZ</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Pengingat</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                                    <small class="text_muted">
+                                Jumat, 31 Mei 2024
+                            </small>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Penyuluhan</h3>
+                            <small class="text_muted">
+                                Rabu, 22 Mei 2024
+                            </small>
+                        </div>
+
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Tambah Pengingat</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script src="index.js"></script>
+    
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const paginationContainer = document.querySelector('.pagination');
+    let schedule = []; // Mengubah dari const ke let untuk memungkinkan reassign
+
+    const rowsPerPage = 5;
+    let currentPage = 1;
+// Load data from schedule.json
+fetch('../data/schedule.json')
+    .then(response => response.json())
+    .then(data => {
+        schedule = data; // Assign data to let variable
+        renderTable(currentPage);
+        updateChart();
+        displayPagination(schedule); // Menambahkan fungsi pagination
+    })
+    .catch(error => console.error('Error loading schedule data:', error));
+    // Data untuk Jadwal Pasien (Bar Chart)
+const ctxPatientSchedule = document.getElementById('patientScheduleChart').getContext('2d');
+const patientScheduleChart = new Chart(ctxPatientSchedule, {
+    type: 'bar',
+    data: {
+        labels: ['Sesuai Jadwal', 'Terlambat', 'Tidak Hadir', 'Emergency'],
+        datasets: [{
+            label: 'Jumlah Pasien',
+            data: [0, 0, 0, 0], // Inisialisasi data dengan 0
+            backgroundColor: [
+                'rgba(75, 192, 192, 0.2)', // Sesuai Jadwal - Hijau
+                'rgba(255, 99, 132, 0.2)', // Tidak Sesuai Jadwal - Merah
+                'rgba(255, 205, 86, 0.2)', // Tidak Hadir - Kuning
+                'rgba(255, 159, 64, 0.2)' // Emergency - Oranye
+            ],
+            borderColor: [
+                'rgba(75, 192, 192, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 205, 86, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+// Load data from schedule.json
+fetch('../data/schedule.json')
+    .then(response => response.json())
+    .then(data => {
+        schedule = data; // Assign data to let variable
+        renderTable(currentPage);
+        displayPagination(schedule); // Menambahkan fungsi pagination
+    })
+    .catch(error => console.error('Error loading schedule data:', error));
+
+function updateChart() {
+    const statuses = ['Sesuai Jadwal', 'Terlambat', 'Tidak Hadir', 'Emergency'];
+    const counts = statuses.map(status => schedule.filter(patient => patient.kehadiran === status).length);
+
+    patientScheduleChart.data.datasets[0].data = counts;
+    patientScheduleChart.update();
+}
+
+function renderTable(page) {
+    const rowsPerPage = 5;
+    const startIndex = (page - 1) * rowsPerPage;
+    const endIndex = startIndex + rowsPerPage;
+    const paginatedData = schedule.slice(startIndex, endIndex);
+
+    const tableBody = document.getElementById('patient-schedule');
+    tableBody.innerHTML = '';
+
+    paginatedData.forEach(patient => {
+        const row = `
+            <tr>
+                <td>${patient.nama_pasien}</td>
+                <td>${patient.jadwal_janji}</td>
+                <td>${patient.kehadiran}</td>
+            </tr>
+        `;
+        tableBody.innerHTML += row;
+    });
+}
+
+document.getElementById('prev')?.addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        renderTable(currentPage);
+    }
+});
+
+document.getElementById('next')?.addEventListener('click', () => {
+    if ((currentPage * rowsPerPage) < schedule.length) {
+        currentPage++;
+        renderTable(currentPage);
+    }
+});
+
+function displayPagination(data) {
+    const rowsPerPage = 5;
+    const totalPages = Math.ceil(data.length / rowsPerPage);
+    paginationContainer.innerHTML = ''; // Bersihkan pagination
+
+    for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement('button');
+        button.textContent = i;
+        button.classList.add('pagination-btn');
+        if (i === currentPage) button.classList.add('active');
+
+        button.addEventListener('click', () => {
+            currentPage = i;
+            renderTable(currentPage);
+            displayPagination(data); // Menyegarkan pagination
+        });
+
+        paginationContainer.appendChild(button);
+    }
+}
+
+</script>
+
+
+
+</body>
+
+</html>

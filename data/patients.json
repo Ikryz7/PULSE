@@ -1,0 +1,73 @@
+[
+    {
+      "tanggal_daftar": "2024-12-01",
+      "waktu_daftar": "09:00 AM",
+      "tanggal_berobat": "2024-12-01",
+      "waktu_berobat": "10:00 AM",
+      "poli": "Poli Umum",
+      "dokter": "dr. Surya Putra",
+      "keluhan": "Demam tinggi dan batuk selama 3 hari",
+      "kondisi_vital": "Suhu tubuh: 39°C, Tekanan darah: 120/80 mmHg",
+      "diagnosis_akhir": "Infeksi Saluran Pernapasan Akut (ISPA)",
+      "resep_diberikan": "Paracetamol 500 mg, Amoxicillin 500 mg",
+      "proses": "Menunggu Obat",
+      "feedback": "Sudah Mengisi"
+    },
+    {
+      "tanggal_daftar": "2024-12-01",
+      "waktu_daftar": "09:30 AM",
+      "tanggal_berobat": "2024-12-01",
+      "waktu_berobat": "10:30 AM",
+      "poli": "Poli Gigi",
+      "dokter": "drg. Rini Yulianti",
+      "keluhan": "Nyeri gigi belakang kanan bawah",
+      "kondisi_vital": "Suhu tubuh: 36.8°C, Tekanan darah: 115/75 mmHg",
+      "diagnosis_akhir": "Gigi berlubang dengan infeksi ringan",
+      "resep_diberikan": "Ibuprofen 400 mg, Clindamycin 300 mg",
+      "proses": "Menunggu Obat",
+      "feedback": "Sudah Mengisi"
+    },
+    {
+      "tanggal_daftar": "2024-12-02",
+      "waktu_daftar": "10:30 AM",
+      "tanggal_berobat": "2024-12-02",
+      "waktu_berobat": "11:00 AM",
+      "poli": "Poli Umum",
+      "dokter": "dr. Hana Putri",
+      "keluhan": "Sakit kepala hebat dan mual",
+      "kondisi_vital": "Suhu tubuh: 37.2°C, Tekanan darah: 130/85 mmHg",
+      "diagnosis_akhir": "Migrain akut",
+      "resep_diberikan": "Sumatriptan 50 mg, Domperidone 10 mg",
+      "proses": "Menunggu Obat",
+      "feedback": "Belum Mengisi"
+    },
+    {
+      "tanggal_daftar": "2024-12-02",
+      "waktu_daftar": "10:45 AM",
+      "tanggal_berobat": "2024-12-02",
+      "waktu_berobat": "11:30 AM",
+      "poli": "Poli Gigi",
+      "dokter": "drg. Phonna Chlissma",
+      "keluhan": "Gusi bengkak di bagian atas kiri",
+      "kondisi_vital": "Suhu tubuh: 37.0°C, Tekanan darah: 120/80 mmHg",
+      "diagnosis_akhir": "Gingivitis akut",
+      "resep_diberikan": "Metronidazole 500 mg, Chlorhexidine mouthwash",
+      "proses": "Menunggu Obat",
+      "feedback": "Sudah Mengisi"
+    },
+    {
+      "tanggal_daftar": "2024-12-03",
+      "waktu_daftar": "11:30 AM",
+      "tanggal_berobat": "2024-12-03",
+      "waktu_berobat": "12:00 PM",
+      "poli": "Poli Umum",
+      "dokter": "dr. Surya Putra",
+      "keluhan": "Nyeri dada ringan saat bernapas",
+      "kondisi_vital": "Suhu tubuh: 36.5°C, Tekanan darah: 135/90 mmHg",
+      "diagnosis_akhir": "Bronkitis kronis",
+      "resep_diberikan": "Salbutamol inhaler, Bromhexine 8 mg",
+      "proses": "Menunggu Obat",
+      "feedback": "Belum Mengisi"
+    }
+]
+  

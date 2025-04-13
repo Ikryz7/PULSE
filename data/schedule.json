@@ -1,0 +1,127 @@
+[
+    {
+        "nama_pasien": "Andi Jatmiko",
+        "jadwal_janji": "2024-12-01 08:00",
+        "kehadiran": "Sesuai Jadwal"
+    },
+    {
+        "nama_pasien": "Siti Rahmawati",
+        "jadwal_janji": "2024-12-01 09:30",
+        "kehadiran": "Tepat Waktu"
+    },
+    {
+        "nama_pasien": "Budi Santoso",
+        "jadwal_janji": "2024-12-01 10:00",
+        "kehadiran": "Emergency"
+    },
+    {
+        "nama_pasien": "Rini Susanti",
+        "jadwal_janji": "2024-12-01 11:00",
+        "kehadiran": "Sesuai Jadwal"
+    },
+    {
+        "nama_pasien": "Faisal Akbar",
+        "jadwal_janji": "2024-12-01 12:00",
+        "kehadiran": "Tidak Hadir"
+    },
+    {
+        "nama_pasien": "Diah Puspita",
+        "jadwal_janji": "2024-12-01 13:00",
+        "kehadiran": "Sesuai Jadwal"
+    },
+    {
+        "nama_pasien": "Hendra Setiawan",
+        "jadwal_janji": "2024-12-01 14:00",
+        "kehadiran": "Sesuai Jadwal"
+    },
+    {
+        "nama_pasien": "Lia Amalia",
+        "jadwal_janji": "2024-12-01 15:00",
+        "kehadiran": "Emergency"
+    },
+    {
+        "nama_pasien": "Eka Susanti",
+        "jadwal_janji": "2024-12-01 16:00",
+        "kehadiran": "Sesuai Jadwal"
+    },
+    {
+        "nama_pasien": "Aryo Wibowo",
+        "jadwal_janji": "2024-12-01 17:00",
+        "kehadiran": "Tidak Hadir"
+    },
+    {
+        "nama_pasien": "Dina Anggraeni",
+        "jadwal_janji": "2024-12-02 08:00",
+        "kehadiran": "Emergency"
+    },
+    {
+        "nama_pasien": "Ilham Nurhadi",
+        "jadwal_janji": "2024-12-02 09:00",
+        "kehadiran": "Emergency"
+    },
+    {
+        "nama_pasien": "Ria Kurnia",
+        "jadwal_janji": "2024-12-02 10:00",
+        "kehadiran": "Sesuai Jadwal"
+    },
+    {
+        "nama_pasien": "Fery Aditia",
+        "jadwal_janji": "2024-12-02 11:00",
+        "kehadiran": "Terlambat"
+    },
+    {
+        "nama_pasien": "Arya Setyawan",
+        "jadwal_janji": "2024-12-02 12:00",
+        "kehadiran": "Sesuai Jadwal"
+    },
+    {
+        "nama_pasien": "Vina Anggraeni",
+        "jadwal_janji": "2024-12-02 13:00",
+        "kehadiran": "Tepat Waktu"
+    },
+    {
+        "nama_pasien": "Bimo Suryadi",
+        "jadwal_janji": "2024-12-02 14:00",
+        "kehadiran": "Tepat Waktu"
+    },
+    {
+        "nama_pasien": "Dani Alfianto",
+        "jadwal_janji": "2024-12-02 15:00",
+        "kehadiran": "Terlambat"
+    },
+    {
+        "nama_pasien": "Siti Maulani",
+        "jadwal_janji": "2024-12-02 16:00",
+        "kehadiran": "Sesuai Jadwal"
+    },
+    {
+        "nama_pasien": "Adi Prasetyo",
+        "jadwal_janji": "2024-12-02 17:00",
+        "kehadiran": "Tepat Waktu"
+    },
+    {
+        "nama_pasien": "Lia Afriana",
+        "jadwal_janji": "2024-12-03 08:00",
+        "kehadiran": "Sesuai Jadwal"
+    },
+    {
+        "nama_pasien": "Benny Santoso",
+        "jadwal_janji": "2024-12-03 09:00",
+        "kehadiran": "Terlambat"
+    },
+    {
+        "nama_pasien": "Fahmi Priyanto",
+        "jadwal_janji": "2024-12-03 10:00",
+        "kehadiran": "Tepat Waktu"
+    },
+    {
+        "nama_pasien": "Wati Permata",
+        "jadwal_janji": "2024-12-03 11:00",
+        "kehadiran": "Sesuai Jadwal"
+    },
+    {
+        "nama_pasien": "Dwi Yulianti",
+        "jadwal_janji": "2024-12-03 12:00",
+        "kehadiran": "Terlambat"
+    }
+]

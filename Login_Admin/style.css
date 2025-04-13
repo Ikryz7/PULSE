@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f4f4;
+}
+.wrapper{
+  position: relative;
+  width: 750px;
+  height: 450px;background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 25px;
+  overflow: hidden;
+}
+.wrapper .form-box{
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.wrapper .form-box.login{
+  left: 0;
+  padding: 0 60px 0 40px;
+}
+.wrapper .form-box.login .animation{
+  transform: translateX(0);
+  transition: .7s ease;
+  opacity: 1;
+  filter: blur(0);
+  
+}
+.wrapper.active .form-box.login .animation{
+  transform: translateX(-120%);
+  transition-delay: calc(.1s * var(--data));
+  opacity: 0;
+  filter: blur(10px);
+  
+}
+.wrapper .form-box.signup{
+  right: 0;
+  padding: 0 40px 0 60px;
+
+}
+.wrapper .form-box.signup .animation{
+  transform: translateX(120%);
+  transition: .7s;
+}
+.wrapper.active .form-box.signup .animation{
+  transform: translateX(0);
+  transition-delay: calc(.1s * var(--data));
+}
+.form-box h2{
+  font-size: 32px;
+  color: #384B70;
+  text-align: center;
+}
+.form-box .input-box{
+  position: relative;
+  width: 100%;
+  height: 45px;
+  margin: 25px 0;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #384B70;
+}
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #555;
+  pointer-events: none;
+  font-size: 16px;
+  transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:not(:placeholder-shown)~label {
+  top: -5px;
+  color: #000;
+}
+/* Awalnya sembunyikan semua logo */
+.logos-container {
+  display: none;
+}
+
+/* Tampilkan logo saat login form aktif */
+.form-box.login.active + .logos-container.login-logos {
+  display: flex; /* Tampilkan login logos */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Tampilkan logo saat signup form aktif */
+.form-box.signup.active + .logos-container.signup-logos {
+  display: flex; /* Tampilkan signup logos */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Navigasi */
+.navigation {
+    list-style: none; /* Hilangkan bullet points */
+    display: flex; /* Tampilkan elemen secara horizontal */
+    gap: 20px; /* Jarak antar item navigasi */
+    margin: 0; /* Hilangkan margin default */
+    padding: 0; /* Hilangkan padding default */
+    position: relative; /* Posisi relatif untuk penyesuaian */
+    top: -10px; /* Angkat elemen ke atas lebih dekat ke bagian atas kontainer */
+    opacity: 0; /* Mulai animasi dengan elemen tersembunyi */
+    transform: translateY(-20px); /* Geser elemen sedikit ke atas untuk animasi */
+    animation: slideIn 1s ease-in-out forwards; /* Terapkan animasi */
+    animation-delay: calc(var(--data) * 0.3s); /* Sinkronisasi dengan elemen lain */
+}
+
+/* Link Navigasi */
+.nav-link a {
+    color: rgba(0, 0, 0, 0.356); /* Warna teks */
+    text-decoration: none; /* Hilangkan garis bawah */
+    font-size: 14px; /* Ukuran font */  
+}
+
+.nav-link a:hover {
+    color: #f0f0f0; /* Ubah warna saat hover */
+}
+/* Input Box for Select Dropdown */
+.input-box {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+/* Label Style */
+.input-box label {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+/* Select Dropdown */
+.input-box select {
+  width: 85%;
+  padding: 12px 15px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  appearance: none; /* Removes default dropdown arrow */
+  outline: none;
+  cursor: pointer;
+}
+
+/* Icon inside the input box */
+.input-box i {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Label transformation when the dropdown is focused or has a value */
+.input-box select:focus + label,
+.input-box select:valid + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #3498db; /* Change color on focus */
+}
+
+/* Focus effect for select dropdown */
+.input-box select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Animasi */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.input-box i{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 18px;
+  transition: .5s;
+}
+.input-box input:focus~i,.input-box input:not(:placeholder-shown)~i
+{ 
+  top: -5px;
+  color: #000;
+}
+.btn{
+   position: relative;
+   width: 100%;
+   height: 45px;
+   background: #507687;
+   color: #fff;
+   border: none;
+   outline: none;
+   border-radius: 10px;
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: 600;
+}
+.form-box .reg-link{
+  font-size: 14.5px;
+  color: #555;
+  text-align: center;
+  margin: 20px 0 10px;
+}
+.reg-link p  a{
+  color: #B8001F;
+  text-decoration: none;
+  font-weight: 600;
+}
+.reg-link p a:hover{
+  text-decoration: underline;
+}
+.description-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.description-title {
+  color: #384B70; /* Warna untuk judul */
+}
+
+.description-text {
+  color: #384B70; /* Warna untuk teks */
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.wrapper .info-text{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapper .info-text.login{
+  right: 0;
+  text-align: right;
+  padding: 0 40px 60px 150px;
+}
+.wrapper .info-text.signup{
+  left: 0;
+  text-align: left;
+  padding: 0 150px 60px 40px;
+  pointer-events: none;
+}
+.wrapper .info-text.signup .animation{
+  transform: translateX(-120%);
+  transition: .7s ease;
+}
+.wrapper.active .info-text.signup .animation{
+  transform: translateX(0);
+  transition-delay: calc(.1s * var(--data));
+}
+/* Style the logos container */
+.logos-container {
+  text-align: center; /* Center the logos */
+  margin-bottom: 10px; /* Space between logos and the login message */
+}
+
+.logo {
+  width: 60px; /* Set a specific width for the logos */
+  height: auto;  /* Maintain the aspect ratio */
+  margin: 10px;  /* Space between logos */
+}
+
+.info-text h2{
+  font-size: 36px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #fff;
+}
+.info-text p{
+  font-size: 16px;
+  color: #fff;
+}
+.wrapper .info-text.login .animation{
+  transform: translateX(0);
+  transition: .7s ease;
+  opacity: 1;
+  filter: blur(0);
+  
+}
+.wrapper.active .info-text.login .animation{
+  transform: translateX(120%);
+  transition-delay: calc(.1s * var(--data));
+  opacity: 0;
+  filter: blur(10px);
+  
+}
+/* Input container */
+.input-box.animation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.custom-label {
+  padding: 10px;
+  border: 1px solid #f4f4f4;
+  border-radius: 4px;
+  background-color: #88C273;
+  color: #88C273;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+}
+
+.custom-file-input {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.file-name {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+
+.wrapper .bg-animate{
+  position: absolute;
+  top: -4px;
+  right: 0;
+  width: 850px;
+  height: 600px;
+  background: #384B70;
+  transform: rotate(10deg)skewY(40deg);
+  transform-origin: bottom right;
+  transition: 1.5s ease;
+}
+.wrapper.active .bg-animate{
+transform: rotate(0deg)skewY(0deg);
+transition-delay: .5s;
+}
+.wrapper .bg-animate2{
+  position: absolute;
+  top: 100%;
+  left: 250px;
+  width: 850px;
+  height: 700px;
+  background: #fff;
+  transform: rotate(0deg)skewY(0deg);
+  transform-origin: bottom left; 
+  transition: 1.5s ease;
+}
+
+.wrapper.active .bg-animate2{
+  transform: rotate(-11deg)skewY(-41deg);
+  transition-delay: 1.2s;
+}

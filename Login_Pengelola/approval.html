@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo_fix.png">
+    <title>Approval | PULSE by Klinik XYZ</title>
+    <!-- Link to external CSS for styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="wrapper" style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+        <!-- Gambar di sisi kiri -->
+        <div class="image-container" style="flex: 1; text-align: center;">
+            <img src="images/logo_fix.png" alt="Descriptive Image" style="max-width: 70%; height: auto; border-radius: 10px;">
+        </div>
+
+        <!-- Penjelasan di sisi kanan -->
+        <div class="description-container" style="flex: 1; padding: 20px;">
+            <div class="content">
+                <h2 style="text-align: center; margin-bottom: 20px;">Approval Requests</h2>
+                <div id="requests"></div>
+                <div id="celebration-image" style="display: none; text-align: center;">
+                    <img src="images/yay.png" alt="Celebration Image" style="max-width: 240px; height: auto;">
+                    <div id="notification" class="notification" style="font-size: 15px; color: #4CAF50;"></div>
+                </div>
+                <button class="back-button" onclick="window.location.href='index.html'" style="--data:4">Kembali</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function loadRequests() {
+    try {
+        const response = await fetch('http://localhost:3000/get-pending-requests');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const requests = await response.json();
+        console.log('Requests loaded:', requests); // Tambahkan log untuk memeriksa respons
+
+        const requestsDiv = document.getElementById('requests');
+        const notificationDiv = document.getElementById('notification');
+        const celebrationDiv = document.getElementById('celebration-image');
+
+        requestsDiv.innerHTML = '';
+        if (requests.length > 0) {
+            notificationDiv.innerHTML = 'Anda menerima request baru!';
+            celebrationDiv.style.display = 'none'; // Hide celebration image if there are requests
+            requests.forEach(request => {
+                const requestDiv = document.createElement('div');
+                requestDiv.style.marginBottom = '15px';
+                let statusText = '';
+
+                if (request.status === 'Accepted') {
+                    statusText = '<p>Status: <strong style="color: green;">Accepted</strong></p>';
+                } else if (request.status === 'Rejected') {
+                    statusText = '<p>Status: <strong style="color: red;">Rejected</strong></p>';
+                } else {
+                    statusText = `
+                        <button onclick="approveRequest('${request.username}')" style="background-color: #28a745; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer; margin-right: 5px;">Approve</button>
+                        <button onclick="rejectRequest('${request.username}')" style="background-color: #dc3545; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Reject</button>
+                    `;
+                }
+
+                requestDiv.innerHTML = `
+                    <p><strong>${request.posisi}</strong></p>
+                    <p>Username: ${request.username}</p>
+                    ${statusText}
+                `;
+                requestsDiv.appendChild(requestDiv);
+            });
+        } else {
+            notificationDiv.innerHTML = 'Tidak ada permintaan yang perlu disetujui.';
+            celebrationDiv.style.display = 'block'; // Show celebration image if no requests
+        }
+    } catch (error) {
+        console.error('Error loading requests:', error);
+    }
+}
+
+async function approveRequest(username) {
+    try {
+        const response = await fetch(`http://localhost:3000/approve-request/${username}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+        });
+
+        console.log('Response status for approveRequest:', response.status); // Add status log
+
+        if (!response.ok) {
+            throw new Error('Failed to approve request');
+        }
+
+        const result = await response.json();
+        console.log('Approve result:', result);
+
+        if (result.message === 'Request approved successfully!') {
+            console.log('Request approved successfully!');
+            loadRequests();  // Reload the requests to reflect the updated approval status
+        } else {
+            console.error('Approval failed:', result.message);
+        }
+    } catch (error) {
+        console.error('Error approving request:', error.message);
+    }
+}
+
+
+
+async function rejectRequest(username) {
+    try {
+        const response = await fetch(`http://localhost:3000/reject-request/${username}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+        });
+
+        console.log('Response status for rejectRequest:', response.status); // Tambahkan log status
+        const result = await response.json();
+        console.log('Reject result:', result); // Tambahkan log hasil response
+        
+        if (!response.ok) {
+            throw new Error('Failed to reject request');
+        }
+
+        loadRequests();
+    } catch (error) {
+        console.error('Error rejecting request:', error);
+    }
+}
+
+        function goBack() {
+            window.history.back();
+        }
+
+        // Initial load of pending requests
+        window.onload = loadRequests;
+    </script>
+</body>
+
+</html>

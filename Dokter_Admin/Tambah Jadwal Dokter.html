@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo_fix.png">
+    <title>Tambah Jadwal | PULSE by Klinik XYZ</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo_fix.png">
+                    <h2>
+                        <span class="danger">PULSE</span>
+                        <span class="by-telkomedika">by Klinik XYZ</span>
+                    </h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="../Dashboard_Admin/index.html">
+                    <span class="fas fa-home"></span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="../Dokter_Admin/index.html">
+                    <span class="fas fa-stethoscope"></span>
+                    <h3>Dokter</h3>
+                </a>
+                <a href="../Pasien_Admin/index.html">
+                    <span class="fas fa-user-injured"></span>
+                    <h3>Pasien</h3>
+                </a>
+                <a href="../Feedback_Admin/index.html">
+                    <span class="fa fa-paper-plane"></span>
+                    <h3>Feedback</h3>
+                </a>
+                <a href="../Presensi_Admin/index.html">
+                    <span class="fas fa-id-card-alt"></span>
+                    <h3>Presensi</h3>
+                </a>
+                <a href="../logout"> <!-- Adjust this route for the logout logic -->
+                    <span class="fas fa-sign-out-alt"></span>
+                    <h3>Keluar</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h1>Tambah Jadwal Dokter</h1>
+        <!-- Kontainer untuk Data Administrasi -->
+        <div class="kontainer-data-vital">
+            <p>Tambahkan identitas dokter yang akan ditambahkan.</p>
+            <!-- Nama Dokter -->
+            <label for="nama-dokter">Nama Dokter</label>
+            <select id="nama-dokter" onchange="toggleNamaDokterInput()">
+                <option value="">Pilih Nama Dokter</option>
+                <option value="drg. Rini Yulianti">drg. Rini Yulianti</option>
+                <option value="drg. Phonna Chlissma">drg. Phonna Chlissma</option>
+                <option value="drg. Ferdian Sugandi">drg. Ferdian Sugandi</option>
+                <option value="baru">Dokter Baru (Isi Nama Manual)</option> <!-- Opsi untuk dokter baru -->
+            </select>
+            <input type="text" id="manual-nama-dokter" placeholder="Masukkan Nama Dokter..." style="display: none;">
+            
+            <!-- Poliklinik -->
+            <label for="poliklinik">Poliklinik</label>
+            <select id="poliklinik">
+                <option value="Poli Umum">Poli Umum</option>
+                <option value="Poli Gigi">Poli Gigi</option>
+            </select>
+        
+            <!-- Jadwal -->
+            <label for="jadwal">Jadwal</label>
+            <div id="jadwal-container">
+                <div class="jadwal-entry">
+                    <select class="hari" name="hari[]">
+                        <option value="Senin">Senin</option>
+                        <option value="Selasa">Selasa</option>
+                        <option value="Rabu">Rabu</option>
+                        <option value="Kamis">Kamis</option>
+                        <option value="Jumat">Jumat</option>
+                        <option value="Sabtu">Sabtu</option>
+                        <option value="Minggu">Minggu</option>
+                    </select>
+                    <input type="text" class="waktu" name="waktu[]" placeholder="Masukkan Rentang Waktu (08:00 - 12:00)">
+                </div>
+            </div>
+            <button type="button" class="btn-tambah-jadwal" onclick="tambahJadwal()">Tambah Jadwal</button>
+        
+            <!-- Submit Button -->
+            <button class="btn-analyze">Submit</button>
+        </div>
+        </main>
+<!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p><b>Wilujeng Sumping!</b></p>
+                        <small class="text-muted">Masuk Sebagai Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2>Klinik XYZ</h2>
+                    <p>Universitas XYZ</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Pengingat</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                                    <small class="text_muted">
+                                Jumat, 31 Mei 2024
+                            </small>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Penyuluhan</h3>
+                            <small class="text_muted">
+                                Rabu, 22 Mei 2024
+                            </small>
+                        </div>
+
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Tambah Pengingat</h3>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        // Tambahkan event listener untuk tombol submit
+        document.querySelector('.btn-analyze').addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            // Ambil data dari form
+            const namaDokterSelect = document.getElementById('nama-dokter');
+            const namaDokter = namaDokterSelect.value === 'baru' 
+                ? document.getElementById('manual-nama-dokter').value.trim() 
+                : namaDokterSelect.value;
+    
+            if (!namaDokter) {
+                alert('Nama dokter harus diisi.');
+                return;
+            }
+    
+            const poliklinik = document.getElementById('poliklinik').value;
+            const jadwalElements = document.querySelectorAll('#jadwal-container .jadwal-entry');
+            const jadwal = Array.from(jadwalElements).map(entry => {
+                const hari = entry.querySelector('.hari').value;
+                const waktu = entry.querySelector('.waktu').value.trim();
+    
+                if (!hari || !waktu) {
+                    alert('Hari dan waktu pada setiap jadwal harus diisi.');
+                    throw new Error('Data jadwal tidak valid.');
+                }
+    
+                return { hari, waktu };
+            });
+    
+            // Kirim data ke backend
+            fetch('http://localhost:3006/add-dokter', { // Ubah port ke 3006
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ namaDokter, poliklinik, jadwal }),
+})
+
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                alert(data.message || 'Data berhasil dikirim');
+                location.reload();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Gagal mengirim data: ' + error.message);
+            });
+        });
+    
+        // Toggle antara dropdown dan manual input untuk Nama Dokter
+        function toggleNamaDokterInput() {
+            const namaDokterSelect = document.getElementById('nama-dokter');
+            const manualInput = document.getElementById('manual-nama-dokter');
+    
+            if (namaDokterSelect.value === 'baru') {
+                manualInput.style.display = 'block'; // Tampilkan input manual
+                manualInput.focus(); // Fokuskan ke input manual
+            } else {
+                manualInput.style.display = 'none'; // Sembunyikan input manual
+                manualInput.value = ''; // Reset nilai input manual
+            }
+        }
+    
+        // Tambahkan entri jadwal baru
+        function tambahJadwal() {
+            const jadwalContainer = document.getElementById('jadwal-container');
+            const newEntry = document.createElement('div');
+            newEntry.classList.add('jadwal-entry');
+            newEntry.innerHTML = `
+                <select class="hari" name="hari[]">
+                    <option value="Senin">Senin</option>
+                    <option value="Selasa">Selasa</option>
+                    <option value="Rabu">Rabu</option>
+                    <option value="Kamis">Kamis</option>
+                    <option value="Jumat">Jumat</option>
+                    <option value="Sabtu">Sabtu</option>
+                    <option value="Minggu">Minggu</option>
+                </select>
+                <input type="text" class="waktu" name="waktu[]" placeholder="Masukkan Rentang Waktu (08:00 - 12:00)">
+            `;
+            jadwalContainer.appendChild(newEntry);
+        }
+    </script>
+    
+</body>
+
+</html>

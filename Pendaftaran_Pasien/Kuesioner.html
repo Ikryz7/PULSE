@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">   
+    <link rel="icon" type="image/png" href="images/logo_fix.png">
+    <title>Kuesioner | PULSE by Klinik XYZ</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo_fix.png">
+                    <h2>
+                        <span class="danger">PULSE</span>
+                        <span class="by-telkomedika">by Klinik XYZ</span>
+                    </h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="../Dashboard_Pasien/index.html">
+                    <span class="fas fa-home"></span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="../Pendaftaran_Pasien/Tata Cara Pendaftaran.html">
+                    <span class="far fa-address-card"></span>
+                    <h3>Pendaftaran</h3>
+                </a>
+                <a href="../Rekam Medis_Pasien/Rekam Medis.html">
+                    <span class="fas fa-file-medical-alt"></span>
+                    <h3>Rekam Medis</h3>
+                </a>
+                <a href="../Login_Pasien/index.html">
+                    <span class="fas fa-sign-out-alt"></span> <!-- Ikon Logout -->
+                    <h3>Keluar</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <main>
+            <h1>Pendaftaran</h1>
+            <div class="instructions">
+                <h2>Tata Cara Pengisian Kuesioner</h2>
+                <p>
+                    Sebelum mengisi kuesioner di bawah ini, berikut merupakan tata cara yang perlu diperhatikan:
+                </p>
+                <ol>
+                    <li>Di dalam skala ini akan disajikan sejumlah pernyataan, bacalah setiap pernyataan dengan teliti. Tugas Anda adalah memilih salah satu pilihan jawaban yang paling sesuai dengan keadaan diri Anda. Jawaban diberikan dengan memilih salah satu lingkaran pada kolom yang telah disediakan di setiap pernyataan. Adapun pilihan jawaban yang tersedia adalah sebagai berikut:</li>
+                    <ul class="custom-list">
+                        <li><strong>4:</strong> Bila pernyataan tersebut <strong>SANGAT SESUAI</strong> dengan diri Anda saat ini.</li>
+        <li><strong>3:</strong> Bila pernyataan tersebut <strong>SESUAI</strong> dengan diri Anda saat ini.</li>
+        <li><strong>2:</strong> Bila pernyataan tersebut <strong>TIDAK SESUAI</strong> dengan diri Anda saat ini.</li>
+        <li><strong>1:</strong> Bila pernyataan tersebut <strong>SANGAT TIDAK SESUAI</strong> dengan diri Anda saat ini.</li>
+                    </ul>
+                    <li>Anda diharapkan menjawab semua pernyataan, jangan sampai ada yang terlewatkan.</li>
+                    <li>Kuesioner ini bukanlah suatu tes, jadi tidak ada jawaban yang salah. Semua jawaban adalah benar, asal benar-benar sesuai dengan kenyataan yang ada pada diri Anda.</li>
+                    <li>Kesungguhan dan jawaban yang sesuai keadaan yang sebenarnya dalam memilih tanggapan sangat menentukan kualitas pemilihan jadwal temu dokter Anda.</li>
+                </ol>
+            </div>
+
+            <h2>Kuesioner</h2>
+
+            
+<form class="registration-form" id="kuesionerForm" onsubmit="return false;">    
+    <div class="form-group">
+        <label for="q1">Tingkat keparahan gejala Anda saat ini?</label>
+        <div class="schedule-options">
+            <span class="scale-number">1</span>
+            <input type="radio" name="q1" value="1" id="q1-1">
+            <label for="q1-1" class="radio-circle" title="1) Tidak terasa apa-apa."> </label>
+            <input type="radio" name="q1" value="2" id="q1-2">
+            <label for="q1-2" class="radio-circle" title="2) Gejala ringan, tidak mengganggu aktivitas."> </label>
+            <input type="radio" name="q1" value="3" id="q1-3">
+            <label for="q1-3" class="radio-circle" title="3) Gejala sedang, mengganggu aktivitas."> </label>
+            <input type="radio" name="q1" value="4" id="q1-4">
+            <label for="q1-4" class="radio-circle" title="4) Gejala berat, sangat mengganggu aktivitas."> </label>
+            <span class="scale-number">4</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="q2">Apakah Anda mengalami nyeri fisik?</label>
+        <div class="schedule-options">
+            <span class="scale-number">1</span>
+            <input type="radio" name="q2" value="1" id="q2-1">
+            <label for="q2-1" class="radio-circle" title="1) Tidak ada nyeri."> </label>
+            <input type="radio" name="q2" value="2" id="q2-2">
+            <label for="q2-2" class="radio-circle" title="2) Nyeri ringan yang bisa ditahan."> </label>
+            <input type="radio" name="q2" value="3" id="q2-3">
+            <label for="q2-3" class="radio-circle" title="3) Nyeri sedang, memerlukan obat."> </label>
+            <input type="radio" name="q2" value="4" id="q2-4">
+            <label for="q2-4" class="radio-circle" title="4) Nyeri berat yang sulit ditahan."> </label>
+            <span class="scale-number">4</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="q3">Tingkat keparahan masalah kesehatan Anda saat ini?</label>
+        <div class="schedule-options">
+            <span class="scale-number">1</span>
+            <input type="radio" name="q3" value="1" id="q3-1">
+            <label for="q3-1" class="radio-circle" title="1) Tidak mendesak, dapat menunggu."> </label>
+            <input type="radio" name="q3" value="2" id="q3-2">
+            <label for="q3-2" class="radio-circle" title="2) Cukup mendesak, namun masih bisa ditunda."> </label>
+            <input type="radio" name="q3" value="3" id="q3-3">
+            <label for="q3-3" class="radio-circle" title="3) Mendesak, membutuhkan perhatian segera."> </label>
+            <input type="radio" name="q3" value="4" id="q3-4">
+            <label for="q3-4" class="radio-circle" title="4) Sangat mendesak, situasi darurat."> </label>
+            <span class="scale-number">4</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="q4">Apakah terdapat luka pada tubuh Anda?</label>
+        <div class="schedule-options">
+            <span class="scale-number">1</span>
+            <input type="radio" name="q4" value="1" id="q4-1">
+            <label for="q4-1" class="radio-circle" title="1) Tidak ada luka luar."> </label>
+            <input type="radio" name="q4" value="2" id="q4-2">
+            <label for="q4-2" class="radio-circle" title="2) Luka ringan (ruam, lecet, iritasi, gatal, sbg)."> </label>
+            <input type="radio" name="q4" value="3" id="q4-3">
+            <label for="q4-3" class="radio-circle" title="3) Luka sedang (luka terbuka ringan, masih dapat ditangani sendiri)."> </label>
+            <input type="radio" name="q4" value="4" id="q4-4">
+            <label for="q4-4" class="radio-circle" title="4) Luka berat (luka terbuka dalam, infeksi yang terlihat jelas, dsbg)."> </label>
+            <span class="scale-number">4</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="q5">Apakah Anda mengalami sesak napas?</label>
+        <div class="schedule-options">
+            <span class="scale-number">1</span>
+            <input type="radio" name="q5" value="1" id="q5-1">
+            <label for="q5-1" class="radio-circle" title="1) Tidak ada sesak."> </label>
+            <input type="radio" name="q5" value="2" id="q5-2">
+            <label for="q5-2" class="radio-circle" title="2) Sesak ringan."> </label>
+            <input type="radio" name="q5" value="3" id="q5-3">
+            <label for="q5-3" class="radio-circle" title="3) Sesak sedang."> </label>
+            <input type="radio" name="q5" value="4" id="q5-4">
+            <label for="q5-4" class="radio-circle" title="4) Sesak berat."> </label>
+            <span class="scale-number">4</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="q6">Apakah Anda mengalami demam atau menggigil?</label>
+        <div class="schedule-options">
+            <span class="scale-number">1</span>
+            <input type="radio" name="q6" value="1" id="q6-1">
+            <label for="q6-1" class="radio-circle" title="1) Tidak ada demam."> </label>
+            <input type="radio" name="q6" value="2" id="q6-2">
+            <label for="q6-2" class="radio-circle" title="2) Demam ringan (<38°C)."> </label>
+            <input type="radio" name="q6" value="3" id="q6-3">
+            <label for="q6-3" class="radio-circle" title="3) Demam sedang (38–39°C)."> </label>
+            <input type="radio" name="q6" value="4" id="q6-4">
+            <label for="q6-4" class="radio-circle" title="4) Demam berat (>39°C)."> </label>
+            <span class="scale-number">4</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="q7">Apakah Anda memiliki riwayat penyakit serius (misalnya diabetes, hipertensi, jantung)?</label>
+        <div class="schedule-options">
+            <span class="scale-number">1</span>
+            <input type="radio" name="q7" value="1" id="q7-1">
+            <label for="q7-1" class="radio-circle" title="1) Tidak ada riwayat penyakit."> </label>
+            <input type="radio" name="q7" value="2" id="q7-2">
+            <label for="q7-2" class="radio-circle" title="2) Riwayat penyakit ringan."> </label>
+            <input type="radio" name="q7" value="3" id="q7-3">
+            <label for="q7-3" class="radio-circle" title="3) Riwayat penyakit sedang."> </label>
+            <input type="radio" name="q7" value="4" id="q7-4">
+            <label for="q7-4" class="radio-circle" title="4) Riwayat penyakit berat dan masih dirawat."> </label>
+            <span class="scale-number">4</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="q8">Apakah kondisi Anda memburuk dalam 24 jam terakhir?</label>
+        <div class="schedule-options">
+            <span class="scale-number">1</span>
+            <input type="radio" name="q8" value="1" id="q8-1">
+            <label for="q8-1" class="radio-circle" title="1) Tidak ada perubahan atau membaik."> </label>
+            <input type="radio" name="q8" value="2" id="q8-2">
+            <label for="q8-2" class="radio-circle" title="2) Sedikit memburuk."> </label>
+            <input type="radio" name="q8" value="3" id="q8-3">
+            <label for="q8-3" class="radio-circle" title="3) Memburuk secara signifikan."> </label>
+            <input type="radio" name="q8" value="4" id="q8-4">
+            <label for="q8-4" class="radio-circle" title="4) Memburuk dengan sangat cepat dan drastis."> </label>
+            <span class="scale-number">4</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="q9">Sudah berapa hari Anda mengalami gejala sakit?</label>
+        <div class="schedule-options">
+            <span class="scale-number">1</span>
+            <input type="radio" name="q9" value="1" id="q9-1">
+            <label for="q9-1" class="radio-circle" title="1) 1 Hari."> </label>
+            <input type="radio" name="q9" value="2" id="q9-2">
+            <label for="q9-2" class="radio-circle" title="2) 2-3 Hari."> </label>
+            <input type="radio" name="q9" value="3" id="q9-3">
+            <label for="q9-3" class="radio-circle" title="3) 4-7 Hari."> </label>
+            <input type="radio" name="q9" value="4" id="q9-4">
+            <label for="q9-4" class="radio-circle" title="4) > 5 Hari."> </label>
+            <span class="scale-number">4</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="q10">Apakah Anda saat ini mengonsumsi obat tertentu?</label>
+        <div class="schedule-options">
+            <span class="scale-number">1</span>
+            <input type="radio" name="q10" value="1" id="q10-1">
+            <label for="q10-1" class="radio-circle" title="1) Tidak ada obat."> </label>
+            <input type="radio" name="q10" value="2" id="q10-2">
+            <label for="q10-2" class="radio-circle" title="2) Obat ringan (misalnya suplemen)."> </label>
+            <input type="radio" name="q10" value="3" id="q10-3">
+            <label for="q10-3" class="radio-circle" title="3) Obat harian untuk penyakit kronis."> </label>
+            <input type="radio" name="q10" value="4" id="q10-4">
+            <label for="q10-4" class="radio-circle" title="4) Obat berat/antibiotik."> </label>
+            <span class="scale-number">4</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="q11">Apakah Anda memiliki alergi?</label>
+        <div class="schedule-options">
+            <span class="scale-number">1</span>
+            <input type="radio" name="q11" value="1" id="q11-1">
+            <label for="q11-1" class="radio-circle" title="1) Tidak ada alergi."> </label>
+            <input type="radio" name="q11" value="2" id="q11-2">
+            <label for="q11-2" class="radio-circle" title="2) Alergi ringan."> </label>
+            <input type="radio" name="q11" value="3" id="q11-3">
+            <label for="q11-3" class="radio-circle" title="3) Alergi yang memerlukan perhatian."> </label>
+            <input type="radio" name="q11" value="4" id="q11-4">
+            <label for="q11-4" class="radio-circle" title="4) Alergi yang memerlukan tindakan segera."> </label>
+            <span class="scale-number">4</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="q12">Apakah Anda membutuhkan dokter spesialis?</label>
+        <div class="schedule-options">
+            <span class="scale-number">1</span>
+            <input type="radio" name="q12" value="1" id="q12-1">
+            <label for="q12-1" class="radio-circle" title="1) Dokter umum."> </label>
+            <input type="radio" name="q12" value="2" id="q12-2">
+            <label for="q12-2" class="radio-circle" title="2) Spesialis Gigi."> </label>
+            <span class="scale-number">2</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="q13">Apakah Anda ingin menghindari waktu kuliah?</label>
+        <div class="schedule-options">
+            <span class="scale-number">1</span>
+            <input type="radio" name="q13" value="1" id="q13-1">
+            <label for="q13-1" class="radio-circle" title="1) Hindari waktu kuliah, jadwalkan saya secepatnya."> </label>
+            <input type="radio" name="q13" value="2" id="q13-2">
+            <label for="q13-2" class="radio-circle" title="2) Tidak keberatan jika bertabrakan."> </label>
+            <span class="scale-number">2</span>
+        </div>
+    </div>
+
+                <button type="button" onclick="kirimKuesioner()">Kirim Kuesioner</button>
+
+            </form>
+        </main>
+        
+    <!-- End of Main Content -->
+    
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p><b>Wilujeng Sumping!</b></p>
+                        <small class="text-muted">Masuk Sebagai Pasien</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2>Klinik XYZ</h2>
+                    <p>Universitas XYZ</p>
+                </div>
+            </div>
+        
+            <div class="reminders">
+                <div class="header">
+                    <h2>Pengingat</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+        
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                                    <small class="text_muted">
+                                Jumat, 31 Mei 2024
+                            </small>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+        
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Penyuluhan</h3>
+                            <small class="text_muted">
+                                Rabu, 22 Mei 2024
+                            </small>
+                        </div>
+        
+                        </span>
+                    </div>
+                </div>
+        
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Tambah Pengingat</h3>
+                        </span>
+                    </div>
+                </div>
+        
+            </div>
+        
+        </div>
+        
+        
+        </div>
+            
+    <script src="index.js"></script>
+    
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('http://localhost:3003/data/kuesioner.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Gagal memuat data kuesioner');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Data Kuesioner:", data);
+        })
+        .catch(error => {
+            console.error('Terjadi kesalahan dalam mengambil data kuesioner:', error);
+        });
+});
+
+function kirimKuesioner() {
+    const formData = new FormData(document.getElementById('kuesionerForm'));
+
+    if ([...formData.entries()].length === 0) {
+        alert("Form belum diisi!");
+        return;
+    }
+
+    const responses = {};
+    formData.forEach((value, key) => {
+        const numericValue = parseInt(value, 10);
+        if (isNaN(numericValue)) {
+            alert(`Nilai ${key} tidak valid`);
+            return;
+        }
+        responses[key] = numericValue;
+    });
+
+    const identitasId = localStorage.getItem('identitasId');
+    if (!identitasId) {
+        alert('ID identitas tidak ditemukan. Harap isi Data Diri terlebih dahulu.');
+        window.location.href = 'Data Diri.html';
+        return;
+    }
+
+    const nilaiTarget = {
+        q1: 4, q2: 4, q3: 4, q4: 4,
+        q5: 4, q6: 4, q7: 4, q8: 4,
+        q9: 4, q10: 4, q11: 4, q12: 2, q13: 1
+    };
+
+    // Hitung nilai gap untuk setiap respons
+const gaps = {};
+for (let key in responses) {
+    gaps[key] = responses[key] - nilaiTarget[key]; // Tidak menggunakan Math.abs
+}
+
+
+    // Calculate CF_SF values using gap
+    const cf_sf_values = calculateCF_SF(gaps);
+
+    // Calculate total score from the different categories using gap
+    const N_total_ku = 0.65 * ((pemetaanGap(gaps.q1) + pemetaanGap(gaps.q4)) / 2) + 0.35 * ((pemetaanGap(gaps.q2) + pemetaanGap(gaps.q3)) / 2);
+    const N_total_ks = 0.60 * pemetaanGap(gaps.q6) + 0.40 * pemetaanGap(gaps.q5);
+    const N_total_rk = 0.60 * ((pemetaanGap(gaps.q8) + pemetaanGap(gaps.q10)) / 2) + 0.40 * ((pemetaanGap(gaps.q7) + pemetaanGap(gaps.q9) + pemetaanGap(gaps.q11)) / 3);
+    const N_total_pp = 0.70 * pemetaanGap(gaps.q12) + 0.30 * pemetaanGap(gaps.q13);
+
+    // Total score
+    const totalScore = N_total_ku * 0.45 + N_total_ks * 0.25 + N_total_rk * 0.25 + N_total_pp * 0.05;
+
+    const result = {
+        identitasId: identitasId,
+        kuesioner: {
+            responses: responses,
+            score: totalScore, // Use totalScore calculated from gaps
+            details: cf_sf_values
+        }
+    };
+
+    fetch('http://localhost:3003/submit-kuesioner', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(result)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Gagal menyimpan kuesioner');
+            }
+            return response.json();
+        })
+        .then(data => {
+            alert(data.message || 'Hasil Kuesioner telah disimpan');
+            window.location.href = 'Jadwal Tersedia.html';
+        })
+        .catch(error => {
+            console.error('Terjadi kesalahan saat mengirim data:', error);
+            alert('Gagal mengirim data ke server.');
+        });
+}
+
+function pemetaanGap(gap) {
+    if (gap === 0) return 5;
+    if (gap === 1) return 4.5;
+    if (gap === -1) return 4;
+    if (gap === 2) return 3.5;
+    if (gap === -2) return 3;
+    if (gap === 3) return 2.5;
+    if (gap === -3) return 2;
+    if (gap === 4) return 1.5;
+    if (gap === -4) return 1;
+    return 1;
+}
+
+function calculateCF_SF(gaps) {
+    const q1 = pemetaanGap(gaps.q1), q2 = pemetaanGap(gaps.q2), q3 = pemetaanGap(gaps.q3);
+    const q4 = pemetaanGap(gaps.q4), q5 = pemetaanGap(gaps.q5), q6 = pemetaanGap(gaps.q6);
+    const q7 = pemetaanGap(gaps.q7), q8 = pemetaanGap(gaps.q8), q9 = pemetaanGap(gaps.q9);
+    const q10 = pemetaanGap(gaps.q10), q11 = pemetaanGap(gaps.q11);
+    const q12 = pemetaanGap(gaps.q12), q13 = pemetaanGap(gaps.q13);
+
+    const NCF_ku = (q1 + q4) / 2;
+    const NSF_ku = (q2 + q3) / 2;
+    const N_total_ku = 0.65 * NCF_ku + 0.35 * NSF_ku;
+
+    const NCF_ks = q6;
+    const NSF_ks = q5;
+    const N_total_ks = 0.60 * NCF_ks + 0.40 * NSF_ks;
+
+    const NCF_rk = (q8 + q10) / 2;
+    const NSF_rk = (q7 + q9 + q11) / 3;
+    const N_total_rk = 0.60 * NCF_rk + 0.40 * NSF_rk;
+
+    const NCF_pp = q12;
+    const NSF_pp = q13;
+    const N_total_pp = 0.70 * NCF_pp + 0.30 * NSF_pp;
+
+    return {
+        KeluhanUtama: { NCF_ku, NSF_ku, N_total_ku },
+        KeluhanSekunder: { NCF_ks, NSF_ks, N_total_ks },
+        RiwayatKesehatan: { NCF_rk, NSF_rk, N_total_rk },
+        PreferensiPasien: { NCF_pp, NSF_pp, N_total_pp }
+    };
+}
+</script>
+</body>
+</html>

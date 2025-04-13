@@ -1,0 +1,172 @@
+[
+  {
+    "namaDokter": "dr. Rini Yulianti",
+    "poliklinik": "Poli Gigi",
+    "jadwal": [
+      {
+        "hari": "Senin",
+        "waktu": "08:00 - 11:00"
+      },
+      {
+        "hari": "Senin",
+        "waktu": "13:00 - 16:00"
+      },
+      {
+        "hari": "Selasa",
+        "waktu": "08:00 - 11:00"
+      },
+      {
+        "hari": "Selasa",
+        "waktu": "13:00 - 16:00"
+      },
+      {
+        "hari": "Sabtu",
+        "waktu": "08:00 - 11:00"
+      }
+    ]
+  },
+  {
+    "namaDokter": "dr. Phonna Chlissma",
+    "poliklinik": "Poli Gigi",
+    "jadwal": [
+      {
+        "hari": "Rabu",
+        "waktu": "08:00 - 11:00"
+      }
+    ]
+  },
+  {
+    "namaDokter": "dr. Ferdian Sugandi",
+    "poliklinik": "Poli Gigi",
+    "jadwal": [
+      {
+        "hari": "Rabu",
+        "waktu": "13:00 - 16:00"
+      },
+      {
+        "hari": "Kamis",
+        "waktu": "08:00 - 11:00"
+      },
+      {
+        "hari": "Kamis",
+        "waktu": "13:00 - 16:00"
+      },
+      {
+        "hari": "Jumat",
+        "waktu": "08:00 - 11:00"
+      },
+      {
+        "hari": "Jumat",
+        "waktu": "13:00 - 16:00"
+      }
+    ]
+  },
+  {
+    "namaDokter": "dr. Surya Putra",
+    "poliklinik": "Poli Umum",
+    "jadwal": [
+      {
+        "hari": "Senin",
+        "waktu": "07:00 - 19:00"
+      },
+      {
+        "hari": "Selasa",
+        "waktu": "07:00 - 19:00"
+      },
+      {
+        "hari": "Rabu",
+        "waktu": "07:00 - 19:00"
+      }
+    ]
+  },
+  {
+    "namaDokter": "dr. Hana Putri",
+    "poliklinik": "Poli Umum",
+    "jadwal": [
+      {
+        "hari": "Kamis",
+        "waktu": "07:00 - 19:00"
+      },
+      {
+        "hari": "Jumat",
+        "waktu": "07:00 - 19:00"
+      },
+      {
+        "hari": "Sabtu",
+        "waktu": "08:00 - 14:00"
+      }
+    ]
+  },
+  {
+    "namaDokter": "dr. Teresa",
+    "poliklinik": "Poli Umum",
+    "jadwal": [
+      {
+        "hari": "Senin",
+        "waktu": "08.00 - 10.30"
+      }
+    ]
+  },
+  {
+    "namaDokter": "dr. A",
+    "poliklinik": "Poli Umum",
+    "jadwal": [
+      {
+        "hari": "Selasa",
+        "waktu": "08.00 - 10.30"
+      },
+      {
+        "hari": "Sabtu",
+        "waktu": "08.00 - 09.00"
+      }
+    ]
+  },
+  {
+    "namaDokter": "drg. Phonna Chlissma",
+    "poliklinik": "Poli Gigi",
+    "jadwal": [
+      {
+        "hari": "Jumat",
+        "waktu": "08.00 - 12.00"
+      },
+      {
+        "hari": "Sabtu",
+        "waktu": "09.00 - 11.00"
+      }
+    ]
+  },
+  {
+    "namaDokter": "dr. B",
+    "poliklinik": "Poli Umum",
+    "jadwal": [
+      {
+        "hari": "Minggu",
+        "waktu": "08:00 - 12:00"
+      }
+    ]
+  },
+  {
+    "namaDokter": "drg. Rini Yulianti",
+    "poliklinik": "Poli Gigi",
+    "jadwal": [
+      {
+        "hari": "Selasa",
+        "waktu": "12.00"
+      }
+    ]
+  },
+  {
+    "namaDokter": "asdasd",
+    "poliklinik": "Poli Gigi",
+    "jadwal": [
+      {
+        "hari": "Selasa",
+        "waktu": "12.00"
+      },
+      {
+        "hari": "Senin",
+        "waktu": "12.00"
+      }
+    ]
+  }
+]

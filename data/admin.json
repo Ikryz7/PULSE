@@ -1,0 +1,122 @@
+[
+    {
+        "bulan": "Januari 2024",
+        "admin": [
+            { "nama": "Andi Nurhadi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "Siti Rahma", "hari_kerja": 20, "hari_hadir": 17, "persentase_kehadiran": "85%" },
+            { "nama": "Dedi Rian", "hari_kerja": 20, "hari_hadir": 19, "persentase_kehadiran": "95%" },
+            { "nama": "Wati Permata", "hari_kerja": 20, "hari_hadir": 16, "persentase_kehadiran": "80%" },
+            { "nama": "Hana Fitriani", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" }
+        ]
+    },
+    {
+        "bulan": "Februari 2024",
+        "admin": [
+            { "nama": "Andi Nurhadi", "hari_kerja": 22, "hari_hadir": 21, "persentase_kehadiran": "95%" },
+            { "nama": "Siti Rahma", "hari_kerja": 22, "hari_hadir": 19, "persentase_kehadiran": "86%" },
+            { "nama": "Dedi Rian", "hari_kerja": 22, "hari_hadir": 20, "persentase_kehadiran": "90%" },
+            { "nama": "Wati Permata", "hari_kerja": 22, "hari_hadir": 18, "persentase_kehadiran": "82%" },
+            { "nama": "Hana Fitriani", "hari_kerja": 22, "hari_hadir": 20, "persentase_kehadiran": "91%" }
+        ]
+    },
+    {
+        "bulan": "Maret 2024",
+        "admin": [
+            { "nama": "Andi Nurhadi", "hari_kerja": 21, "hari_hadir": 19, "persentase_kehadiran": "90%" },
+            { "nama": "Siti Rahma", "hari_kerja": 21, "hari_hadir": 18, "persentase_kehadiran": "85%" },
+            { "nama": "Dedi Rian", "hari_kerja": 21, "hari_hadir": 20, "persentase_kehadiran": "95%" },
+            { "nama": "Wati Permata", "hari_kerja": 21, "hari_hadir": 17, "persentase_kehadiran": "81%" },
+            { "nama": "Hana Fitriani", "hari_kerja": 21, "hari_hadir": 19, "persentase_kehadiran": "90%" }
+        ]
+    },
+    {
+        "bulan": "April 2024",
+        "admin": [
+            { "nama": "Andi Nurhadi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "Siti Rahma", "hari_kerja": 20, "hari_hadir": 17, "persentase_kehadiran": "85%" },
+            { "nama": "Dedi Rian", "hari_kerja": 20, "hari_hadir": 19, "persentase_kehadiran": "95%" },
+            { "nama": "Wati Permata", "hari_kerja": 20, "hari_hadir": 16, "persentase_kehadiran": "80%" },
+            { "nama": "Hana Fitriani", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" }
+        ]
+    },
+    {
+        "bulan": "Mei 2024",
+        "admin": [
+            { "nama": "Andi Nurhadi", "hari_kerja": 22, "hari_hadir": 21, "persentase_kehadiran": "95%" },
+            { "nama": "Siti Rahma", "hari_kerja": 22, "hari_hadir": 19, "persentase_kehadiran": "86%" },
+            { "nama": "Dedi Rian", "hari_kerja": 22, "hari_hadir": 20, "persentase_kehadiran": "90%" },
+            { "nama": "Wati Permata", "hari_kerja": 22, "hari_hadir": 18, "persentase_kehadiran": "82%" },
+            { "nama": "Hana Fitriani", "hari_kerja": 22, "hari_hadir": 20, "persentase_kehadiran": "91%" }
+        ]
+    },
+    {
+        "bulan": "Juni 2024",
+        "admin": [
+            { "nama": "Andi Nurhadi", "hari_kerja": 21, "hari_hadir": 19, "persentase_kehadiran": "90%" },
+            { "nama": "Siti Rahma", "hari_kerja": 21, "hari_hadir": 18, "persentase_kehadiran": "85%" },
+            { "nama": "Dedi Rian", "hari_kerja": 21, "hari_hadir": 20, "persentase_kehadiran": "95%" },
+            { "nama": "Wati Permata", "hari_kerja": 21, "hari_hadir": 17, "persentase_kehadiran": "81%" },
+            { "nama": "Hana Fitriani", "hari_kerja": 21, "hari_hadir": 19, "persentase_kehadiran": "90%" }
+        ]
+    },
+    {
+        "bulan": "Juli 2024",
+        "admin": [
+            { "nama": "Andi Nurhadi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "Siti Rahma", "hari_kerja": 20, "hari_hadir": 17, "persentase_kehadiran": "85%" },
+            { "nama": "Dedi Rian", "hari_kerja": 20, "hari_hadir": 19, "persentase_kehadiran": "95%" },
+            { "nama": "Wati Permata", "hari_kerja": 20, "hari_hadir": 16, "persentase_kehadiran": "80%" },
+            { "nama": "Hana Fitriani", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" }
+        ]
+    },
+    {
+        "bulan": "Agustus 2024",
+        "admin": [
+            { "nama": "Andi Nurhadi", "hari_kerja": 22, "hari_hadir": 21, "persentase_kehadiran": "95%" },
+            { "nama": "Siti Rahma", "hari_kerja": 22, "hari_hadir": 19, "persentase_kehadiran": "86%" },
+            { "nama": "Dedi Rian", "hari_kerja": 22, "hari_hadir": 20, "persentase_kehadiran": "90%" },
+            { "nama": "Wati Permata", "hari_kerja": 22, "hari_hadir": 18, "persentase_kehadiran": "82%" },
+            { "nama": "Hana Fitriani", "hari_kerja": 22, "hari_hadir": 20, "persentase_kehadiran": "91%" }
+        ]
+    },
+    {
+        "bulan": "September 2024",
+        "admin": [
+            { "nama": "Andi Nurhadi", "hari_kerja": 21, "hari_hadir": 19, "persentase_kehadiran": "90%" },
+            { "nama": "Siti Rahma", "hari_kerja": 21, "hari_hadir": 18, "persentase_kehadiran": "85%" },
+            { "nama": "Dedi Rian", "hari_kerja": 21, "hari_hadir": 20, "persentase_kehadiran": "95%" },
+            { "nama": "Wati Permata", "hari_kerja": 21, "hari_hadir": 17, "persentase_kehadiran": "81%" },
+            { "nama": "Hana Fitriani", "hari_kerja": 21, "hari_hadir": 19, "persentase_kehadiran": "90%" }
+        ]
+    },
+    {
+        "bulan": "Oktober 2024",
+        "admin": [
+            { "nama": "Andi Nurhadi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "Siti Rahma", "hari_kerja": 20, "hari_hadir": 17, "persentase_kehadiran": "85%" },
+            { "nama": "Dedi Rian", "hari_kerja": 20, "hari_hadir": 19, "persentase_kehadiran": "95%" },
+            { "nama": "Wati Permata", "hari_kerja": 20, "hari_hadir": 16, "persentase_kehadiran": "80%" },
+            { "nama": "Hana Fitriani", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" }
+        ]
+    },
+    {
+        "bulan": "November 2024",
+        "admin": [
+            { "nama": "Andi Nurhadi", "hari_kerja": 22, "hari_hadir": 21, "persentase_kehadiran": "95%" },
+            { "nama": "Siti Rahma", "hari_kerja": 22, "hari_hadir": 19, "persentase_kehadiran": "86%" },
+            { "nama": "Dedi Rian", "hari_kerja": 22, "hari_hadir": 20, "persentase_kehadiran": "90%" },
+            { "nama": "Wati Permata", "hari_kerja": 22, "hari_hadir": 18, "persentase_kehadiran": "82%" },
+            { "nama": "Hana Fitriani", "hari_kerja": 22, "hari_hadir": 20, "persentase_kehadiran": "91%" }
+        ]
+    },
+    {
+        "bulan": "Desember 2024",
+        "admin": [
+            { "nama": "Andi Nurhadi", "hari_kerja": 21, "hari_hadir": 19, "persentase_kehadiran": "90%" },
+            { "nama": "Siti Rahma", "hari_kerja": 21, "hari_hadir": 18, "persentase_kehadiran": "85%" },
+            { "nama": "Dedi Rian", "hari_kerja": 21, "hari_hadir": 20, "persentase_kehadiran": "95%" },
+            { "nama": "Wati Permata", "hari_kerja": 21, "hari_hadir": 17, "persentase_kehadiran": "81%" },
+            { "nama": "Hana Fitriani", "hari_kerja": 21, "hari_hadir": 19, "persentase_kehadiran": "90%" }
+        ]
+    }
+]

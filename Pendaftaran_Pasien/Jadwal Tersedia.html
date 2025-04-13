@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo_fix.png">
+    <title>Pendaftaran | PULSE by Klinik XYZ</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo_fix.png">
+                    <h2>
+                        <span class="danger">PULSE</span>
+                        <span class="by-telkomedika">by Klinik XYZ</span>
+                    </h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="../Dashboard_Pasien/index.html">
+                    <span class="fas fa-home"></span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="../Pendaftaran_Pasien/Tata Cara Pendaftaran.html">
+                    <span class="far fa-address-card"></span>
+                    <h3>Pendaftaran</h3>
+                </a>
+                <a href="../Rekam Medis_Pasien/Rekam Medis.html">
+                    <span class="fas fa-file-medical-alt"></span>
+                    <h3>Rekam Medis</h3>
+                </a>
+                <a href="../Login_Pasien/index.html">
+                    <span class="fas fa-sign-out-alt"></span> <!-- Ikon Logout -->
+                    <h3>Keluar</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <main3>
+            <!-- Modal untuk konfirmasi -->
+
+            <div class="schedule-container">
+                <!-- Modal for schedule confirmation -->
+                <div id="confirmationModal" class="modal">
+                    <div class="modal-content">
+                        <p>Apakah Anda yakin ingin mengonfirmasi jadwal ini?</p>
+                        <button id="confirmButton" class="btn-konfirmasi">Ya, Konfirmasi</button>
+                        <button id="rejectButton" class="btn-batal">Pilih jadwal lain</button>
+                    </div>
+                </div>
+                
+                <!-- Modal for notification after confirmation -->
+                <div id="notificationModal" class="modal">
+                    <div class="modal-content">
+                        <p>Anda sudah membuat jadwal janji Anda. Jangan lupa untuk tepat waktu!</p>
+                        <button class="btn-back" id="backButton" onclick="window.location.href='Tata Cara Pendaftaran.html'">Back</button>
+                    </div>
+                </div>
+                <div class="suggestion-container">
+                    <p>Menurut kalkulasi kami, berikut adalah jadwal yang kami sarankan untuk Anda.</p>
+                </div>
+                <!-- Jadwal akan dimuat di sini oleh JavaScript -->
+                <!-- You can add hidden inputs here -->
+                <input type="hidden" id="scheduleId" value="someScheduleId">
+                <input type="hidden" id="selectedSchedule" value="someSelectedSchedule">
+            </div>
+            <div class="terms-container">
+                <p>Dengan memilih salah satu jadwal di atas, kami menganggap Anda telah memahami Syarat dan Ketentuan kami sebagai berikut:</p>
+                <ol>
+                    <li>Jadwal temu dengan dokter dianggap sah dan Anda sudah terdaftar di dalam sistem.</li>
+                    <li>Perubahan jadwal dapat dilakukan untuk jadwal temu dengan dokter bersangkutan yang sama.</li>
+                    <li>Pemohon perubahan jadwal adalah pasien yang bersangkutan yang data dirinya telah terdaftar pada website PULSE dan menggunakan akun PULSE milik pemohon.</li>
+                    <li>Perubahan jadwal melalui PULSE dapat dilakukan maksimal 1 jam sebelum jadwal temu yang sebelumnya dipilih dan kode booking yang dimiliki berstatus "Terdaftar". Jika lewat dari waktu tersebut maka perubahan jadwal dapat dilakukan secara offline di unit Telkomedika Universitas Telkom.</li>
+                    <li>Perubahan jadwal dapat dilakukan apabila jadwal yang baru (pengganti), masih tersedia.</li>
+                </ol>
+            </div>
+            <button id="refresh-schedule-button">Refresh Jadwal</button>
+        </main3>
+        
+        
+    <!-- End of Main Content -->
+    
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p><b>Wilujeng Sumping!</b></p>
+                        <small class="text-muted">Masuk Sebagai Pasien</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2>Klinik XYZ</h2>
+                    <p>Universitas XYZ</p>
+                </div>
+            </div>
+        
+            <div class="reminders">
+                <div class="header">
+                    <h2>Pengingat</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+        
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                                    <small class="text_muted">
+                                Jumat, 31 Mei 2024
+                            </small>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+        
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Penyuluhan</h3>
+                            <small class="text_muted">
+                                Rabu, 22 Mei 2024
+                            </small>
+                        </div>
+        
+                        </span>
+                    </div>
+                </div>
+        
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Tambah Pengingat</h3>
+                        </span>
+                    </div>
+                </div>
+        
+            </div>
+        
+        </div>
+        
+        
+        </div>
+            
+            <script src="index.js"></script>
+            <script>
+               document.addEventListener('DOMContentLoaded', function () {
+        console.log('DOM fully loaded and parsed');
+        const scheduleContainer = document.querySelector('.schedule-container');
+        const refreshButton = document.getElementById('refresh-schedule-button');
+        const confirmationModal = document.getElementById('confirmationModal');
+        const notificationModal = document.getElementById('notificationModal');
+        const closeConfirmationModal = document.getElementById('closeConfirmationModal');
+        const confirmButton = document.getElementById('confirmButton');
+        const rejectButton = document.getElementById('rejectButton');
+        const backButton = document.getElementById('backButton');
+
+        console.log('confirmationModal:', confirmationModal);
+        console.log('notificationModal:', notificationModal);
+        let kuesionerData = []; // Array to hold data from kuesioner.json
+        let selectedSchedule = null;
+
+        if (confirmationModal && notificationModal) {
+            // Add event listeners for confirmation, rejection, and back buttons
+            if (confirmButton && rejectButton && backButton) {
+                confirmButton.addEventListener('click', function () {
+                    console.log('Schedule confirmed');
+                    confirmationModal.classList.remove('show');
+                });
+
+                rejectButton.addEventListener('click', function () {
+                    console.log('Rejected. Choose another schedule.');
+                    confirmationModal.classList.remove('show');
+                });
+
+                backButton.addEventListener('click', function () {
+                    window.location.href = 'Tata Cara Pendaftaran.html';
+                });
+            }
+        } else {
+            console.error('Modal elements not found');
+        }
+    function loadSchedules() {
+        fetch('../data/kuesioner.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch kuesioner data');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Wrap single object in an array for compatibility
+                kuesionerData = Array.isArray(data) ? data : [data];
+
+                scheduleContainer.innerHTML = ''; // Clear previous schedules
+
+                // Get active user ID asynchronously
+                getActiveUserIdFromData().then(activeId => {
+                    if (!activeId) {
+                        console.warn('No active ID found.');
+                        scheduleContainer.innerHTML = '<p>Tidak ada data untuk pengguna saat ini.</p>';
+                        return;
+                    }
+
+                    const userEntry = kuesionerData.find(entry => entry.identitas.id === activeId);
+
+                    if (!userEntry) {
+                        console.warn(`Data untuk ID ${activeId} tidak ditemukan.`);
+                        scheduleContainer.innerHTML = '<p>Tidak ada data untuk pengguna saat ini.</p>';
+                        return;
+                    }
+
+                    const { identitas, kuesioner } = userEntry;
+
+                    kuesionerData.forEach(entry => {
+                        const { identitas, kuesioner } = entry;
+
+                        // Pastikan data memiliki format sesuai
+                        if (!identitas || !kuesioner || !kuesioner.kuesioner) {
+                            console.warn('Data kuesioner tidak valid, dilewati:', entry);
+                            return;
+                        }
+
+                        const { responses, score } = kuesioner.kuesioner;
+
+                        // Validasi detail di dalam kuesioner.kuesioner
+                        if (!responses || typeof score !== 'number') {
+                            console.warn('Data kuesioner tidak valid, dilewati:', entry);
+                            return;
+                        }
+                    });
+                const selectedPoli = identitas.poliPeriksa?.trim() || "Poli Umum";
+                const targetDate = identitas.tanggalPeriksa;
+                const startTime = identitas.waktuMulai;
+                const endTime = identitas.waktuSelesai;
+
+                const isUrgent = kuesioner.score >= 5;
+
+                console.log('Selected Poli:', selectedPoli);
+                console.log('Date:', targetDate);
+                console.log('Time:', startTime, '-', endTime);
+
+                const generatedSchedules = generateScheduleOptions(startTime, endTime, selectedPoli, targetDate);
+
+                if (generatedSchedules.length > 0) {
+                    const scheduleHTML = generateScheduleHTML(generatedSchedules, selectedPoli);
+                    scheduleContainer.innerHTML += `
+                        <div class="suggestion-container">
+                            <p>Menurut kalkulasi kami, berikut adalah jadwal yang kami sarankan untuk Anda.</p>
+                        </div>
+                        ${scheduleHTML}
+                    `;
+                } else {
+                    console.warn('No schedules available');
+                    scheduleContainer.innerHTML = '<p>No schedules available at the moment.</p>';
+                }
+            });
+        })
+        .catch(error => {
+            console.error('Error loading kuesioner data:', error);
+            scheduleContainer.innerHTML = '<p>Failed to load kuesioner data.</p>';
+        });
+}
+ // Add a notification for "Anda telah memilih jadwal!"
+ const scheduleSelectionNotification = document.createElement('div');
+            scheduleSelectionNotification.classList.add('schedule-selection-notification');
+            scheduleSelectionNotification.textContent = 'Anda telah memilih jadwal!';
+            scheduleContainer.appendChild(scheduleSelectionNotification); // Add the notification to the schedule container
+document.addEventListener('click', function (event) {
+    if (event.target && event.target.classList.contains('select-schedule-button')) {
+        const clickedSchedule = JSON.parse(event.target.getAttribute('data-schedule'));
+
+        // Check if there's any selected entry in kuesionerData with valid id
+        let selectedId = null;
+        kuesionerData.forEach(entry => {
+            if (entry.identitas?.id) {
+                selectedId = entry.identitas.id; // Find and assign the ID
+            }
+        });
+
+        if (selectedId) {
+            const selectedSchedule = clickedSchedule;
+
+            // Send selected schedule data to the server
+            fetch('http://localhost:3003/submit-schedule', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    id: selectedId,
+                    selectedSchedule: selectedSchedule
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'Schedule updated successfully') {
+                    console.log('Schedule updated successfully');
+                } else {
+                    console.error('Failed to update schedule:', data);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        } else {
+            console.error('ID tidak ditemukan di kuesionerData.');
+            alert('Tidak dapat melanjutkan tanpa ID yang valid. Periksa data.');
+        }
+    }
+});
+
+                    scheduleContainer.innerHTML += `
+    <div class="selected-schedule">
+        <h4>Jadwal Terpilih</h4>
+        <p>Poliklinik: ${kuesionerData?.selectedSchedule?.poliklinik || 'Belum dipilih'}</p>
+        <p>Tanggal: ${kuesionerData?.selectedSchedule?.tanggal || 'Belum dipilih'}</p>
+        <p>Jam: ${kuesionerData?.selectedSchedule?.jam || 'Belum dipilih'}</p>
+    </div>
+`;
+
+                // Fungsi untuk mendapatkan ID pengguna aktif dari kuesioner.json
+function getActiveUserIdFromData() {
+    return fetch('../data/kuesioner.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch kuesioner data');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Jika data berbentuk array, gunakan ID dari elemen pertama
+            const entries = Array.isArray(data) ? data : [data];
+            if (entries.length > 0) {
+                return entries[0].identitas.id; // Ambil ID pertama
+            } else {
+                throw new Error('No entries found in kuesioner data');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching active user ID:', error);
+            return null; // Jika terjadi error, kembalikan null
+        });
+}
+
+// Panggil fungsi ini untuk memuat ID dinamis
+getActiveUserIdFromData().then(activeId => {
+    if (activeId) {
+        console.log(`Active User ID: ${activeId}`);
+        // Gunakan activeId di tempat lain
+    } else {
+        console.warn('No active ID found');
+    }
+});
+document.getElementById('confirmationModal').addEventListener('click', function () {
+    confirmationModal.classList.add('show');
+});
+
+console.log('Confirmation Modal:', confirmationModal);
+confirmationModal.classList.add('show');
+
+                    // Function to generate schedule options
+                    function generateScheduleOptions(startTime, endTime, selectedPoli, targetDate) {
+                        const schedules = [];
+                        const start = parseTime(startTime);
+                        const end = parseTime(endTime);
+                
+                        // Check if the selected Poli is "Poli Umum"
+                        if (selectedPoli === "Poli Umum") {
+                            const availableTimes = generateRandomTimeSlots(); // For Poli Umum, generate random times between 8 AM and 7 PM
+                            availableTimes.forEach(slot => {
+                                schedules.push({
+                                    tanggal: targetDate,
+                                    poliklinik: selectedPoli,
+                                    jam: slot
+                                });
+                            });
+                        } else if (selectedPoli === "Poli Gigi") {
+                            const dayOfWeek = new Date(targetDate).toLocaleDateString('id-ID', { weekday: 'long' });
+                            const gigiSchedule = {
+                                "Senin": ["08:00 - 11:00", "13:00 - 16:00"],
+                                "Selasa": ["08:00 - 11:00", "13:00 - 16:00"],
+                                "Rabu": ["08:00 - 11:00", "13:00 - 16:00"],
+                                "Kamis": ["08:00 - 11:00", "13:00 - 16:00"],
+                                "Jumat": ["08:00 - 11:00"],
+                                "Sabtu": ["08:00 - 11:00"]
+                            };
+                
+                            const availableTimes = gigiSchedule[dayOfWeek] || [];
+                            availableTimes.forEach(time => {
+                                schedules.push({
+                                    tanggal: targetDate,
+                                    poliklinik: selectedPoli,
+                                    jam: time
+                                });
+                            });
+                        }
+                
+                        return schedules;
+                    }
+                
+                    // Function to adjust schedule based on selected Poli
+                    function adjustSchedule(schedule, selectedPoli, targetDate) {
+                        if (!schedule) {
+                            console.error('Invalid schedule:', schedule);
+                            return { poliklinik: selectedPoli || "Poli Umum", tanggal: "N/A", jam: "N/A" };
+                        }
+                
+                        const adjustedSchedule = { ...schedule };
+                        adjustedSchedule.poliklinik = selectedPoli || "Poli Umum";
+                        adjustedSchedule.jam = schedule.jam || "Tidak ada jadwal tersedia";
+                        adjustedSchedule.tanggal = schedule.tanggal || "N/A";
+                
+                        adjustedSchedule.tanggal = new Date(targetDate).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+                        return adjustedSchedule;
+                    }
+
+                // Function to generate HTML for the schedules
+function generateScheduleHTML(schedules, selectedPoli) {
+    return schedules.slice(0, 4).map(schedule => {
+        const adjustedSchedule = adjustSchedule(schedule, selectedPoli, new Date(schedule.tanggal));
+        console.log('Adjusted Poli:', adjustedSchedule.poliklinik);
+        console.log('Adjusted Schedule:', adjustedSchedule);
+
+        return adjustedSchedule.poliklinik === selectedPoli ? `
+            <div class="schedule-item">
+                <h4>Poliklinik</h4>
+                <p>${adjustedSchedule.poliklinik}</p>
+                <h4>Tanggal Janji</h4>
+                <p>${adjustedSchedule.tanggal}</p>
+                <h4>Jam Janji</h4>
+                <p>${adjustedSchedule.jam}</p>
+                <button class="select-schedule-button" data-schedule='${JSON.stringify(adjustedSchedule)}'>Pilih Jadwal</button>
+            </div>
+        ` : '';
+    }).join('');
+}
+
+// Event listener for selecting a schedule
+document.addEventListener('click', function (event) {
+            if (event.target && event.target.classList.contains('select-schedule-button')) {
+                const clickedSchedule = JSON.parse(event.target.getAttribute('data-schedule'));
+
+                let selectedId = null;
+                kuesionerData.forEach(entry => {
+                    if (entry.identitas?.id) {
+                        selectedId = entry.identitas.id; // Find and assign the ID
+                    }
+                });
+
+                if (selectedId) {
+                    const selectedSchedule = clickedSchedule;
+
+                    // Send selected schedule data to the server
+                    fetch('http://localhost:3003/submit-schedule', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            id: selectedId,
+                            selectedSchedule: selectedSchedule
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.message === 'Schedule updated successfully') {
+                            console.log('Schedule updated successfully');
+                        } else {
+                            console.error('Failed to update schedule:', data);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+                } else {
+                    console.error('ID tidak ditemukan di kuesionerData.');
+                    alert('Tidak dapat melanjutkan tanpa ID yang valid. Periksa data.');
+                }
+
+                // Show confirmation modal
+                confirmationModal.classList.add('show');
+
+                // Update modal content with the selected schedule
+                const modalContent = confirmationModal.querySelector('.modal-content');
+                modalContent.querySelector('p').textContent = `Apakah Anda yakin ingin mengonfirmasi jadwal ini pada ${clickedSchedule.tanggal} pukul ${clickedSchedule.jam}?`;
+
+                // Confirmation button event
+                confirmButton.addEventListener('click', function () {
+                    // Handle confirmation logic here
+                    console.log('Jadwal dikonfirmasi:', clickedSchedule);
+
+                    // Close the confirmation modal
+                    confirmationModal.classList.remove('show');
+
+                    // Show notification modal
+                    notificationModal.classList.add('show');
+                });
+
+                // Reject button event
+                rejectButton.addEventListener('click', function () {
+                    // Handle rejection logic here
+                    console.log('Jadwal ditolak:', clickedSchedule);
+
+                    // Close the confirmation modal
+                    confirmationModal.classList.remove('show');
+                });
+            }
+        });
+
+        // Close modal when clicking on close button
+        const btnClose = document.querySelector('.btnclose');
+        if (btnClose) {
+            btnClose.addEventListener('click', function () {
+                const modal = document.querySelector('.modal');
+                if (modal) {
+                    modal.classList.remove('show');
+                }
+            });
+        }           
+                    // Function to generate random time slots for general Poli
+                    function generateRandomTimeSlots() {
+                        const startHour = 8;
+                        const endHour = 19;
+                        const intervalMinutes = 30;
+                
+                        const slots = [];
+                        for (let currentHour = startHour; currentHour < endHour; currentHour++) {
+                            const startMinutes = Math.floor(Math.random() * 2) * intervalMinutes;
+                            const start = new Date(2024, 0, 1, currentHour, startMinutes);
+                            const end = new Date(start.getTime() + intervalMinutes * 60000);
+                
+                            slots.push(`${formatTime(start)} - ${formatTime(end)}`);
+                        }
+                
+                        return shuffleArray(slots).slice(0, 4); // Randomize and select 4 unique slots
+                    }
+                
+                    // Parse time in HH:mm format
+                    function parseTime(timeString) {
+                        const [hours, minutes] = timeString.split(':').map(Number);
+                        const date = new Date();
+                        date.setHours(hours, minutes, 0, 0);
+                        return date;
+                    }
+                
+                    // Format time for display
+                    function formatTime(date) {
+                        const hours = date.getHours();
+                        const minutes = date.getMinutes().toString().padStart(2, '0');
+                        return `${hours}:${minutes}`;
+                    }
+                
+                    // Shuffle an array to randomize order
+                    function shuffleArray(array) {
+                        for (let i = array.length - 1; i > 0; i--) {
+                            const j = Math.floor(Math.random() * (i + 1));
+                            [array[i], array[j]] = [array[j], array[i]];
+                        }
+                        return array;
+                    }
+                
+                    // Event listener for refreshing schedule
+                    refreshButton.addEventListener('click', function () {
+                        loadSchedules();
+                    });
+                
+                
+                    loadSchedules();
+                });
+                </script>
+                
+            
+            
+    </body>
+    
+    </html>

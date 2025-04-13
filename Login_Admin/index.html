@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo_fix.png">
+    <title>Welcome | PULSE by Klinik XYZ</title>
+    <!-- Link to external CSS for styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+    <div class="wrapper">
+        <!-- Background animation spans -->
+        <span class="bg-animate"></span>
+        <span class="bg-animate2"></span>
+
+        <!-- Login form container -->
+<div class="form-box login">
+    <ul class="navigation animation" style="--data:0;">
+        <li class="nav-link"><a href="about.html">About</a></li>
+    </ul>
+    <h2 class="animation" style="--data:0;">Login</h2>
+    
+    <form action="#" id="login-form">
+        <!-- Username input -->
+        <div class="input-box animation" style="--data:1;">
+            <input type="text" id="login-username" placeholder=""> <!-- ID should be 'login-username' -->
+            <label>NIM/NIP</label>
+            <i class="fa-solid fa-address-card"></i>
+        </div>
+        
+        <div class="input-box animation" style="--data:3;">
+            <input type="password" id="login-password" placeholder=""> <!-- ID should be 'login-password' -->
+            <label>Password</label>
+            <i class="fa-solid fa-lock"></i>
+        </div>
+        
+
+        <!-- Submit button -->
+        <a href="../Dashboard_Admin/index.html">
+            <button type="button" class="btn animation" style="--data:4">Login</button>
+        </a>
+
+
+        <!-- Link to sign-up form -->
+        <div class="reg-link animation" style="--data:4;">
+            <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+        </div>
+    </form>
+</div>
+
+<!-- Welcome back message and logos for login -->
+<div class="info-text login">
+    <h2 class="animation" style="--data:0;">Your Health</h2>
+    <p class="animation" style="--data:1">Just a Click Away.</p>
+  </div>
+        <!-- Sign-Up form container -->
+<div class="form-box signup">
+    <h2 class="animation">Sign Up</h2>
+    <form action="#" id="signup-form"> 
+        <!-- Hidden Identity Field for Admin -->
+        <input type="hidden" id="signup-identity" value="admin" />
+    
+        <!-- Username input -->
+        <div class="input-box animation" style="--data:17">
+            <input type="text" id="signup-username" placeholder="">
+            <label>NIM/NIP</label>
+            <i class="fa-solid fa-address-card"></i>
+        </div>
+    
+        <!-- Password input -->
+        <div class="input-box animation" style="--data:19">
+            <input type="password" id="signup-password" placeholder="">
+            <label>Password</label>
+            <i class="fa-solid fa-lock"></i>
+        </div>
+    
+        <!-- Posisi input -->
+        <div class="input-box animation" style="--data:19">
+            <select id="signup-posisi">
+                <option value="admin">Admin</option>
+                <option value="dokter-umum">Dokter Umum</option>
+                <option value="dokter-gigi">Dokter Gigi</option>
+            </select>
+            <label for="signup-posisi">Posisi</label>
+            <i class="fa fa-users"></i>
+        </div>
+    
+        <!-- Submit button -->
+        <button type="submit" class="btn animation" style="--data:20">Sign Up</button>
+    
+        <!-- Link to login form -->
+        <div class="reg-link animation" style="--data:21">
+            <p>Already have an account? <a href="#" class="login-link" >Login</a></p>
+        </div>
+    </form>
+</div>    
+
+       <!-- Welcome back message and logos for signup -->
+<div class="info-text signup">
+    <div class="logos-container signup-logos">
+        <img src="images/logo_fix.png" alt="Logo 1" class="logo">
+        <img src="images/logo.png" alt="Logo 2" class="logo">
+    </div>
+    <h2 class="animation" style="--data:22">Join</h2>
+    <p class="animation" style="--data:23">The PULSE of your health companion!</p>
+  </div>
+    <script src="./script.js"></script>
+    <!-- Your other HTML content -->
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Fungsi untuk menangani login
+    function handleLogin(event) {
+        event.preventDefault(); // Mencegah form submission
+
+        const usernameInput = document.getElementById('login-username');
+        const passwordInput = document.getElementById('login-password');
+
+        if (!usernameInput || !passwordInput) {
+            alert('Username atau password tidak ditemukan.');
+            return;
+        }
+
+        const usernameValue = usernameInput.value.trim();
+        const passwordValue = passwordInput.value.trim();
+
+        if (!usernameValue || !passwordValue) {
+            alert('Mohon masukkan username dan password.');
+            return;
+        }
+
+        // Ambil data dari file data.json
+        fetch('data.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Gagal memuat file data.json');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const users = data.users || [];
+                // Cari user yang sesuai dengan input
+                const matchedUser = users.find(user => user.username === usernameValue && user.password === passwordValue);
+
+                if (matchedUser) {
+                    alert('Login berhasil!');
+                    // Redirect sesuai role atau ke halaman dashboard yang telah ditentukan
+                    window.location.href = (matchedUser.role === 'admin') ? '../Dashboard_Admin/index.html' : 'dashboard.html';
+                } else {
+                    alert('Login gagal. Username atau password salah.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Terjadi kesalahan: ' + error.message);
+            });
+    }
+
+    // Pasang event listener untuk form login
+    const loginForm = document.getElementById('login-form');
+    if (loginForm) {
+        loginForm.addEventListener('submit', handleLogin);
+    }
+
+    // Jika diperlukan, Anda juga bisa menambahkan validasi untuk sign-up, misalnya:
+    const signupForm = document.getElementById('signup-form');
+    if (signupForm) {
+        signupForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById('signup-username').value.trim();
+            const password = document.getElementById('signup-password').value.trim();
+            const posisi = document.getElementById('signup-posisi').value;
+            const identity = document.getElementById('signup-identity').value;
+
+            if (!username || !password || !posisi || !identity) {
+                alert('Mohon lengkapi semua kolom.');
+                return;
+            }
+
+            // Proses sign-up dapat dilakukan dengan mengirimkan data ke server (misalnya REST API) 
+            // karena mengubah data.json di sisi client tidaklah aman dan tidak efisien.
+            fetch('http://localhost:3000/signup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password, posisi, identity }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message || 'Sign-up gagal');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Terjadi kesalahan saat mendaftar.');
+            });
+        });
+    }
+});
+</script>
+    
+
+</body>
+</html>

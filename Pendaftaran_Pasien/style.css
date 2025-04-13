@@ -1,0 +1,1452 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0000;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-mode-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+}
+
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+h2{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 0.87rem;
+}
+
+small{
+    font-size: 0.76rem;
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 24px; /* Adjust this size as needed */
+}
+
+.logo .danger {
+    display: block;
+    font-size: 24px; /* Size for "PULSE" */
+    font-weight: bold;
+    color: #507687;
+}
+
+.logo .by-telkomedika {
+    display: block;
+    font-size: 14px; /* Smaller size for "by Telkomedika" */
+    font-weight: normal;
+}
+
+.success{
+    color: var(--color-success);
+}
+
+.warning{
+    color: var(--color-warning);
+}
+
+.container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem auto 23rem;
+}
+
+aside{
+    height: 100vh;
+}
+
+aside .toggle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .toggle .logo{
+    display: flex;
+    gap: 0.5rem;
+}
+
+aside .toggle .logo img{
+    width: 2rem;
+    height: 2rem;
+}
+
+aside .toggle .close{
+    padding-right: 1rem;
+    display: none;
+}
+
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    height: 88vh;
+    position: relative;
+    top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar:hover{
+    box-shadow: none;
+}
+
+aside .sidebar a{
+    display: flex;
+    align-items: center;
+    color: var(--color-info-dark);
+    height: 3.7rem;
+    gap: 1rem;
+    position: relative;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a.active{
+    width: 100%;
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    margin-left: 0;
+}
+
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 18px;
+    background-color: var(--color-primary);
+}
+
+aside .sidebar a.active span{
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover{
+    color: var(--color-primary);
+}
+
+aside .sidebar a:hover span{
+    margin-left: 0.6rem;
+}
+
+aside .sidebar .message-count{
+    background-color: var(--color-danger);
+    padding: 2px 6px;
+    color: var(--color-white);
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+main{
+    margin-top: 1.4rem;
+}
+
+main .analyse{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+main .analyse > div{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.registration-form, .doctor-schedule, .schedule-confirmation {
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+}
+
+
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius-1);
+    resize: vertical;
+}
+.kontainer-data-vital {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.kontainer-data-vital h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.kontainer-data-vital label {
+    margin-top: 1rem;
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.kontainer-data-vital input,
+.kontainer-data-vital select {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: var(--border-radius-1);
+    border: 1px solid var(--color-light);
+    font-size: 1rem;
+}
+
+.kontainer-data-diri {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 1070px; /* Optional max width to limit stretch */
+    flex-grow: 1;
+    margin: 1rem; /* Margin for spacing within main */
+}
+
+.kontainer-data-diri {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.kontainer-data-diri h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.kontainer-data-vidirital label {
+    margin-top: 1rem;
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.kontainer-data-diri input,
+.kontainer-data-diri select {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: var(--border-radius-1);
+    border: 1px solid var(--color-light);
+    font-size: 1rem;
+}
+/* Right-align Next Page button */
+.btn-next-page {
+    align-self: flex-end; /* Align the button to the right */
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius-2);
+    background-color: var(--color-success);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Space above the button */
+}
+
+.btn-next-page:hover {
+    background-color: var(--color-warning-dark);
+}
+button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius-1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--color-success);
+}
+
+.schedule-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.schedule-button {
+    background-color: var(--color-light);
+    padding: 0.7rem;
+    border: none;
+    border-radius: var(--border-radius-1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+/* Styling ketika dropdown atau input tanggal mendapat fokus */
+.dropdown:focus, .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Menambahkan efek hover untuk dropdown dan input */
+.dropdown:hover, .form-control:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling untuk dropdown option */
+.dropdown option {
+    font-size: 14px;
+}
+/* Styling untuk dropdown menu dan input */
+.dropdown, .form-control, #tanggalWaktuRentang {
+    width: 100%;  /* Membuat dropdown dan input berbagi ruang */
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding:13px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+}
+.time-range {
+    display: flex;           /* Menggunakan Flexbox untuk tata letak horizontal */
+    align-items: center;     /* Menyelaraskan item ke tengah secara vertikal */
+    gap: 10px;               /* Jarak antara elemen-elemen */
+}
+
+.time-range input {
+    width: 100px;            /* Tentukan lebar input sesuai kebutuhan */
+}
+
+.time-range span {
+    font-size: 20px;         /* Ukuran font untuk tanda minus */
+}
+
+/* Styling ketika dropdown atau input mendapat fokus */
+.dropdown:focus, .form-control:focus, #tanggalWaktuRentang:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Menambahkan efek hover untuk dropdown dan input */
+.dropdown:hover, .form-control:hover, #tanggalWaktuRentang:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling untuk dropdown option */
+.dropdown option {
+    font-size: 14px;
+}
+
+/* Styling untuk flatpickr (Tanggal dan Waktu) */
+.flatpickr-input {
+    width: 48%;  /* Menyesuaikan lebar dengan input lainnya */
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--box-shadow);
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Styling ketika flatpickr input mendapat fokus */
+.flatpickr-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Styling untuk elemen kalender flatpickr */
+.flatpickr-calendar {
+    font-size: 14px;
+}
+
+
+.schedule-button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.confirm-button {
+    background-color: var(--color-success);
+}
+/* General container styling */
+.dashboard-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Notification container styling */
+.notification-container {
+    background-color: var(--color-white); /* Use existing variable */
+    padding: var(--card-padding); /* Use existing variable */
+    border-radius: var(--card-border-radius); /* Use existing variable */
+    box-shadow: var(--box-shadow); /* Use existing variable */
+    text-align: center;
+    max-width: 400px;
+    flex: 1;
+    transition: all 0.3s ease; /* Added for hover effect */
+}
+
+.notification-container:hover {
+    box-shadow: none; /* Hover effect to match other sections */
+}
+
+.notification-container h2 {
+    margin-bottom: 1rem;
+}
+.feedback-container {
+    background-color: var(--color-white); /* Warna latar belakang */
+    padding: var(--card-padding); /* Padding sesuai kebutuhan */
+    border-radius: var(--card-border-radius); /* Sudut bulat */
+    box-shadow: var(--box-shadow); /* Bayangan */
+    flex: 1; /* Mengisi ruang yang ada */
+    min-height: 400px; /* Tinggi minimum untuk konsistensi */
+    display: flex; /* Menggunakan flexbox untuk konten di dalam */
+    flex-direction: column; /* Mengatur elemen di kolom */
+    margin-top: 20px; /* Menambahkan margin atas untuk jarak */
+}
+.header {
+    text-align: center; /* Memusatkan teks di dalam elemen */
+    margin: 0 auto; /* Memastikan kontainer berada di tengah (jika ada lebar yang ditentukan) */
+    padding: 1rem; /* Padding agar tidak terlalu menempel ke tepi */
+}
+
+.header h2 {
+    margin: 0; /* Menghapus margin untuk h2 agar lebih rapi */
+}
+
+.header p {
+    margin: 0; /* Menghapus margin untuk p agar lebih rapi */
+    color: var(--color-muted); /* Menggunakan warna yang sesuai untuk teks */
+}
+
+
+.feedback-container h2 {
+    margin-top: 0; /* Mengatur margin atas untuk keseragaman */
+}
+
+.feedback-form {
+    display: flex; /* Menggunakan flexbox */
+    flex-direction: column; /* Menyusun elemen dalam kolom */
+    flex: 1; /* Mengisi ruang yang ada */
+}
+
+.form-group {
+    margin-bottom: 1rem; /* Spasi antar elemen form */
+}
+
+label {
+    margin-bottom: 0.5rem; /* Jarak antara label dan input */
+    font-weight: bold; /* Menebalkan label */
+}
+
+input[type="text"],
+textarea {
+    width: 100%; /* Lebar penuh */
+    padding: 0.5rem; /* Padding di dalam input */
+    border: 1px solid #ccc; /* Garis batas */
+    border-radius: 4px; /* Sudut bulat */
+}
+
+textarea {
+    resize: vertical; /* Memungkinkan pengguna untuk meresize vertikal */
+}
+
+.submit-feedback-btn {
+    margin-top: auto; /* Memastikan tombol berada di bawah */
+    padding: 10px 20px; /* Padding untuk tombol */
+    background-color: var(--button-color); /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghapus batas tombol */
+    border-radius: 5px; /* Sudut bulat untuk tombol */
+    cursor: pointer; /* Mengubah cursor saat hover */
+}
+
+.submit-feedback-btn:hover {
+    background-color: darken(var(--button-color), 10%); /* Warna tombol saat hover */
+}
+
+.queue-position {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-primary); /* Change to existing variable */
+    margin-bottom: 1rem;
+}
+
+.reminder {
+    color: var(--color-danger); /* Use existing variable */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.change-schedule-btn {
+    background-color: var(--color-success); /* Use existing variable */
+    color: var(--color-white); /* Use existing variable */
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--card-border-radius); /* Use existing variable */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem;
+}
+
+.change-schedule-btn:hover {
+    background-color: var(--color-success-hover); /* Define hover color in variables */
+}
+
+.footnote {
+    color: var(--color-danger); /* Use existing variable */
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.appointment-details {
+    color: var(--color-dark-variant); /* Use existing variable */
+    font-size: 0.9rem;
+}
+
+/* Medical record container styling */
+.medical-record-container {
+    background-color: var(--color-white); /* Warna latar belakang */
+    padding: var(--card-padding); /* Padding sesuai variabel yang ada */
+    border-radius: var(--card-border-radius); /* Sudut bulat */
+    box-shadow: var(--box-shadow); /* Bayangan */
+    flex: 1; /* Membuat kontainer fleksibel */
+    min-width: 250px; /* Menentukan lebar minimum untuk tampilan yang baik */
+    text-align: center; /* Rata tengah untuk teks */
+    transition: all 0.3s ease; /* Efek transisi */
+}
+
+
+.medical-record-container:hover {
+    box-shadow: none; /* Hover effect to match other sections */
+}
+
+.medical-record-container h2 {
+    margin-bottom: 1rem;
+}
+
+.medical-record-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.medical-record-table th,
+.medical-record-table td {
+    padding: 0.8rem;
+    text-align: center;
+    border: 1px solid var(--color-light); /* Use existing variable */
+}
+
+.medical-record-table th {
+    background-color: var(--color-light); /* Use existing variable */
+    font-weight: bold;
+}
+
+.view-btn {
+    background-color: var(--color-primary); /* Use existing variable */
+    color: var(--color-white); /* Use existing variable */
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--card-border-radius); /* Use existing variable */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-btn:hover {
+    background-color: var(--color-primary-hover); /* Define hover color in variables */
+}
+
+.see-all-btn {
+    background-color: var(--color-success); /* Use existing variable */
+    color: var(--color-white); /* Use existing variable */
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--card-border-radius); /* Use existing variable */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.see-all-btn:hover {
+    background-color: var(--color-success-hover); /* Define hover color in variables */
+}
+
+/* Main Styling */
+main {
+    margin-top: 1.4rem;
+}
+
+main .recent-orders{
+    margin-top: 1.3rem;
+}
+
+main .recent-orders h2{
+    margin-bottom: 0.8rem;
+}
+.dashboard-container {
+    display: flex; /* Menggunakan flexbox */
+    justify-content: space-between; /* Menjaga jarak antar kontainer */
+}
+
+
+main .recent-orders table{
+    background-color: var(--color-white);
+    width: 100%;
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 0.3s ease;
+}
+
+main .recent-orders table:hover{
+    box-shadow: none;
+}
+
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td{
+    border: none;
+}
+
+main .recent-orders a{
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+}
+/* Membuat form lebih fleksibel */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1rem;
+    max-width: 100%;
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Mengatur skala linier agar fleksibel dan horizontal */
+.schedule-options {
+    display: flex;
+    justify-content: space-between; /* Menyebar angka dan radio secara merata */
+    align-items: center;
+    gap: 1rem; /* Jarak antara elemen skala */
+    width: 100%; /* Memastikan skala menggunakan lebar penuh container */
+    padding: 0 1rem; /* Memberikan padding horizontal */
+    flex-direction: row; /* Pastikan elemen tersebar secara horizontal */
+}
+.form-group {
+    margin-bottom: 20px; /* Adjust spacing between questions */
+}
+.instructions {
+    margin-bottom: 30px; /* Adjust spacing before the form */
+}
+.instructions h2 {
+    margin-top: 20px; /* Adjust this value as needed */
+}
+ol {
+    margin-left: 20px; /* Adjust this value for the desired indentation */
+}
+.schedule-options {
+    display: flex;
+    align-items: center;
+}
+.custom-list {
+    list-style-type: none; /* Removes the bullet points */
+    padding-left: 20px;    /* Indents the list */
+}
+
+.custom-list li {
+    margin-bottom: 5px; /* Optional: adds some space between list items */
+}
+
+.radio-circle {
+    display: inline-block;
+    width: 30px; /* Adjust size of the circle */
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #000; /* Circle border */
+    margin: 0 10px; /* Space around circles */
+    cursor: pointer;
+    position: relative;
+}
+.radio-circle:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px; /* Adjust size of the inner circle */
+    height: 16px;
+    border-radius: 50%;
+    background: transparent;
+    transform: translate(-50%, -50%);
+}
+input[type="radio"]:checked + .radio-circle:after {
+    background: #007BFF; /* Change color of selected circle */
+}
+/* Styling untuk angka skala */
+.scale-number {
+    flex-grow: 1; /* Memungkinkan angka skala tumbuh mengisi ruang */
+    text-align: center; /* Posisikan angka di tengah */
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+
+/* Styling lingkaran radio button */
+.schedule-options input[type="radio"] {
+    display: none; /* Sembunyikan radio button default */
+}
+
+.schedule-options label {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Ukuran lingkaran */
+    height: 30px;
+    background-color: #f0f0f0; /* Warna dasar lingkaran */
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+.scale-number {
+    font-weight: bold;
+    font-size: 1rem; /* Atur ukuran font angka skala sesuai keinginan (contoh: 1.5rem) */
+}
+
+/* Jika radio button dipilih, lingkaran akan berubah warna */
+.schedule-options input[type="radio"]:checked + label {
+    background-color: blue; /* Warna lingkaran jika dipilih */
+}
+/* Jika ingin mengatur jarak spesifik untuk lingkaran radio */
+.schedule-options label {
+    margin: 0 3rem; /* Atur jarak horizontal antara lingkaran */
+}
+/* Tambahan styling jika hover pada lingkaran */
+.schedule-options label:hover {
+    background-color: lightblue;
+}
+
+/* Warna angka berubah saat lingkaran dipilih */
+.schedule-options input[type="radio"]:checked + label + .scale-number {
+    color: blue;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the modal */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark background */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000; /* Ensure modal is on top */
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+/* Modal content box */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    width: 80%; /* Responsive width */
+    max-width: 300px; /* Maximum width */
+    transition: transform 0.3s ease-out; /* Smooth transition for modal content */
+    position: relative; /* To allow positioning of close button */
+}
+
+/* Button Styles */
+.btn-konfirmasi, .btn-batal {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition on hover */
+}
+
+.btn-konfirmasi {
+    background-color: green;
+    color: white;
+}
+
+.btn-batal {
+    background-color: red;
+    color: white;
+}
+
+.modal .btn-konfirmasi:hover, .modal .btn-batal:hover {
+    opacity: 0.8;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Close button for the modal */
+.modal-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Focus styles for accessibility */
+.btn-konfirmasi:focus, .btn-batal:focus, .modal-content .close-btn:focus {
+    outline: 2px solid #000; /* Add a visible outline for focus */
+    box-shadow: 0 0 5px #4d90fe; /* Optional: add a shadow effect when focused */
+}
+
+/* For showing the modal with opacity */
+.modal.show {
+    display: flex;
+    opacity: 1; /* Make modal visible */
+}
+
+
+
+/* Efek animasi pada lingkaran */
+.schedule-options input[type="radio"] + label:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.schedule-options input[type="radio"]:checked + label:before {
+    transform: scale(0.6); /* Efek visual saat dipilih */
+}
+
+/* CSS tambahan untuk main2 */
+main2 {
+    display: flex;
+    justify-content: center; /* Mencentralisasi konten secara horizontal */
+    align-items: center; /* Mencentralisasi konten secara vertikal */
+    padding: 2rem; /* Menambah padding untuk ruang di sekitar konten */
+    
+}
+
+.instructions-container {
+    max-width: 800px; /* Lebar maksimum untuk container instruksi */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    padding: 2rem; /* Menambah padding di dalam container */
+    background-color: var(--color-white); /* Latar belakang putih */
+    border-radius: var(--card-border-radius); /* Sudut bulat */
+    box-shadow: var(--box-shadow); /* Efek bayangan */
+    font-size: 1.2rem; /* Ukuran font lebih besar */
+}
+
+/* Jarak setelah judul */
+.instructions-container h2 {
+    font-size: 2rem; /* Ukuran teks judul lebih besar */
+    margin-bottom: 1rem; /* Jarak bawah untuk memberi ruang setelah judul */
+}
+
+/* Jarak setelah paragraf tertentu */
+.instructions-container p:nth-child(5) {
+    margin-bottom: 1.5rem; /* Jarak bawah untuk memberi ruang setelah kalimat */
+}
+
+/* Aturan untuk tulisan 'Telkomedika' */
+.instructions-container p:last-child {
+    font-size: 0.8rem; /* Ukuran font sangat kecil */
+    text-align: right; /* Rata kanan */
+    margin-top: 1rem; /* Jarak atas untuk memberi ruang di atas tulisan */
+}
+.submit-button {
+    background-color: var(--color-primary); /* Ganti dengan warna utama sesuai desain */
+    color: white; /* Warna teks putih */
+    padding: 0.5rem 1rem; /* Padding untuk tombol lebih kecil */
+    border: none; /* Menghapus border */
+    border-radius: 0.5rem; /* Sudut bulat untuk tombol */
+    font-size: 1.2rem; /* Ukuran font tombol */
+    cursor: pointer; /* Mengubah cursor saat hover */
+    margin: 1rem auto; /* Jarak atas dan bawah, serta rata tengah */
+    display: block; /* Membuat tombol sebagai blok untuk rata tengah */
+    width: 200px; /* Lebar tetap untuk tombol */
+    transition: background-color 0.3s; /* Efek transisi saat hover */
+}
+main3 {
+    display: flex;
+    flex-direction: column; /* Menyusun konten dalam satu kolom */
+    justify-content: flex-start; /* Mengatur konten ke atas */
+    padding: 2rem; /* Menambah padding untuk ruang di sekitar konten */
+}
+
+.suggestion-container {
+    flex-basis: 100%; /* Mengambil seluruh lebar untuk kontainer saran */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    margin: 2rem 0; /* Menambahkan jarak atas dan bawah untuk mendekatkan dengan jadwal */
+    font-size: 1.2rem; /* Ukuran font untuk teks saran, dibesarkan */
+    font-weight: bold; /* Membuat teks menjadi tebal */
+    padding: 1rem; /* Padding di dalam kontainer */
+    background-color: var(--color-white); /* Warna latar belakang kontainer */
+    border-radius: var(--card-border-radius); /* Sudut bulat */
+    box-shadow: var(--box-shadow); /* Efek bayangan */
+    border: 1px solid var(--color-gray-light); /* Gaya border */
+    width: calc(100% - 2rem); /* Mengatur lebar sesuai dengan ruang tersedia */
+    max-width: 1000px; /* Lebar maksimum untuk container */
+    margin: 0 auto; /* Menyelaraskan kontainer di tengah halaman */
+    display: flex; /* Menggunakan flexbox untuk menata isi */
+    height: 130px; /* Tinggi tetap untuk setiap kolom (custom) */
+    align-items: center; /* Mencentralisasi konten secara vertikal */
+    justify-content: center; /* Mencentralisasi konten secara horizontal */
+}
+
+.schedule-container {
+    display: flex; /* Menyusun kontainer secara horizontal */
+    flex-direction: row; /* Menjaga arah horizontal */
+    justify-content: space-between; /* Jarak antar item */
+    gap: 1rem; /* Jarak antar kolom (bisa disesuaikan) */
+    flex-wrap: wrap; /* Membungkus jika terlalu banyak untuk satu baris */
+    max-width: 1000px; /* Mengatur lebar maksimum untuk container */
+    align-items: center; /* Mencentralisasi konten secara vertikal */
+    margin: 2rem 0; /* Menambahkan jarak atas dan bawah untuk mendekatkan dengan elemen lain */
+    justify-content: center; /* Mencentralisasi konten secara horizontal */
+}
+
+.schedule-item {
+    flex: 1; /* Membuat setiap jadwal item sama lebar */
+    min-width: 200px; /* Lebar minimum untuk setiap item */
+    padding: 1rem; /* Padding di dalam container item */
+    background-color: var(--color-white); /* Warna latar belakang putih */
+    border-radius: var(--card-border-radius); /* Sudut bulat */
+    width: 120px; /* Lebar tetap untuk setiap kolom (custom) */
+    height: 250px; /* Tinggi tetap untuk setiap kolom (custom) */
+    box-shadow: var(--box-shadow); /* Efek bayangan */
+    align-items: center; /* Mencentralisasi konten secara horizontal */
+    text-align: center; /* Menyelaraskan teks di tengah */
+}
+
+.schedule-item h4 {
+    font-size: 1rem; /* Ukuran font judul lebih kecil */
+    margin: 0.5rem 0; /* Jarak bawah untuk memberi ruang */
+}
+
+.schedule-item p {
+    font-size: 0.9rem; /* Ukuran font informasi jadwal lebih kecil */
+    margin: 0.3rem 0; /* Jarak atas dan bawah untuk paragraf */
+}
+.terms-container {
+    margin-top: 2rem; /* Jarak atas untuk memberi ruang dari kontainer di atas */
+    padding: 1rem; /* Padding di dalam kontainer */
+    text-align: justify; /* Menjadikan teks rata kiri dan kanan */
+    max-width: 1000px; /* Lebar maksimum untuk container */
+    margin: 0 auto; /* Menyelaraskan kontainer di tengah halaman */
+    font-size: 0.9rem; /* Ukuran font */
+}
+
+.terms-container p {
+    margin-bottom: 1rem; /* Jarak bawah untuk teks */
+}
+
+.terms-container ol {
+    margin-left: 1.5rem; /* Jarak kiri untuk daftar */
+}
+
+.select-schedule-button {
+    background-color: var(--color-primary); /* Ganti dengan warna utama sesuai desain */
+    color: white; /* Warna teks putih */
+    padding: 0.3rem 0.6rem; /* Padding untuk tombol */
+    border: none; /* Menghapus border */
+    border-radius: 0.3rem; /* Sudut bulat untuk tombol */
+    font-size: 0.9rem; /* Ukuran font tombol lebih kecil */
+    cursor: pointer; /* Mengubah cursor saat hover */
+    margin-top: 0.8rem; /* Jarak atas untuk memberi ruang di atas tombol */
+    transition: background-color 0.3s; /* Efek transisi saat hover */
+}
+
+/* Efek hover untuk tombol */
+.select-schedule-button:hover {
+    background-color: darken(var(--color-primary), 10%); /* Menggelapkan warna saat hover */
+}
+
+/* Efek hover untuk tombol */
+.submit-button:hover {
+    background-color: darken(var(--color-primary), 10%); /* Menggelapkan warna saat hover */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-primary); /* Match primary color */
+    color: var(--color-white); /* Match text color */
+    border: none;
+    border-radius: var(--card-border-radius); /* Consistent border radius */
+    cursor: pointer;
+    margin-top: 1rem; /* Align with main spacing */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: darken(var(--color-primary), 10%); /* Darken on hover, adjust as necessary */
+}
+.right-section{
+    margin-top: 1.4rem;
+}
+
+.right-section .nav{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right-section .nav button{
+    display: none;
+}
+
+.right-section .dark-mode{
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .dark-mode span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section .dark-mode span.active{
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .nav .profile{
+    display: flex;
+    gap: 2rem;
+    text-align: right;
+}
+
+.right-section .nav .profile .profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.right-section .user-profile{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .user-profile:hover{
+    box-shadow: none;
+}
+
+.right-section .user-profile img{
+    width: 11rem;
+    height: auto;
+    margin-bottom: 0.8rem;
+    border-radius: 50%;
+}
+
+.right-section .user-profile h2{
+    margin-bottom: 0.2rem;
+}
+
+.right-section .reminders{
+    margin-top: 2rem;
+}
+
+.right-section .reminders .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.right-section .reminders .header span{
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-white);
+    border-radius: 50%;
+}
+
+.right-section .reminders .notification{
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .reminders .notification:hover{
+    box-shadow: none;
+}
+
+.right-section .reminders .notification .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.right-section .reminders .notification .icon{
+    padding: 0.6rem;
+    color: var(--color-white);
+    background-color: var(--color-success);
+    border-radius: 20%;
+    display: flex;
+}
+
+.right-section .reminders .notification.deactive .icon{
+    background-color: var(--color-danger);
+}
+
+.right-section .reminders .add-reminder{
+    background-color: var(--color-white);
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.right-section .reminders .add-reminder:hover{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.right-section .reminders .add-reminder div{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 95%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+
+    aside .logo h2{
+        display: none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+
+    aside .sidebar a{
+        width: 5.6rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    main .analyse{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    main .new-users .user-list .user{
+        flex-basis: 40%;
+    }
+
+    main .recent-orders {
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 0.8rem;
+    }
+
+    main .recent-orders table{
+        width: 83vw;
+    }
+
+    main table thead tr th:last-child,
+    main table thead tr th:first-child{
+        display: none;
+    }
+
+    main table tbody tr td:last-child,
+    main table tbody tr td:first-child{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 0 var(--padding-1);
+    }
+
+    aside{
+        position: fixed;
+        background-color: var(--color-white);
+        width: 15rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        left: -100%;
+        display: none;
+        animation: showMenu 0.4s ease forwards;
+    }
+
+    @keyframes showMenu {
+       to{
+        left: 0;
+       } 
+    }
+
+    aside .logo{
+        margin-left: 1rem;
+    }
+
+    aside .logo h2{
+        display: inline;
+    }
+
+    aside .sidebar h3{
+        display: inline;
+    }
+
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: absolute;
+        bottom: 5rem;
+    }
+
+    aside .toggle .close{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    main{
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+
+    main .new-users .user-list .user{
+        flex-basis: 35%;
+    }
+
+    main .recent-orders{
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+    }
+
+    main .recent-orders table{
+        width: 100%;
+        margin: 0;
+    }
+
+    .right-section{
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+
+    .right-section .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        background-color: var(--color-white);
+        padding: 0 var(--padding-1);
+        height: 4.6rem;
+        width: 100%;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+        margin: 0;
+    }
+
+    .right-section .nav .dark-mode{
+        width: 4.4rem;
+        position: absolute;
+        left: 66%;
+    }
+
+    .right-section .profile .info{
+        display: none;
+    }
+
+    .right-section .nav button{
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
+
+    .right-section .nav button span{
+        font-size: 2rem;
+    }
+
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo_fix.png">
+    <title>Detail | PULSE by Klinik XYZ</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo_fix.png">
+                    <h2>
+                        <span class="danger">PULSE</span>
+                        <span class="by-telkomedika">by Klinik XYZ</span>
+                    </h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="../Dashboard_Dokter Gigi/index.html">
+                    <span class="fas fa-home"></span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="../Jadwal_Dokter Gigi/index.html">
+                    <span class="	fas fa-user-md"></span>
+                    <h3>Jadwal</h3>
+                </a>
+                <a href="../Rekam Medis_Dokter Gigi/Rekam Medis.html">
+                    <span class="fas fa-file-medical-alt"></span>
+                    <h3>Rekam Medis</h3>
+                </a>
+                <a href="../Presensi_Dokter Gigi/index.html">
+                    <span class="	fas fa-id-card-alt"></span>
+                    <h3>Presensi</h3>
+                </a>
+                <a href="../Login_Dokter/index.html">
+                    <span class="fas fa-sign-out-alt"></span> <!-- Ikon Logout -->
+                    <h3>Keluar</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+<main>
+    <h1>Edit Data</h1>
+<!-- Kontainer untuk Data Administrasi -->
+<div class="kontainer-data-vital">
+    <h2>Data Administrasi</h2>
+
+    <label for="nama-pasien">Nama Pasien</label>
+    <input type="text" id="nama-pasien" placeholder="Masukkan Nama Pasien">
+
+    <label for="nomor-rekam-medis">Nomor Rekam Medis</label>
+    <input type="text" id="nomor-rekam-medis" placeholder="Masukkan Nomor Rekam Medis">
+
+    <label for="alamat-lengkap">Alamat Lengkap</label>
+    <input type="text" id="alamat-lengkap" placeholder="Masukkan Alamat Lengkap Pasien">
+
+    <label for="tempat-lahir">Tempat Lahir</label>
+<input type="text" id="tempat-lahir" placeholder="Masukkan Tempat Lahir">
+
+<label for="tanggal-lahir">Tanggal Lahir</label>
+<input type="date" id="tanggal-lahir">
+
+
+    <label for="jenis-kelamin">Jenis Kelamin</label>
+    <select id="jenis-kelamin">
+        <option value="laki-laki">Laki-Laki</option>
+        <option value="perempuan">Perempuan</option>
+    </select>
+</div>
+
+    <!-- Kontainer untuk Data Klinis -->
+<div class="kontainer-data-vital">
+    <h2>Data Klinis</h2>
+
+    <div class="kontainer-dokter">
+        <label for="poli">Poliklinik</label>
+        <input type="text" id="poli" placeholder="Masukkan Poli">
+
+        <label for="nama-dokter">Dokter</label>
+        <input type="text" id="nama-dokter" placeholder="Masukkan Nama Dokter">
+    </div>
+
+    <label for="amnesis">Hasil Amnesis</label>
+    <input type="text" id="amnesis" placeholder="Masukkan Hasil Amnesis Pasien">
+
+    <label for="kondisi-vital">Hasil Pemeriksaan Fisik</label>
+
+    <div class="sub-kondisi-vital">
+        <label for="suhu-tubuh">Suhu Tubuh</label>
+        <input type="text" id="suhu-tubuh" placeholder="Masukkan Suhu Tubuh (°C)">
+        
+        <label for="denyut-nadi">Denyut Nadi</label>
+        <input type="text" id="denyut-nadi" placeholder="Masukkan Denyut Nadi (BPM)">
+        
+        <label for="tekanan-darah">Tekanan Darah</label>
+        <input type="text" id="tekanan-darah" placeholder="Masukkan Tekanan Darah (mmHg)">
+        
+        <label for="saturasi-oksigen">Saturasi Oksigen</label>
+        <input type="text" id="saturasi-oksigen" placeholder="Masukkan Saturasi Oksigen (%)">
+    </div>
+
+    <label for="diagnosis">Diagnosis</label>
+    <input type="text" id="diagnosis" placeholder="Masukkan Diagnosis Pasien">
+
+    <label for="bentuk-penanganan">Bentuk Penanganan</label>
+    <input type="text" id="bentuk-penanganan" placeholder="Masukkan Bentuk Penanganan Pasien">
+
+    <label for="resep-quantity">Resep</label>
+    <input type="number" id="resep-quantity" placeholder="Masukkan Quantity Resep" min="1" onchange="tambahResep()">
+
+    <div id="resep-container"></div>
+
+    <label for="rujukan">Rujukan</label>
+    <select id="rujukan" onchange="tambahRujukan()">
+        <option value="tidak">Tidak</option>
+        <option value="ya">Ya</option>
+    </select>
+
+    <div id="rujukan-container" style="display: none;">
+        <label for="tujuan-rujukan">Tujuan Rujukan</label>
+        <input type="text" id="tujuan-rujukan" placeholder="Masukkan Tujuan Rujukan Pasien">
+    </div>
+
+
+
+
+    <button class="btn-submit">Submit</button>
+</main>
+<!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p><b>Wilujeng Sumping!</b></p>
+                        <small class="text-muted">Masuk Sebagai Dokter Gigi</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2>Klinik XYZ</h2>
+                    <p>Universitas XYZ</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Pengingat</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+        
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                                    <small class="text_muted">
+                                Jumat, 31 Mei 2024
+                            </small>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+        
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Penyuluhan</h3>
+                            <small class="text_muted">
+                                Rabu, 22 Mei 2024
+                            </small>
+                        </div>
+        
+                        </span>
+                    </div>
+                </div>
+        
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Tambah Pengingat</h3>
+                        </span>
+                    </div>
+                </div>
+        
+            </div>
+        
+        </div>
+        
+        
+        </div>
+            
+    <script src="index.js"></script>
+    <script>
+        // Ambil parameter nomor rekam medis dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nomorRekamMedis = urlParams.get('nomor_rekam_medis');
+    
+        if (nomorRekamMedis) {
+            console.log('Nomor Rekam Medis yang diterima:', nomorRekamMedis);
+    
+            // Fetch data pasien dari API
+            fetch('http://localhost:3008/api/pasien-gigi')
+                .then(response => response.json())
+                .then(data => {
+                    // Cari pasien yang sesuai berdasarkan nomor rekam medis
+                    const pasienData = data.find(pasien => pasien.administrasi.nomor_rekam_medis === nomorRekamMedis);
+    
+                    if (pasienData) {
+                        console.log('Pasien ditemukan:', pasienData); // Log data pasien yang ditemukan
+    
+                        // Isi form dengan data pasien
+                        document.getElementById('nama-pasien').value = pasienData.administrasi.nama_pasien;
+                        document.getElementById('nomor-rekam-medis').value = pasienData.administrasi.nomor_rekam_medis;
+                        document.getElementById('alamat-lengkap').value = pasienData.administrasi.alamat_lengkap;
+                        document.getElementById('tempat-lahir').value = pasienData.administrasi.tempat_lahir;
+                        document.getElementById('tanggal-lahir').value = pasienData.administrasi.tanggal_lahir;
+                        document.getElementById('jenis-kelamin').value = pasienData.administrasi.jenis_kelamin;
+    
+                        // Data klinis
+                        document.getElementById('poli').value = pasienData.penanganan.poli;
+                        document.getElementById('nama-dokter').value = pasienData.penanganan.dokter;
+                        document.getElementById('amnesis').value = pasienData.klinis.amnesis;
+                        document.getElementById('suhu-tubuh').value = pasienData.klinis.kondisi_vital.suhu_tubuh;
+                        document.getElementById('denyut-nadi').value = pasienData.klinis.kondisi_vital.denyut_nadi;
+                        document.getElementById('tekanan-darah').value = pasienData.klinis.kondisi_vital.tekanan_darah;
+                        document.getElementById('saturasi-oksigen').value = pasienData.klinis.kondisi_vital.saturasi_oksigen;
+                        document.getElementById('diagnosis').value = pasienData.klinis.diagnosis;
+                        document.getElementById('bentuk-penanganan').value = pasienData.klinis.bentuk_penanganan;
+    
+                        // Jika pasien dirujuk
+                        if (pasienData.klinis.rujukan === 'ya') {
+                            document.getElementById('rujukan').value = 'ya';
+                            document.getElementById('rujukan-container').style.display = 'block';
+                            document.getElementById('tujuan-rujukan').value = pasienData.klinis.tujuan_rujukan || ''; // Jika ada
+                        } else {
+                            document.getElementById('rujukan').value = 'tidak';
+                            document.getElementById('rujukan-container').style.display = 'none';
+                        }
+    
+                        // Resep (jika ada resep, bisa diisi sesuai kebutuhan)
+                    } else {
+                        console.log('Pasien tidak ditemukan dengan nomor Rekam Medis:', nomorRekamMedis);
+                        alert('Pasien tidak ditemukan');
+                    }
+                })
+                .catch(error => {
+                    console.error('Terjadi kesalahan:', error);
+                    alert('Terjadi kesalahan saat memuat data.');
+                });
+        } else {
+            alert('Nomor Rekam Medis tidak ditemukan di URL.');
+        }
+    </script>
+</body>
+
+</html>

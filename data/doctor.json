@@ -1,0 +1,122 @@
+[
+    {
+        "bulan": "Januari 2024",
+        "dokter": [
+            { "nama": "dr. Surya Putra", "spesialisasi": "Dokter Umum", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "dr. Hana Putri", "spesialisasi": "Dokter Umum", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Phonna Chlissma", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Ferdian Sugandi", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Rini Yulianti", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 17, "persentase_kehadiran": "85%" }
+        ]
+    },
+    {
+        "bulan": "Februari 2024",
+        "dokter": [
+            { "nama": "dr. Surya Putra", "spesialisasi": "Dokter Umum", "hari_kerja": 22, "hari_hadir": 20, "persentase_kehadiran": "91%" },
+            { "nama": "dr. Hana Putri", "spesialisasi": "Dokter Umum", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Phonna Chlissma", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Ferdian Sugandi", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Rini Yulianti", "spesialisasi": "Dokter Gigi", "hari_kerja": 22, "hari_hadir": 19, "persentase_kehadiran": "86%" }
+        ]
+    },
+    {
+        "bulan": "Maret 2024",
+        "dokter": [
+            { "nama": "dr. Surya Putra", "spesialisasi": "Dokter Umum", "hari_kerja": 21, "hari_hadir": 19, "persentase_kehadiran": "90%" },
+            { "nama": "dr. Hana Putri", "spesialisasi": "Dokter Umum", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Phonna Chlissma", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Ferdian Sugandi", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Rini Yulianti", "spesialisasi": "Dokter Gigi", "hari_kerja": 21, "hari_hadir": 18, "persentase_kehadiran": "85%" }
+        ]
+    },
+    {
+        "bulan": "April 2024",
+        "dokter": [
+            { "nama": "dr. Surya Putra", "spesialisasi": "Dokter Umum", "hari_kerja": 22, "hari_hadir": 21, "persentase_kehadiran": "95%" },
+            { "nama": "dr. Hana Putri", "spesialisasi": "Dokter Umum", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Phonna Chlissma", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Ferdian Sugandi", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Rini Yulianti", "spesialisasi": "Dokter Gigi", "hari_kerja": 22, "hari_hadir": 20, "persentase_kehadiran": "91%" }
+        ]
+    },
+    {
+        "bulan": "Mei 2024",
+        "dokter": [
+            { "nama": "dr. Surya Putra", "spesialisasi": "Dokter Umum", "hari_kerja": 23, "hari_hadir": 21, "persentase_kehadiran": "91%" },
+            { "nama": "dr. Hana Putri", "spesialisasi": "Dokter Umum", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Phonna Chlissma", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Ferdian Sugandi", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Rini Yulianti", "spesialisasi": "Dokter Gigi", "hari_kerja": 23, "hari_hadir": 20, "persentase_kehadiran": "87%" }
+        ]
+    },
+    {
+        "bulan": "Juni 2024",
+        "dokter": [
+            { "nama": "dr. Surya Putra", "spesialisasi": "Dokter Umum", "hari_kerja": 21, "hari_hadir": 20, "persentase_kehadiran": "95%" },
+            { "nama": "dr. Hana Putri", "spesialisasi": "Dokter Umum", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Phonna Chlissma", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Ferdian Sugandi", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Rini Yulianti", "spesialisasi": "Dokter Gigi", "hari_kerja": 21, "hari_hadir": 19, "persentase_kehadiran": "91%" }
+        ]
+    },
+    {
+        "bulan": "Juli 2024",
+        "dokter": [
+            { "nama": "dr. Surya Putra", "spesialisasi": "Dokter Umum", "hari_kerja": 22, "hari_hadir": 21, "persentase_kehadiran": "95%" },
+            { "nama": "dr. Hana Putri", "spesialisasi": "Dokter Umum", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Phonna Chlissma", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Ferdian Sugandi", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Rini Yulianti", "spesialisasi": "Dokter Gigi", "hari_kerja": 22, "hari_hadir": 20, "persentase_kehadiran": "91%" }
+        ]
+    },
+    {
+        "bulan": "Agustus 2024",
+        "dokter": [
+            { "nama": "dr. Surya Putra", "spesialisasi": "Dokter Umum", "hari_kerja": 23, "hari_hadir": 21, "persentase_kehadiran": "91%" },
+            { "nama": "dr. Hana Putri", "spesialisasi": "Dokter Umum", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Phonna Chlissma", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Ferdian Sugandi", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Rini Yulianti", "spesialisasi": "Dokter Gigi", "hari_kerja": 23, "hari_hadir": 20, "persentase_kehadiran": "87%" }
+        ]
+    },
+    {
+        "bulan": "September 2024",
+        "dokter": [
+            { "nama": "dr. Surya Putra", "spesialisasi": "Dokter Umum", "hari_kerja": 21, "hari_hadir": 20, "persentase_kehadiran": "95%" },
+            { "nama": "dr. Hana Putri", "spesialisasi": "Dokter Umum", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Phonna Chlissma", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Ferdian Sugandi", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Rini Yulianti", "spesialisasi": "Dokter Gigi", "hari_kerja": 21, "hari_hadir": 19, "persentase_kehadiran": "91%" }
+        ]
+    },
+    {
+        "bulan": "Oktober 2024",
+        "dokter": [
+            { "nama": "dr. Surya Putra", "spesialisasi": "Dokter Umum", "hari_kerja": 22, "hari_hadir": 21, "persentase_kehadiran": "95%" },
+            { "nama": "dr. Hana Putri", "spesialisasi": "Dokter Umum", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Phonna Chlissma", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Ferdian Sugandi", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Rini Yulianti", "spesialisasi": "Dokter Gigi", "hari_kerja": 22, "hari_hadir": 20, "persentase_kehadiran": "91%" }
+        ]
+    },
+    {
+        "bulan": "November 2024",
+        "dokter": [
+            { "nama": "dr. Surya Putra", "spesialisasi": "Dokter Umum", "hari_kerja": 21, "hari_hadir": 20, "persentase_kehadiran": "95%" },
+            { "nama": "dr. Hana Putri", "spesialisasi": "Dokter Umum", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Phonna Chlissma", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Ferdian Sugandi", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Rini Yulianti", "spesialisasi": "Dokter Gigi", "hari_kerja": 21, "hari_hadir": 19, "persentase_kehadiran": "91%" }
+        ]
+    },
+    {
+        "bulan": "Desember 2024",
+        "dokter": [
+            { "nama": "dr. Surya Putra", "spesialisasi": "Dokter Umum", "hari_kerja": 22, "hari_hadir": 21, "persentase_kehadiran": "95%" },
+            { "nama": "dr. Hana Putri", "spesialisasi": "Dokter Umum", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Phonna Chlissma", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Ferdian Sugandi", "spesialisasi": "Dokter Gigi", "hari_kerja": 20, "hari_hadir": 18, "persentase_kehadiran": "90%" },
+            { "nama": "drg. Rini Yulianti", "spesialisasi": "Dokter Gigi", "hari_kerja": 22, "hari_hadir": 20, "persentase_kehadiran": "91%" }
+        ]
+    }
+]

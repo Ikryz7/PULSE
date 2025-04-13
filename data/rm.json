@@ -1,0 +1,221 @@
+[
+    {
+      "penanganan": {
+        "poli": "Poli Umum",
+        "dokter": "Dr. Ahmad",
+        "tanggal_penanganan": "2024-12-01",
+        "waktu_penanganan": "09:00",
+        "bentuk_penanganan": "Registrasi"
+      },
+      "administrasi": {
+        "nama_pasien": "Budi Santoso",
+        "nim": "123456789",
+        "nomor_rekam_medis": "RM123456",
+        "alamat_lengkap": "Jl. Merdeka No. 10, Jakarta",
+        "tempat_lahir": "Bandung",
+        "tanggal_lahir": "1995-01-01",
+        "jenis_kelamin": "laki-laki"
+      },
+      "klinis": {
+        "amnesis": "Keluhan batuk dan demam selama 3 hari.",
+        "kondisi_vital": {
+          "suhu_tubuh": "37.5",
+          "denyut_nadi": "80",
+          "tekanan_darah": "120/80",
+          "saturasi_oksigen": "98"
+        },
+        "diagnosis": "Flu biasa",
+        "bentuk_penanganan": "Pemberian obat antipiretik",
+        "resep": 2,
+        "rujukan": "tidak"
+      }
+    },
+    {
+      "penanganan": {
+        "poli": "Poli Gigi",
+        "dokter": "Dr. Rina",
+        "tanggal_penanganan": "2024-12-02",
+        "waktu_penanganan": "10:30",
+        "bentuk_penanganan": "Darurat"
+      },
+      "administrasi": {
+        "nama_pasien": "Siti Aminah",
+        "nim": "987654321",
+        "nomor_rekam_medis": "RM987654",
+        "alamat_lengkap": "Jl. Cendana No. 5, Surabaya",
+        "tempat_lahir": "Surabaya",
+        "tanggal_lahir": "1990-04-15",
+        "jenis_kelamin": "perempuan"
+      },
+      "klinis": {
+        "amnesis": "Nyeri gigi bagian kanan bawah.",
+        "kondisi_vital": {
+          "suhu_tubuh": "36.8",
+          "denyut_nadi": "75",
+          "tekanan_darah": "110/70",
+          "saturasi_oksigen": "97"
+        },
+        "diagnosis": "Gigi berlubang",
+        "bentuk_penanganan": "Tambal gigi",
+        "resep": 1,
+        "rujukan": "tidak"
+      }
+    },
+    {
+      "penanganan": {
+        "poli": "Poli Umum",
+        "dokter": "Dr. Liana",
+        "tanggal_penanganan": "2024-12-03",
+        "waktu_penanganan": "14:00",
+        "bentuk_penanganan": "Registrasi"
+      },
+      "administrasi": {
+        "nama_pasien": "Rina Putri",
+        "nim": "112233445",
+        "nomor_rekam_medis": "RM112233",
+        "alamat_lengkap": "Jl. Bunga No. 12, Bali",
+        "tempat_lahir": "Bali",
+        "tanggal_lahir": "2015-07-10",
+        "jenis_kelamin": "perempuan"
+      },
+      "klinis": {
+        "amnesis": "Batuk pilek dan demam tinggi.",
+        "kondisi_vital": {
+          "suhu_tubuh": "38.0",
+          "denyut_nadi": "90",
+          "tekanan_darah": "110/70",
+          "saturasi_oksigen": "96"
+        },
+        "diagnosis": "Infeksi saluran pernapasan atas",
+        "bentuk_penanganan": "Pemberian obat penurun demam dan antibiotik",
+        "resep": 3,
+        "rujukan": "tidak"
+      }
+    },
+    {
+      "penanganan": {
+        "poli": "Poli Umum",
+        "dokter": "Dr. Joko",
+        "tanggal_penanganan": "2024-12-04",
+        "waktu_penanganan": "16:00",
+        "bentuk_penanganan": "Darurat"
+      },
+      "administrasi": {
+        "nama_pasien": "Andi Subagio",
+        "nim": "556677889",
+        "nomor_rekam_medis": "RM556677",
+        "alamat_lengkap": "Jl. Merdeka No. 20, Yogyakarta",
+        "tempat_lahir": "Yogyakarta",
+        "tanggal_lahir": "1987-09-20",
+        "jenis_kelamin": "laki-laki"
+      },
+      "klinis": {
+        "amnesis": "Gatal dan ruam di kulit.",
+        "kondisi_vital": {
+          "suhu_tubuh": "37.0",
+          "denyut_nadi": "70",
+          "tekanan_darah": "120/80",
+          "saturasi_oksigen": "99"
+        },
+        "diagnosis": "Dermatitis alergi",
+        "bentuk_penanganan": "Pemberian salep dan antihistamin",
+        "resep": 2,
+        "rujukan": "tidak"
+      }
+    },
+    {
+      "penanganan": {
+        "poli": "Poli Umum",
+        "dokter": "Dr. Yani",
+        "tanggal_penanganan": "2024-12-05",
+        "waktu_penanganan": "11:00",
+        "bentuk_penanganan": "Registrasi"
+      },
+      "administrasi": {
+        "nama_pasien": "Joko Santoso",
+        "nim": "223344556",
+        "nomor_rekam_medis": "RM223344",
+        "alamat_lengkap": "Jl. Raya No. 25, Bandung",
+        "tempat_lahir": "Bandung",
+        "tanggal_lahir": "1982-11-10",
+        "jenis_kelamin": "laki-laki"
+      },
+      "klinis": {
+        "amnesis": "Sakit perut bagian bawah",
+        "kondisi_vital": {
+          "suhu_tubuh": "36.5",
+          "denyut_nadi": "78",
+          "tekanan_darah": "130/85",
+          "saturasi_oksigen": "98"
+        },
+        "diagnosis": "Apendisitis",
+        "bentuk_penanganan": "Operasi pengangkatan usus buntu",
+        "resep": 1,
+        "rujukan": "ya",
+        "tujuan_rujukan": "RS Cipto"
+      }
+    },
+    {
+      "penanganan": {
+        "poli": "Poli Umum",
+        "dokter": "Dr. Arif",
+        "tanggal_penanganan": "2024-12-03",
+        "waktu_penanganan": "14:45",
+        "bentuk_penanganan": "Rutin"
+      },
+      "administrasi": {
+        "nama_pasien": "Darrel Amani",
+        "nim": "123456789",
+        "nomor_rekam_medis": "RM123456",
+        "alamat_lengkap": "Jl. Mawar No. 10, Jakarta",
+        "tempat_lahir": "Jakarta",
+        "tanggal_lahir": "1989-07-20",
+        "jenis_kelamin": "laki-laki"
+      },
+      "klinis": {
+        "amnesis": "Demam ringan selama tiga hari.",
+        "kondisi_vital": {
+          "suhu_tubuh": "37.5",
+          "denyut_nadi": "80",
+          "tekanan_darah": "120/80",
+          "saturasi_oksigen": "96"
+        },
+        "diagnosis": "Infeksi saluran pernapasan atas",
+        "bentuk_penanganan": "Pemberian obat",
+        "resep": 2,
+        "rujukan": "tidak"
+      }
+    },
+    {
+      "penanganan": {
+        "poli": "Poli Anak",
+        "dokter": "Dr. Siti",
+        "tanggal_penanganan": "2024-12-04",
+        "waktu_penanganan": "09:15",
+        "bentuk_penanganan": "Darurat"
+      },
+      "administrasi": {
+        "nama_pasien": "Josef Asama",
+        "nim": "987654322",
+        "nomor_rekam_medis": "RM987655",
+        "alamat_lengkap": "Jl. Melati No. 7, Bandung",
+        "tempat_lahir": "Bandung",
+        "tanggal_lahir": "1995-03-12",
+        "jenis_kelamin": "perempuan"
+      },
+      "klinis": {
+        "amnesis": "Ruam kulit disertai gatal.",
+        "kondisi_vital": {
+          "suhu_tubuh": "37.0",
+          "denyut_nadi": "78",
+          "tekanan_darah": "115/75",
+          "saturasi_oksigen": "98"
+        },
+        "diagnosis": "Dermatitis kontak",
+        "bentuk_penanganan": "Salep dan obat antihistamin",
+        "resep": 1,
+        "rujukan": "tidak"
+      }
+    }
+  ]
+  

@@ -1,0 +1,56 @@
+[
+  {
+    "username": "123",
+    "password": "123",
+    "posisi": "admin",
+    "approved": true,
+    "status": "Rejected"
+  },
+  {
+    "username": "abc",
+    "password": "abc",
+    "posisi": "dokter-umum",
+    "approved": true,
+    "status": "Rejected"
+  },
+  {
+    "username": "1201213219",
+    "password": "12232443",
+    "posisi": "admin",
+    "approved": true,
+    "status": "Accepted"
+  },
+  {
+    "username": "1201213269",
+    "password": "123456",
+    "posisi": "admin",
+    "approved": true,
+    "status": "Accepted"
+  },
+  {
+    "username": "gisellafirlianda",
+    "password": "123",
+    "posisi": "dokter-umum",
+    "approved": true,
+    "status": "Accepted"
+  },
+  {
+    "username": "1201213293",
+    "password": "123",
+    "posisi": "dokter-umum",
+    "approved": true,
+    "status": "Accepted"
+  },
+  {
+    "username": "123",
+    "password": "123",
+    "posisi": "admin",
+    "approved": false
+  },
+  {
+    "username": "abc",
+    "password": "abc",
+    "posisi": "dokter-umum",
+    "approved": false
+  }
+]

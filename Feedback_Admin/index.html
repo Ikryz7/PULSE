@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo_fix.png">
+    <title>Feedback | PULSE by Klinik XYZ</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo_fix.png">
+                    <h2>
+                        <span class="danger">PULSE</span>
+                        <span class="by-telkomedika">by Klinik XYZ</span>
+                    </h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="../Dashboard_Admin/index.html">
+                    <span class="fas fa-home"></span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="../Dokter_Admin/index.html">
+                    <span class="fas fa-stethoscope"></span>
+                    <h3>Dokter</h3>
+                </a>
+                <a href="../Pasien_Admin/index.html">
+                    <span class="fas fa-user-injured"></span>
+                    <h3>Pasien</h3>
+                </a>
+                <a href="../Feedback_Admin/index.html">
+                    <span class="fa fa-paper-plane"></span>
+                    <h3>Feedback</h3>
+                </a>
+                <a href="../Presensi_Admin/index.html">
+                    <span class="fas fa-id-card-alt"></span>
+                    <h3>Presensi</h3>
+                </a>
+                <a href="../logout"> <!-- Adjust this route for the logout logic -->
+                    <span class="fas fa-sign-out-alt"></span>
+                    <h3>Keluar</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h1>Feedback</h1>
+            <div class="doctor-feedback-section">
+                <table class="feedback-table">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Poliklinik</th>
+                            <th>Tanggal Berobat</th>
+                            <th>Waktu Berobat</th>
+                            <th>Feedback</th>
+                        </tr>
+                    </thead>
+                    <tbody id="feedback-tbody">
+                        <!-- Data akan dimasukkan di sini menggunakan JavaScript -->
+                    </tbody>
+                </table>
+        
+                <!-- Kontainer untuk pagination, akan diisi oleh JavaScript -->
+                <div id="pagination-container" class="pagination"></div>
+            </div>
+        </main>
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p><b>Wilujeng Sumping!</b></p>
+                        <small class="text-muted">Masuk Sebagai Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2>Klinik XYZ</h2>
+                    <p>Universitas XYZ</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Pengingat</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                                    <small class="text_muted">
+                                Jumat, 31 Mei 2024
+                            </small>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Penyuluhan</h3>
+                            <small class="text_muted">
+                                Rabu, 22 Mei 2024
+                            </small>
+                        </div>
+
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Tambah Pengingat</h3>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        // Fungsi untuk memuat data dari feedback.json
+        fetch('../data/feedback.json')
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.getElementById('feedback-tbody');
+                const feedbackList = data.slice(0, 10); // Ambil 10 data pertama
+
+                feedbackList.forEach(feedback => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${feedback.nama}</td>
+                        <td>${feedback.poliklinik}</td>
+                        <td>${feedback.tanggal_berobat}</td>
+                        <td>${feedback.waktu_berobat}</td>
+                        <td>${feedback.feedback}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading feedback.json:', error);
+            });
+            // Fungsi untuk memuat data dari feedback.json dengan pagination
+fetch('../data/feedback.json')
+    .then(response => response.json())
+    .then(data => {
+        const itemsPerPage = 10; // Tentukan berapa banyak data per halaman
+        let currentPage = 1;
+
+        // Fungsi untuk menampilkan data sesuai halaman yang dipilih
+        function displayData(page) {
+            const tbody = document.getElementById('feedback-tbody');
+            tbody.innerHTML = ''; // Bersihkan data yang ada sebelumnya
+
+            const startIndex = (page - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const pageData = data.slice(startIndex, endIndex);
+
+            pageData.forEach(feedback => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${feedback.nama}</td>
+                    <td>${feedback.poliklinik}</td>
+                    <td>${feedback.tanggal_berobat}</td>
+                    <td>${feedback.waktu_berobat}</td>
+                    <td>${feedback.feedback}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Fungsi untuk menampilkan tombol pagination
+        function setupPagination() {
+            const totalPages = Math.ceil(data.length / itemsPerPage);
+            const paginationContainer = document.getElementById('pagination-container');
+            paginationContainer.innerHTML = ''; // Bersihkan pagination sebelumnya
+
+            for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+                button.textContent = i;
+                button.addEventListener('click', () => {
+                    currentPage = i;
+                    displayData(currentPage);
+                });
+
+                // Menambahkan tombol page ke container
+                paginationContainer.appendChild(button);
+            }
+        }
+
+        // Inisialisasi data dan pagination
+        displayData(currentPage);
+        setupPagination();
+    })
+    .catch(error => {
+        console.error('Error loading feedback.json:', error);
+    });
+
+    </script>
+</body>
+
+</html>

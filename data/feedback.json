@@ -1,0 +1,142 @@
+[
+    {
+        "nama": "Asmadi Gunawan",
+        "poliklinik": "Umum",
+        "tanggal_berobat": "12-10-2024",
+        "waktu_berobat": "10:00 AM",
+        "feedback": "Dokter sangat profesional dan ramah."
+    },
+    {
+        "nama": "Yance Wulandari",
+        "poliklinik": "Gigi",
+        "tanggal_berobat": "15-10-2024",
+        "waktu_berobat": "11:30 AM",
+        "feedback": "Pengalaman luar biasa, sangat membantu."
+    },
+    {
+        "nama": "Cawisadi Prasetya",
+        "poliklinik": "Gigi",
+        "tanggal_berobat": "18-10-2024",
+        "waktu_berobat": "09:00 AM",
+        "feedback": "Penanganan bagus, namun waktu tunggu sedikit lama."
+    },
+    {
+        "nama": "Galuh Damanik",
+        "poliklinik": "Umum",
+        "tanggal_berobat": "20-10-2024",
+        "waktu_berobat": "02:00 PM",
+        "feedback": "Pelayanan sangat cepat dan ramah."
+    },
+    {
+        "nama": "Bella Hariyah",
+        "poliklinik": "Gigi",
+        "tanggal_berobat": "25-10-2024",
+        "waktu_berobat": "08:30 AM",
+        "feedback": "Dokter memberikan penjelasan yang jelas."
+    },
+    {
+        "nama": "Mustika Lazuardi",
+        "poliklinik": "Gigi",
+        "tanggal_berobat": "27-10-2024",
+        "waktu_berobat": "01:00 PM",
+        "feedback": "Sangat puas dengan pelayanannya."
+    },
+    {
+        "nama": "Jaiman Widodo",
+        "poliklinik": "Gigi",
+        "tanggal_berobat": "30-10-2024",
+        "waktu_berobat": "03:30 PM",
+        "feedback": "Dokter sangat teliti dan ramah."
+    },
+    {
+        "nama": "Shakila Pudjiastuti",
+        "poliklinik": "Gigi",
+        "tanggal_berobat": "01-11-2024",
+        "waktu_berobat": "04:00 PM",
+        "feedback": "Pelayanan sangat baik dan cepat."
+    },
+    {
+        "nama": "Qori Nuraini",
+        "poliklinik": "Umum",
+        "tanggal_berobat": "05-11-2024",
+        "waktu_berobat": "09:15 AM",
+        "feedback": "Dokter sangat membantu dan ramah."
+    },
+    {
+        "nama": "Nurul Kusumawati",
+        "poliklinik": "Umum",
+        "tanggal_berobat": "10-11-2024",
+        "waktu_berobat": "10:45 AM",
+        "feedback": "Sangat puas dengan pelayanan yang diberikan."
+    },
+    {
+        "nama": "Aurora Agustina",
+        "poliklinik": "Gigi",
+        "tanggal_berobat": "12-11-2024",
+        "waktu_berobat": "09:30 AM",
+        "feedback": "Waktu tunggu lama dan kurang nyaman."
+    },
+    {
+        "nama": "Carub Sitorus",
+        "poliklinik": "Gigi",
+        "tanggal_berobat": "14-11-2024",
+        "waktu_berobat": "10:30 AM",
+        "feedback": "Dokter sangat sabar dan perhatian."
+    },
+    {
+        "nama": "Elvina Astuti",
+        "poliklinik": "Umum",
+        "tanggal_berobat": "16-11-2024",
+        "waktu_berobat": "01:00 PM",
+        "feedback": "Pelayanan cepat, tapi ruangan terlalu sempit."
+    },
+    {
+        "nama": "Gandi Nashiruddin",
+        "poliklinik": "Gigi",
+        "tanggal_berobat": "17-11-2024",
+        "waktu_berobat": "02:30 PM",
+        "feedback": "Sangat puas dengan cara dokter menangani masalah gigi saya."
+    },
+    {
+        "nama": "Gabriella Suartini",
+        "poliklinik": "Umum",
+        "tanggal_berobat": "19-11-2024",
+        "waktu_berobat": "11:00 AM",
+        "feedback": "Pelayanan kurang memadai, tidak ada penjelasan yang jelas."
+    },
+    {
+        "nama": "Widya Nasyidah",
+        "poliklinik": "Gigi",
+        "tanggal_berobat": "21-11-2024",
+        "waktu_berobat": "04:00 PM",
+        "feedback": "Dokter sangat baik, namun biaya terlalu mahal."
+    },
+    {
+        "nama": "Emong Adriansyah",
+        "poliklinik": "Gigi",
+        "tanggal_berobat": "23-11-2024",
+        "waktu_berobat": "08:00 AM",
+        "feedback": "Pengalaman buruk, dokter tidak ramah."
+    },
+    {
+        "nama": "Rahmi Namaga",
+        "poliklinik": "Umum",
+        "tanggal_berobat": "25-11-2024",
+        "waktu_berobat": "07:30 AM",
+        "feedback": "Pelayanan sangat ramah, saya merasa dihargai."
+    },
+    {
+        "nama": "Kuncoro",
+        "poliklinik": "Umum",
+        "tanggal_berobat": "27-11-2024",
+        "waktu_berobat": "01:45 PM",
+        "feedback": "Proses pendaftaran sangat memakan waktu."
+    },
+    {
+        "nama": "Intan Mulyani",
+        "poliklinik": "Gigi",
+        "tanggal_berobat": "29-11-2024",
+        "waktu_berobat": "09:45 AM",
+        "feedback": "Dokter sangat berpengalaman dan penjelasannya sangat jelas."
+    }
+]

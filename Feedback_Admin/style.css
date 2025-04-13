@@ -1,0 +1,971 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-mode-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+}
+.logo h2 {
+    margin: 0;
+    font-size: 24px; /* Adjust this size as needed */
+}
+
+.logo .danger {
+    display: block;
+    font-size: 24px; /* Size for "PULSE" */
+    font-weight: bold;
+    color: #507687;
+}
+
+.logo .by-telkomedika {
+    display: block;
+    font-size: 14px; /* Smaller size for "by Telkomedika" */
+    font-weight: normal;
+}
+
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 0.87rem;
+}
+
+small{
+    font-size: 0.76rem;
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.danger{
+    color: var(--color-danger);
+}
+
+.success{
+    color: var(--color-success);
+}
+
+.warning{
+    color: var(--color-warning);
+}
+
+.container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem auto 23rem;
+}
+
+aside{
+    height: 100vh;
+}
+
+aside .toggle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .toggle .logo{
+    display: flex;
+    gap: 0.5rem;
+}
+
+aside .toggle .logo img{
+    width: 2rem;
+    height: 2rem;
+}
+
+aside .toggle .close{
+    padding-right: 1rem;
+    display: none;
+}
+
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    height: 88vh;
+    position: relative;
+    top: 1.5rem;
+    transition: all 0.3s ease;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.pagination button.active {
+    background-color: #007BFF;
+    color: white;
+}
+
+.pagination button:hover {
+    background-color: #ddd;
+}
+
+aside .sidebar:hover{
+    box-shadow: none;
+}
+
+aside .sidebar a{
+    display: flex;
+    align-items: center;
+    color: var(--color-info-dark);
+    height: 3.7rem;
+    gap: 1rem;
+    position: relative;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a.active{
+    width: 100%;
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    margin-left: 0;
+}
+
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 18px;
+    background-color: var(--color-primary);
+}
+
+aside .sidebar a.active span{
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover{
+    color: var(--color-primary);
+}
+
+aside .sidebar a:hover span{
+    margin-left: 0.6rem;
+}
+
+aside .sidebar .message-count{
+    background-color: var(--color-danger);
+    padding: 2px 6px;
+    color: var(--color-white);
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+main {
+    margin-top: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.doctor-schedule, .adjust-schedule {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+    
+}
+
+.doctor-schedule h2, .adjust-schedule h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    
+}
+
+.doctor-schedule p, .adjust-schedule p {
+    font-size: 1rem;
+    color: var(--color-dark-variant);
+    margin-bottom: 1.2rem;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-light);
+}
+
+.schedule-table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    
+}
+
+.schedule-table tbody tr:hover {
+    background-color: var(--color-light);
+}
+
+.btn-edit {
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--border-radius-1);
+    background-color: var(--color-warning);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+    background-color: var(--color-warning-dark);
+}
+
+.btn-back {
+    padding: 0.5rem 2rem; /* Increased horizontal padding for a longer button */
+    border-radius: var(--border-radius-1);
+    background-color: var(--color-warning);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px auto; /* Adds space between the table and the button */
+    display: block; /* Centers the button horizontally */
+    text-align: center; /* Centers the text inside the button */
+    width: 20%; /* You can adjust the percentage as needed to make the button longer */
+}
+
+
+.btn-back:hover {
+    background-color: var(--color-warning-dark);
+}
+
+.btn-see-all {
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--border-radius-1);
+    background-color: var(--color-warning);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px auto; /* Adds space between the table and the button */
+    display: block; /* Centers the button horizontally */
+    text-align: center; /* Ensures the text inside the button is centered */
+}
+
+
+.btn-see-all:hover {
+    background-color: var(--color-warning-dark);
+}
+
+.adjust-schedule .btn-add-schedule {
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius-2);
+    background-color: var(--color-success);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.adjust-schedule .btn-add-schedule:hover {
+    background-color: var(--color-success-dark);
+}
+.kontainer-data-dokter {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem; /* Adding space below the container */
+}
+
+.kontainer-data-dokter label {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.2rem; /* Regular font size */
+    color: var(--color-dark); /* Label text color */
+}
+
+.kontainer-data-dokter input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem; /* Small margin between label and input */
+    margin-bottom: 1rem; /* Space below each input */
+    border-radius: var(--border-radius-1);
+    border: 1px solid var(--color-light);
+    font-size: 1rem;
+}
+
+.btn-analyze {
+    display: block;
+    margin-left: auto; /* Right-align the button */
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius-2);
+    background-color: var(--color-success);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-analyze:hover {
+    background-color: var(--color-success-dark);
+}
+
+/* CSS untuk tampilan feedback tabel */
+.doctor-feedback-section {
+    margin: 20px;
+    padding: var(--card-padding);
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+}
+
+.doctor-feedback-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+
+}
+
+.feedback-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+/* CSS untuk slider dengan teks Hadir dan Tidak Hadir */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px; /* Lebar slider */
+    height: 34px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f00; /* Warna merah untuk Tidak Hadir */
+    transition: .4s;
+    border-radius: 34px;
+    display: flex; /* Menggunakan flexbox */
+    align-items: center; /* Pusatkan vertikal */
+    justify-content: space-between; /* Ruang antara teks dan lingkaran */
+    padding: 0 10px; /* Tambahkan padding untuk teks */
+}
+
+/* Memastikan teks tidak bertabrakan dengan lingkaran */
+.slider::after {
+    content: "Tidak";
+    font-size: 10px; /* Ukuran font lebih kecil untuk Tidak Hadir */
+    color: white; /* Warna teks */
+    transition: .4s;
+    margin-left: auto; /* Pindahkan ke kanan */
+}
+
+/* Saat checkbox di-check (Hadir) */
+input:checked + .slider {
+    background-color: #4CAF50; /* Warna hijau untuk Hadir */
+}
+
+/* Tampilkan teks Hadir saat slider aktif */
+input:checked + .slider::after {
+    content: "Hadir";
+    margin-left: 0; /* Pindahkan teks ke kiri */
+}
+
+/* Lingkaran slider */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+/* Pindahkan bola slider ke kanan */
+input:checked + .slider:before {
+    transform: translateX(46px); /* Geser lebih jauh karena slider lebih lebar */
+}
+
+/* Kontainer untuk tombol dalam kolom tabel */
+.action-buttons {
+    display: flex; /* Menggunakan flexbox untuk tombol inline */
+    align-items: center; /* Pusatkan tombol secara vertikal */
+    justify-content: center; /* Pusatkan tombol secara horizontal */
+    gap: 0.5rem; /* Jarak antara tombol */
+}
+
+/* CSS untuk tombol Edit */
+.btn-edit {
+    padding: 0.4rem 0.8rem; /* Padding tombol */
+    border-radius: var(--border-radius-1);
+    background-color: var(--color-warning);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.8rem; /* Ukuran font untuk tombol */
+}
+
+.btn-edit:hover {
+    background-color: var(--color-warning-dark);
+}
+
+/* CSS untuk tombol Call */
+.btn-call {
+    background-color: #4CAF50; /* Warna hijau */
+    color: white; /* Warna teks */
+    border: none;
+    padding: 0.4rem 0.6rem; /* Padding tombol */
+    border-radius: 4px; /* Sudut kotak */
+    cursor: pointer;
+    font-size: 0.8rem; /* Ukuran font untuk tombol */
+    display: flex;
+    align-items: center; /* Pusatkan ikon dan teks secara vertikal */
+    justify-content: center; /* Pusatkan teks di tengah */
+}
+
+.btn-call i {
+    font-size: 1rem; /* Ukuran ikon */
+}
+
+.btn-call:hover {
+    background-color: #45a049; /* Warna saat hover */
+}
+
+
+.feedback-table th, .feedback-table td {
+    padding: 1rem;
+    text-align: center; /* Isi tabel centered */
+    border-bottom: 1px solid var(--color-light);
+}
+
+.feedback-table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.feedback-table td {
+    color: var(--color-dark-variant);
+}
+
+.feedback-table tbody tr:hover {
+    background-color: var(--color-light);
+}
+
+.feedback-table tbody tr:nth-child(even) {
+    background-color: var(--color-light-variant);
+}
+
+.doctor-schedule, .doctor-feedback-section {
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+    width: 100%; /* Ambil lebar penuh */
+    max-width: 100%; /* Pastikan tidak melampaui lebar kontainer */
+}
+
+.schedule-table, .feedback-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+.schedule-table th, .schedule-table td, 
+.feedback-table th, .feedback-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-light);
+}
+
+.schedule-table th, .feedback-table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.schedule-table tbody tr:hover, .feedback-table tbody tr:hover {
+    background-color: var(--color-light);
+}
+
+.schedule-table tbody tr:nth-child(even), 
+.feedback-table tbody tr:nth-child(even) {
+    background-color: var(--color-light-variant);
+}
+
+/* Pastikan margin dalam elemen tidak menjorok */
+.doctor-feedback-section {
+    margin: 0; /* Atur margin menjadi 0 */
+    padding: var(--card-padding);
+}
+main section, 
+.doctor-schedule, 
+.adjust-schedule, 
+.doctor-feedback-section {
+    transition: box-shadow 0.3s ease; /* Transisi 0.3 detik dengan easing */
+}
+
+main section:hover, 
+.doctor-schedule:hover, 
+.adjust-schedule:hover, 
+.doctor-feedback-section:hover {
+    box-shadow: none;
+}
+
+
+
+.right-section{
+    margin-top: 1.4rem;
+}
+
+.right-section .nav{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right-section .nav button{
+    display: none;
+}
+
+.right-section .dark-mode{
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .dark-mode span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section .dark-mode span.active{
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .nav .profile{
+    display: flex;
+    gap: 2rem;
+    text-align: right;
+}
+
+.right-section .nav .profile .profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.right-section .user-profile{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .user-profile:hover{
+    box-shadow: none;
+}
+
+.right-section .user-profile img{
+    width: 11rem;
+    height: auto;
+    margin-bottom: 0.8rem;
+    border-radius: 50%;
+}
+
+.right-section .user-profile h2{
+    margin-bottom: 0.2rem;
+}
+
+.right-section .reminders{
+    margin-top: 2rem;
+}
+
+.right-section .reminders .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.right-section .reminders .header span{
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-white);
+    border-radius: 50%;
+}
+
+.right-section .reminders .notification{
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .reminders .notification:hover{
+    box-shadow: none;
+}
+
+.right-section .reminders .notification .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.right-section .reminders .notification .icon{
+    padding: 0.6rem;
+    color: var(--color-white);
+    background-color: var(--color-success);
+    border-radius: 20%;
+    display: flex;
+}
+
+.right-section .reminders .notification.deactive .icon{
+    background-color: var(--color-danger);
+}
+
+.right-section .reminders .add-reminder{
+    background-color: var(--color-white);
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.right-section .reminders .add-reminder:hover{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.right-section .reminders .add-reminder div{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 95%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+
+    aside .logo h2{
+        display: none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+
+    aside .sidebar a{
+        width: 5.6rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    main .analyse{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    main .new-users .user-list .user{
+        flex-basis: 40%;
+    }
+
+    main .recent-orders {
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 0.8rem;
+    }
+
+    main .recent-orders table{
+        width: 83vw;
+    }
+
+    main table thead tr th:last-child,
+    main table thead tr th:first-child{
+        display: none;
+    }
+
+    main table tbody tr td:last-child,
+    main table tbody tr td:first-child{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 0 var(--padding-1);
+    }
+
+    aside{
+        position: fixed;
+        background-color: var(--color-white);
+        width: 15rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        left: -100%;
+        display: none;
+        animation: showMenu 0.4s ease forwards;
+    }
+
+    @keyframes showMenu {
+       to{
+        left: 0;
+       } 
+    }
+
+    aside .logo{
+        margin-left: 1rem;
+    }
+
+    aside .logo h2{
+        display: inline;
+    }
+
+    aside .sidebar h3{
+        display: inline;
+    }
+
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: absolute;
+        bottom: 5rem;
+    }
+
+    aside .toggle .close{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    main{
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+
+    main .new-users .user-list .user{
+        flex-basis: 35%;
+    }
+
+    main .recent-orders{
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+    }
+
+    main .recent-orders table{
+        width: 100%;
+        margin: 0;
+    }
+
+    .right-section{
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+
+    .right-section .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        background-color: var(--color-white);
+        padding: 0 var(--padding-1);
+        height: 4.6rem;
+        width: 100%;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+        margin: 0;
+    }
+
+    .right-section .nav .dark-mode{
+        width: 4.4rem;
+        position: absolute;
+        left: 66%;
+    }
+
+    .right-section .profile .info{
+        display: none;
+    }
+
+    .right-section .nav button{
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
+
+    .right-section .nav button span{
+        font-size: 2rem;
+    }
+
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo_fix.png">
+    <title>Edit Data | PULSE by Klinik XYZ</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo_fix.png">
+                    <h2>
+                        <span class="danger">PULSE</span>
+                        <span class="by-telkomedika">by Klinik XYZ</span>
+                    </h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="../Dashboard_Admin/index.html">
+                    <span class="fas fa-home"></span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="../Dokter_Admin/index.html">
+                    <span class="fas fa-stethoscope"></span>
+                    <h3>Dokter</h3>
+                </a>
+                <a href="../Pasien_Admin/index.html">
+                    <span class="fas fa-user-injured"></span>
+                    <h3>Pasien</h3>
+                </a>
+                <a href="../Feedback_Admin/index.html">
+                    <span class="fa fa-paper-plane"></span>
+                    <h3>Feedback</h3>
+                </a>
+                <a href="../Presensi_Admin/index.html">
+                    <span class="fas fa-id-card-alt"></span>
+                    <h3>Presensi</h3>
+                </a>
+                <a href="../logout"> <!-- Adjust this route for the logout logic -->
+                    <span class="fas fa-sign-out-alt"></span>
+                    <h3>Keluar</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h1>Edit Data Dokter</h1>
+        
+            <div class="kontainer-data-vital">
+                <p>Edit identitas dokter yang akan diganti.</p>
+    
+                <label for="nama-dokter">Nama Dokter</label>
+                <input type="text" id="nama-dokter" readonly>
+    
+                <label for="poliklinik">Poliklinik</label>
+                <input type="text" id="poliklinik" readonly>
+    
+                <label for="jadwal-praktik">Jadwal Praktik</label>
+                <textarea id="jadwal-praktik" readonly></textarea>
+    
+                <label for="kehadiran">Kehadiran</label>
+                <select id="kehadiran">
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                </select>
+    
+                <button class="btn-analyze" onclick="submitData()">Submit</button>
+            </div>
+        </main>
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p><b>Wilujeng Sumping!</b></p>
+                        <small class="text-muted">Masuk Sebagai Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2>Klinik XYZ</h2>
+                    <p>Universitas XYZ</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Pengingat</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                                    <small class="text_muted">
+                                Jumat, 31 Mei 2024
+                            </small>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            alarm
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Penyuluhan</h3>
+                            <small class="text_muted">
+                                Rabu, 22 Mei 2024
+                            </small>
+                        </div>
+
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Tambah Pengingat</h3>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        // Fungsi untuk mendapatkan parameter dari URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const doctorName = getQueryParam('nama'); // Ambil nama dokter dari query parameter
+
+            // Fetch data dokter dari JSON
+            fetch('../data/datadokter.json')
+                .then(response => response.json())
+                .then(data => {
+                    const doctor = data.find(d => d.namaDokter === doctorName);
+
+                    if (doctor) {
+                        // Isi form dengan data dokter
+                        document.getElementById('nama-dokter').value = doctor.namaDokter;
+                        document.getElementById('poliklinik').value = doctor.poliklinik;
+
+                        // Format jadwal menjadi string yang lebih rapi
+                        const jadwalFormatted = doctor.jadwal
+                            .map(j => `${j.hari}: ${j.waktu}`)
+                            .join('\n');
+                        document.getElementById('jadwal-praktik').value = jadwalFormatted;
+
+                        // Kehadiran default
+                        document.getElementById('kehadiran').value = "Hadir"; // Default value
+                    } else {
+                        alert('Data dokter tidak ditemukan!');
+                    }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+
+        // Fungsi untuk submit data
+        function submitData() {
+            const kehadiran = document.getElementById('kehadiran').value;
+
+            const updatedData = {
+                namaDokter: document.getElementById('nama-dokter').value,
+                poliklinik: document.getElementById('poliklinik').value,
+                jadwalPraktik: document.getElementById('jadwal-praktik').value,
+                kehadiran: kehadiran,
+            };
+
+            console.log('Data yang diupdate:', updatedData);
+            alert('Data berhasil disimpan!');
+        }
+    </script>
+</body>
+
+</html>
